@@ -60,7 +60,7 @@ export default function Home() {
 
                         {/* Welcome text */}
                         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                            Welcome to Zigo Technology (Pvt) Ltd.
+                            Zigo Technology (Pvt) Ltd.
                         </h1>
 
                         <h2 className="text-xl sm:text-2xl mb-16">
