@@ -1,9 +1,13 @@
+"use client";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Contact() {
+    const router = useRouter();
     return (
         <div className="min-h-screen flex flex-col">
             <Head>
@@ -36,7 +40,37 @@ export default function Contact() {
                     </div>
                 </div>
 
-                <div className="mt-12 sm:mt-24 md:mt-48 border-t border-blue-400"></div>
+                {/* Breadcrumb Navigation */}
+                <nav
+                    aria-label="Breadcrumb"
+                    className="bg-white container mx-auto px-4 sm:px-8 md:px-16 pt-8 pb-4 mt-30"
+                >
+                    <ol className="flex items-center space-x-2 text-sm sm:text-base">
+                        <li>
+                            <Link
+                                href="/"
+                                className="text-blue-500 hover:text-blue-700 hover:underline transition-colors"
+                            >
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <span className="text-gray-400 mx-1">/</span>
+                        </li>
+                        <li>
+                            <Link
+                                href="/pages/contact"
+                                className="text-blue-500 hover:text-blue-700 hover:underline transition-colors"
+                            >
+                                Contact us
+                            </Link>
+                        </li>
+                    </ol>
+                </nav>
+
+                <div className="flex flex-col items-center">
+                    <div className="bg-blue-200 rounded-md mx-auto h-[3px] w-11/12"></div>
+                </div>
 
                 {/* Main Contact Section */}
                 <div className="bg-white py-12 sm:py-16 md:py-20">

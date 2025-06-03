@@ -34,7 +34,7 @@ export default function XPert() {
                             priority
                         />
                     </div>
-                    <div className="relative z-10 container mx-auto px-4 py-16 text-start text-white">
+                    <div className="relative z-10 container mx-auto px-4 py-20 text-start text-white">
                         {/* Welcome text */}
                         <h1 className="text-4xl sm:text-5xl font-bold mb-4">OUR BRANDS</h1>
 
@@ -88,7 +88,7 @@ export default function XPert() {
                             {/* Vertical line */}
                             <div className="w-0.5 bg-gray-200 mx-2 h-1vh mt-10"></div>
                             {/* X-PERT */}
-                            <div className="flex-1 text-center p-6 justify-center">
+                            <div className="flex-1 text-center p-6 justify-center mt-[-50]">
                                 <div className="flex justify-start mb-15">
                                     <div className="w-2xl h-48  relative">
                                         <Image

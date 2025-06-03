@@ -3,6 +3,17 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+type MenuItem = {
+    name: string;
+    path: string;
+    type: "link" | "scroll";
+    onClick?: (
+        e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+    ) => void;
+};
+
+
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolling, setScrolling] = useState(false);
@@ -11,13 +22,35 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
-    const menuItems = [
-        { name: "Home", path: "/" },
-        { name: "About us", path: "/" },
-        { name: "Our Brands", path: "/pages/brands" },
-        { name: "Production", path: "/pages/production" },
-        { name: "Contact Us", path: "/pages/contact" },
+    // Handle smooth scroll to About Us section
+    const handleAboutUsClick = (
+        e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+    ) => {
+        e.preventDefault();
+        const aboutSection = document.getElementById("about-us-section");
+        if (aboutSection) {
+            aboutSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+        setIsOpen(false);
+    };
+
+
+    const menuItems: MenuItem[] = [
+        { name: "Home", path: "/", type: "link" },
+        {
+            name: "About us",
+            path: "#about-us",
+            type: "scroll",
+            onClick: handleAboutUsClick,
+        },
+        { name: "Our Brands", path: "/pages/brands", type: "link" },
+        { name: "Production", path: "/pages/production", type: "link" },
+        { name: "Contact Us", path: "/pages/contact", type: "link" },
     ];
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -61,27 +94,51 @@ const Navbar = () => {
                     {/* Desktop menu - responsive spacing and sizing for tablets */}
                     <div className="hidden md:flex items-center space-x-1 lg:space-x-4">
                         {menuItems.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.path}
-                                className="text-white text-xs md:text-sm lg:text-[0.95rem] hover:text-blue-200 px-1 md:px-2 lg:px-3 py-2 flex items-center whitespace-nowrap"
-                            >
-                                {item.name}
-                                <svg
-                                    className="w-3 h-3 md:w-4 md:h-4 ml-0.5 md:ml-1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M19 9l-7 7-7-7"
-                                    />
-                                </svg>
-                            </Link>
+                            <div key={item.name}>
+                                {item.type === "scroll" ? (
+                                    <button
+                                        className="text-white text-xs md:text-sm lg:text-[0.95rem] hover:text-blue-200 px-1 md:px-2 lg:px-3 py-2 flex items-center whitespace-nowrap cursor-pointer"
+                                        onClick={item.onClick}
+                                    >
+                                        {item.name}
+                                        <svg
+                                            className="w-3 h-3 md:w-4 md:h-4 ml-0.5 md:ml-1"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M19 9l-7 7-7-7"
+                                            />
+                                        </svg>
+                                    </button>
+                                ) : (
+                                    <Link
+                                        href={item.path}
+                                        className="text-white text-xs md:text-sm lg:text-[0.95rem] hover:text-blue-200 px-1 md:px-2 lg:px-3 py-2 flex items-center whitespace-nowrap"
+                                    >
+                                        {item.name}
+                                        <svg
+                                            className="w-3 h-3 md:w-4 md:h-4 ml-0.5 md:ml-1"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M19 9l-7 7-7-7"
+                                            />
+                                        </svg>
+                                    </Link>
+                                )}
+                            </div>
                         ))}
                     </div>
 
@@ -132,14 +189,24 @@ const Navbar = () => {
             <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-90">
                     {menuItems.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.path}
-                            className="text-white hover:bg-blue-800 block px-3 py-2 rounded-md text-base font-medium"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            {item.name}
-                        </Link>
+                        <div key={item.name}>
+                            {item.type === "scroll" ? (
+                                <button
+                                    onClick={item.onClick}
+                                    className="text-white hover:bg-blue-800 block px-3 py-2 rounded-md text-base font-medium w-full text-left cursor-pointer"
+                                >
+                                    {item.name}
+                                </button>
+                            ) : (
+                                <Link
+                                    href={item.path}
+                                    className="text-white hover:bg-blue-800 block px-3 py-2 rounded-md text-base font-medium"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {item.name}
+                                </Link>
+                            )}
+                        </div>
                     ))}
                 </div>
             </div>

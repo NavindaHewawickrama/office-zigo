@@ -90,25 +90,22 @@ export default function Brands() {
                             <div className="container mx-auto px-4 sm:px-8 md:px-16">
                                 <div className="h-[3px] w-full bg-blue-200 rounded-md mt-4"></div>
                             </div>{" "}
-                            <div className="py-12 md:py-20">
+                            <div className="py-6 md:py-10">
                                 <h1 className="text-gray-400 font-bold text-2xl md:text-3xl lg:text-4xl text-center">
                                     OUR BRANDS
                                 </h1>
                             </div>
-                            <div className="container mx-auto px-4 sm:px-8 md:px-16">
-                                <div className="h-[3px] w-full bg-blue-200 rounded-md mt-4"></div>
-                            </div>{" "}
                         </div>
 
                         {/* Brands Section */}
-                        <div className="mt-8 md:mt-10">
+                        <div>
                             {/* Desktop Layout - 3 columns with dividers */}
                             <div className="hidden lg:flex justify-between">
                                 {/* Vertical line */}
                                 <div className="w-0.5 bg-gray-200 mx-2 h-64 mt-10"></div>
 
                                 {/* OMS */}
-                                <div className="flex-1 text-center">
+                                <div className="flex-1 text-center bg-white rounded-xl p-5 sm:p-6 shadow-md border-t-4 border-b-4 border-red-600 hover:shadow-lg hover:bg-gradient-to-r hover:from-red-300 hover:to-gray-300  transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex justify-center">
                                         <div className="w-48 h-52 relative">
                                             <Image
@@ -130,7 +127,7 @@ export default function Brands() {
                                         quis nostrud
                                     </p>
                                     <button
-                                        className="border-solid border-2 border-gray-400 px-4 py-2 rounded-2xl text-gray-400 mt-4 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-105 transition-all duration-300"
+                                        className="border-solid border-2 border-red-400 px-4 py-2 rounded-2xl text-red-400 mt-4 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-105 transition-all duration-300"
                                         onClick={handleOmsClick}
                                     >
                                         Read More
@@ -140,7 +137,7 @@ export default function Brands() {
                                 <div className="w-0.5 bg-gray-200 mx-2 h-64 mt-10"></div>
 
                                 {/* ONESAM */}
-                                <div className="flex-1 text-center">
+                                <div className="flex-1 text-center bg-white rounded-xl p-5 sm:p-6 shadow-md border-b-4 border-t-4 border-black hover:shadow-lg hover:bg-gradient-to-r hover:from-gray-300 hover:to-orange-300 transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex justify-center">
                                         <div className="w-48 h-52 relative">
                                             <Image
@@ -162,7 +159,7 @@ export default function Brands() {
                                         quis nostrud
                                     </p>
                                     <button
-                                        className="border-solid border-2 border-gray-400 px-4 py-2 rounded-2xl text-gray-400 mt-4 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-105 transition-all duration-300"
+                                        className="border-solid border-2 border-black px-4 py-2 rounded-2xl text-black mt-4 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-105 transition-all duration-300"
                                         onClick={handleOnesamClick}
                                     >
                                         Read More
@@ -172,7 +169,7 @@ export default function Brands() {
                                 <div className="w-0.5 bg-gray-200 mx-2 h-64 mt-10"></div>
 
                                 {/* X-PERT */}
-                                <div className="flex-1 text-center">
+                                <div className="flex-1 text-center bg-white rounded-xl p-5 sm:p-6 shadow-md border-b-4 border-t-4 border-pink-600 hover:shadow-lg hover:bg-gradient-to-r hover:from-pink-300 hover:to-blue-300 transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex justify-center">
                                         <div className="w-48 h-52 relative">
                                             <Image
@@ -194,7 +191,7 @@ export default function Brands() {
                                         quis nostrud
                                     </p>
                                     <button
-                                        className="border-solid border-2 border-gray-400 px-4 py-2 rounded-2xl text-gray-400 mt-4 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-105 transition-all duration-300"
+                                        className="border-solid border-2 border-pink-400 px-4 py-2 rounded-2xl text-pink-400 mt-4 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-105 transition-all duration-300"
                                         onClick={handleXpertClick}
                                     >
                                         Read More

@@ -1,19 +1,47 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CountUp from "react-countup";
+import Link from 'next/link';
 
 export default function Home() {
     const [startCount, setStartCount] = useState(false);
+    const [achievementInView, setAchievementInView] = useState(false);
+    const achievementRef = useRef(null);
 
     useEffect(() => {
-        // Trigger the count-up animation when the component mounts
-        if (window.scrollY < 1000) {
-            setStartCount(true);
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Reset and start animations when entering view
+                        setAchievementInView(true);
+                        setStartCount(true);
+                    } else {
+                        // Reset animations when leaving view
+                        setAchievementInView(false);
+                        setStartCount(false);
+                    }
+                });
+            },
+            {
+                threshold: 0.3,
+                rootMargin: "0px 0px -100px 0px",
+            }
+        );
+
+        if (achievementRef.current) {
+            observer.observe(achievementRef.current);
         }
+
+        return () => {
+            if (achievementRef.current) {
+                observer.unobserve(achievementRef.current);
+            }
+        };
     }, []);
 
     return (
@@ -31,7 +59,7 @@ export default function Home() {
 
             <main className="flex-grow">
                 {/* Hero Section */}
-                <div className="bg-blue-900 relative">
+                <div id="hero-section" className="bg-blue-900 relative">
                     {/* Background circuit pattern */}
                     <div className="absolute inset-0 z-0 opacity-30">
                         <Image
@@ -60,7 +88,7 @@ export default function Home() {
 
                         {/* Welcome text */}
                         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                            Zigo Technology (Pvt) Ltd.
+                            Welcome to Zigo Technology (Pvt) Ltd.
                         </h1>
 
                         <h2 className="text-xl sm:text-2xl mb-16">
@@ -83,13 +111,15 @@ export default function Home() {
                             {/* Brands */}
                             <div className="text-center">
                                 <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
-                                        <Image
-                                            src="/images/brand.webp"
-                                            alt="Brands Icon"
-                                            fill
-                                            className="object-contain"
-                                        />
+                                    <div className="w-24 h-24 relative cursor-pointer hover:scale-110 transition duration-300">
+                                        <Link href="/pages/brands">
+                                            <Image
+                                                src="/images/brand.webp"
+                                                alt="Brands Icon"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
                                 <h3 className="text-gray-500 uppercase text-xl font-medium">
@@ -100,13 +130,15 @@ export default function Home() {
                             {/* Production */}
                             <div className="text-center">
                                 <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
-                                        <Image
-                                            src="/images/production.avif"
-                                            alt="Production Icon"
-                                            fill
-                                            className="object-contain"
-                                        />
+                                    <div className="w-24 h-24 relative cursor-pointer hover:scale-110 transition duration-300">
+                                        <Link href="/pages/production">
+                                            <Image
+                                                src="/images/production.avif"
+                                                alt="Production Icon"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
                                 <h3 className="text-gray-500 uppercase text-xl font-medium">
@@ -117,13 +149,15 @@ export default function Home() {
                             {/* Contact Us */}
                             <div className="text-center">
                                 <div className="flex justify-center mb-4">
-                                    <div className="w-24 h-24 relative">
-                                        <Image
-                                            src="/images/contact.png"
-                                            alt="Contact Us Icon"
-                                            fill
-                                            className="object-contain"
-                                        />
+                                    <div className="w-24 h-24 relative cursor-pointer hover:scale-110 transition duration-300">
+                                        <Link href="/pages/contact">
+                                            <Image
+                                                src="/images/contact.png"
+                                                alt="Contact Us Icon"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
                                 <h3 className="text-gray-500 uppercase text-xl font-medium">
@@ -138,7 +172,7 @@ export default function Home() {
                 </div>
 
                 {/* About Us Section */}
-                <div className="bg-white py-8">
+                <div id="about-us-section" className="bg-white py-8">
                     <div className="container mx-auto px-4">
                         <h2 className="text-gray-500 text-4xl font-medium text-center mb-6">
                             ABOUT US
@@ -209,48 +243,55 @@ export default function Home() {
                         <div className="max-w-4xl mx-auto mb-12">
                             <div className="flex flex-col md:flex-row justify-between gap-8">
                                 {/* Vision */}
-                                <div className="flex-1 text-center md:border-r md:border-gray-300 md:pr-8">
-                                    <div className="flex justify-center mb-4">
-                                        <div className="w-24 h-24 relative">
+                                <div className="flex-1 text-center md:border-r md:border-gray-300 md:pr-8 group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-indigo-100 rounded-xl p-6">
+                                    <div className="flex justify-center mb-4 transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                                        <div className="w-24 h-24 relative overflow-hidden rounded-full shadow-lg group-hover:shadow-xl transition-all duration-500">
                                             <Image
                                                 src="/images/vision.jpg"
                                                 alt="Vision Icon"
                                                 fill
-                                                className="object-contain"
+                                                className="object-contain transform transition-all duration-500 group-hover:scale-110"
                                             />
+                                            {/* Animated overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                                         </div>
                                     </div>
-                                    <h3 className="text-gray-600 text-2xl font-medium mb-4">
+                                    <h3 className="text-gray-600 text-2xl font-medium mb-4 transform transition-all duration-500 group-hover:text-blue-700 group-hover:scale-105">
                                         OUR VISION
                                     </h3>
-                                    <p className="text-gray-600">
-                                        To become the world &apos s leading brand in mobile
-                                        accessories and electronic equipment, recognized for
-                                        innovation, superior quality and exceptional customer
-                                        experience.
+                                    <p className="text-gray-600 transform transition-all duration-500 group-hover:text-gray-700 leading-relaxed">
+                                        To become the world's leading brand in mobile accessories
+                                        and electronic equipment, recognized for innovation,
+                                        superior quality and exceptional customer experience.
                                     </p>
+                                    {/* Animated underline */}
+                                    <div className="w-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 transition-all duration-500 group-hover:w-full rounded-full"></div>
                                 </div>
 
                                 {/* Mission */}
-                                <div className="flex-1 text-center md:pl-8">
-                                    <div className="flex justify-center mb-4">
-                                        <div className="w-24 h-24 relative">
+                                <div className="flex-1 text-center md:pl-8 group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-br hover:from-green-50 hover:to-emerald-100 rounded-xl p-6">
+                                    <div className="flex justify-center mb-4 transform transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                                        <div className="w-24 h-24 relative overflow-hidden rounded-full shadow-lg group-hover:shadow-xl transition-all duration-500">
                                             <Image
                                                 src="/images/mission.jpg"
                                                 alt="Mission Icon"
                                                 fill
-                                                className="object-contain"
+                                                className="object-contain transform transition-all duration-500 group-hover:scale-110"
                                             />
+                                            {/* Animated overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-teal-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                                         </div>
                                     </div>
-                                    <h3 className="text-gray-600 text-2xl font-medium mb-4">
+                                    <h3 className="text-gray-600 text-2xl font-medium mb-4 transform transition-all duration-500 group-hover:text-green-700 group-hover:scale-105">
                                         OUR MISSION
                                     </h3>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 transform transition-all duration-500 group-hover:text-gray-700 leading-relaxed">
                                         To deliver premium mobile accessories and electronic
                                         equipment to customers worldwide, ensuring quality,
                                         innovation and customer satisfaction.
                                     </p>
+                                    {/* Animated underline */}
+                                    <div className="w-0 h-1 bg-gradient-to-r from-green-500 to-teal-500 mx-auto mt-4 transition-all duration-500 group-hover:w-full rounded-full"></div>
                                 </div>
                             </div>
                         </div>
@@ -260,7 +301,7 @@ export default function Home() {
                         </div>
 
                         {/* Core Values */}
-                        <div className="mt-15">
+                        <div className="w-full rounded-2xl p-6 sm:p-8 md:p-10">
                             <h2 className="text-gray-500 text-4xl font-medium text-center mb-6 uppercase">
                                 Core Values
                             </h2>
@@ -268,7 +309,7 @@ export default function Home() {
                             {/* Grid container for 2 columns */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                                 {/* 1 */}
-                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg hover:bg-blue-100 transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex items-start gap-4">
                                         <div className="flex-grow">
                                             <h4 className="font-bold text-blue-800 text-base sm:text-lg mb-2 uppercase">
@@ -284,7 +325,7 @@ export default function Home() {
                                 </div>
 
                                 {/* 2 */}
-                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg hover:bg-green-100 transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex items-start gap-4">
                                         <div className="flex-grow">
                                             <h4 className="font-bold text-green-800 text-base sm:text-lg mb-2 uppercase">
@@ -300,7 +341,7 @@ export default function Home() {
                                 </div>
 
                                 {/* 3 */}
-                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg hover:bg-purple-100 transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex items-start gap-4">
                                         <div className="flex-grow">
                                             <h4 className="font-bold text-purple-800 text-base sm:text-lg mb-2 uppercase">
@@ -315,7 +356,7 @@ export default function Home() {
                                 </div>
 
                                 {/* 4 */}
-                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-red-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-red-600 hover:shadow-lg hover:bg-red-100 transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex items-start gap-4">
                                         <div className="flex-grow">
                                             <h4 className="font-bold text-red-800 text-base sm:text-lg mb-2 uppercase">
@@ -331,7 +372,7 @@ export default function Home() {
                                 </div>
 
                                 {/* 5 */}
-                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-yellow-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-yellow-600 hover:shadow-lg hover:bg-yellow-100 transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex items-start gap-4">
                                         <div className="flex-grow">
                                             <h4 className="font-bold text-yellow-800 text-base sm:text-lg mb-2 uppercase">
@@ -347,10 +388,10 @@ export default function Home() {
                                 </div>
 
                                 {/* 6 */}
-                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-orange-600 hover:shadow-lg hover:bg-orange-100 transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex items-start gap-4">
                                         <div className="flex-grow">
-                                            <h4 className="font-bold text-indigo-800 text-base sm:text-lg mb-2 uppercase">
+                                            <h4 className="font-bold text-orange-800 text-base sm:text-lg mb-2 uppercase">
                                                 Continuous Improvement
                                             </h4>
                                             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
@@ -362,7 +403,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-teal-600 hover:shadow-lg transition-shadow duration-300">
+                                <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-teal-600 hover:shadow-lg hover:bg-green-100 transition-all duration-300 hover:scale-105 cursor-pointer">
                                     <div className="flex items-start gap-4">
                                         <div className="flex-grow">
                                             <h4 className="font-bold text-teal-800 text-base sm:text-lg mb-2 uppercase">
@@ -385,64 +426,147 @@ export default function Home() {
                 </div>
 
                 {/* Achievements Section */}
-                <div className="bg-gradient-to-b from-white to-blue-500 py-16">
-                    <div className="container mx-auto px-4">
-                        <h2 className="text-gray-500 text-4xl font-medium text-center mb-6">
+                <div
+                    ref={achievementRef}
+                    className="bg-gradient-to-b from-white to-blue-500 py-16 relative overflow-hidden"
+                >
+                    <div className="container mx-auto px-4 relative z-10">
+                        <h2
+                            className={`text-gray-500 text-4xl font-medium text-center mb-6 transform transition-all duration-1000 ${achievementInView
+                                ? "translate-y-0 opacity-100"
+                                : "translate-y-10 opacity-0"
+                                }`}
+                        >
                             OUR ACHIEVEMENTS
                         </h2>
 
                         <div className="flex flex-wrap justify-center gap-8">
                             {/* 15 Years Experience */}
-                            <div className="p-8 text-center w-full md:w-64">
-                                <h3 className="text-blue-700 text-5xl font-bold mb-2">
-                                    {startCount && (
-                                        <CountUp end={15} duration={6} separator="," />
-                                    )}
-                                </h3>
-                                <p className="text-blue-700 font-semibold uppercase">YEARS</p>
-                                <p className="text-blue-700 text-sm">
+                            <div
+                                className={`p-8 text-center w-full md:w-64 transform transition-all duration-1000 delay-300 ${achievementInView
+                                    ? "translate-y-0 opacity-100 scale-100"
+                                    : "translate-y-20 opacity-0 scale-95"
+                                    } hover:scale-110 hover:shadow-2xl hover:bg-white hover:bg-opacity-20 rounded-xl transition-all duration-300 cursor-pointer group`}
+                            >
+                                <div className="relative">
+                                    <h3 className="text-blue-700 text-5xl font-bold mb-2 relative z-10 group-hover:text-blue-800 transition-colors duration-300">
+                                        {achievementInView && (
+                                            <CountUp
+                                                key={`years-${achievementInView}`}
+                                                end={15}
+                                                duration={3}
+                                                separator=","
+                                                delay={0.5}
+                                                onEnd={() => console.log("15 years animation complete")}
+                                            />
+                                        )}
+                                    </h3>
+                                </div>
+                                <p className="text-blue-700 font-semibold uppercase text-xl group-hover:text-blue-800 transition-colors duration-300">
+                                    YEARS
+                                </p>
+                                <p className="text-blue-700 text-sm group-hover:text-blue-800 transition-colors duration-300">
                                     Competence On Mobile Accessory Industry
                                 </p>
+                                {/* Animated underline */}
+                                <div className="w-0 h-1 bg-blue-600 mx-auto mt-2 group-hover:w-full transition-all duration-500 rounded-full"></div>
                             </div>
 
                             {/* 3500+ Products */}
-                            <div className="p-8 text-center w-full md:w-64">
-                                <h3 className="text-blue-700 text-5xl font-bold mb-2">
-                                    {startCount && (
-                                        <CountUp end={3500} duration={4} separator="," />
-                                    )}
-                                </h3>
-                                <p className="text-blue-700 font-semibold uppercase">PLUS</p>
-                                <p className="text-blue-700 text-sm">PRODUCTS</p>
+                            <div
+                                className={`p-8 text-center w-full md:w-64 transform transition-all duration-1000 delay-500 ${achievementInView
+                                    ? "translate-y-0 opacity-100 scale-100"
+                                    : "translate-y-20 opacity-0 scale-95"
+                                    } hover:scale-110 hover:shadow-2xl hover:bg-white hover:bg-opacity-20 rounded-xl transition-all duration-300 cursor-pointer group`}
+                            >
+                                <div className="relative">
+                                    <h3 className="text-blue-700 text-5xl font-bold mb-2 relative z-10 group-hover:text-blue-800 transition-colors duration-300">
+                                        {achievementInView && (
+                                            <CountUp
+                                                key={`products-${achievementInView}`}
+                                                end={3500}
+                                                duration={4}
+                                                separator=","
+                                                delay={0.8}
+                                                onEnd={() => console.log("3500+ animation complete")}
+                                            />
+                                        )}
+                                    </h3>
+                                </div>
+                                <p className="text-blue-700 font-semibold uppercase text-xl group-hover:text-blue-800 transition-colors duration-300">
+                                    PLUS
+                                </p>
+                                <p className="text-blue-700 text-sm group-hover:text-blue-800 transition-colors duration-300">
+                                    PRODUCTS
+                                </p>
+                                {/* Animated underline */}
+                                <div className="w-0 h-1 bg-blue-600 mx-auto mt-2 group-hover:w-full transition-all duration-500 rounded-full"></div>
                             </div>
 
                             {/* Island-wide Customer Base */}
-                            <div className="p-8 text-center w-full md:w-64">
-                                <h3 className="text-blue-700 text-2xl font-bold mb-2">
-                                    ISLAND WIDE
-                                </h3>
-                                <p className="text-blue-700 font-bold text-3xl uppercase">
-                                    CUSTOMER
-                                </p>
-                                <p className="text-blue-700 font-bold text-2xl">BASE</p>
+                            <div
+                                className={`p-8 text-center w-full md:w-64 transform transition-all duration-1000 delay-700 ${achievementInView
+                                    ? "translate-y-0 opacity-100 scale-100"
+                                    : "translate-y-20 opacity-0 scale-95"
+                                    } hover:scale-110 hover:shadow-2xl hover:bg-white hover:bg-opacity-20 rounded-xl transition-all duration-300 cursor-pointer group`}
+                            >
+                                <div className="relative">
+                                    <div className="relative z-10">
+                                        <h3 className="text-blue-700 text-2xl font-bold mb-2 group-hover:text-blue-800 transition-colors">
+                                            ISLAND WIDE
+                                        </h3>
+                                        <p className="text-blue-700 font-bold text-3xl uppercase group-hover:text-blue-800 transition-colors duration-300">
+                                            CUSTOMER
+                                        </p>
+                                        <p className="text-blue-700 font-bold text-2xl group-hover:text-blue-800 transition-colors duration-300">
+                                            BASE
+                                        </p>
+                                    </div>
+                                </div>
+                                {/* Animated underline */}
+                                <div className="w-0 h-1 bg-blue-600 mx-auto mt-2 group-hover:w-full transition-all duration-500 rounded-full"></div>
                             </div>
 
                             {/* Island-wide Distribution Network */}
-                            <div className="p-8 text-center w-full md:w-64">
-                                <h3 className="text-blue-700 text-2xl font-bold mb-2">
-                                    ISLAND WIDE
-                                </h3>
-                                <p className="text-blue-700 font-bold text-3xl uppercase">
-                                    DISTRIBUTION
-                                </p>
-                                <p className="text-blue-700 font-bold text-2xl">NETWORK</p>
+                            <div
+                                className={`p-8 text-center w-full md:w-64 transform transition-all duration-1000 delay-900 ${achievementInView
+                                    ? "translate-y-0 opacity-100 scale-100"
+                                    : "translate-y-20 opacity-0 scale-95"
+                                    } hover:scale-110 hover:shadow-2xl hover:bg-white hover:bg-opacity-20 rounded-xl transition-all duration-300 cursor-pointer group`}
+                            >
+                                <div className="relative">
+                                    <div className="relative z-10">
+                                        <h3 className="text-blue-700 text-2xl font-bold mb-2 group-hover:text-blue-800 transition-colors">
+                                            ISLAND WIDE
+                                        </h3>
+                                        <p className="text-blue-700 font-bold text-3xl uppercase group-hover:text-blue-800 transition-colors duration-300">
+                                            DISTRIBUTION
+                                        </p>
+                                        <p className="text-blue-700 font-bold text-2xl group-hover:text-blue-800 transition-colors duration-300">
+                                            NETWORK
+                                        </p>
+                                    </div>
+                                </div>
+                                {/* Animated underline */}
+                                <div className="w-0 h-1 bg-blue-600 mx-auto mt-2 group-hover:w-full transition-all duration-500 rounded-full"></div>
                             </div>
                         </div>
 
-                        <div className="text-center mt-12 py-6 text-white rounded-lg">
-                            <h3 className="text-4xl font-medium">
+                        <div
+                            className={`text-center mt-12 py-6 text-white rounded-lg transform transition-all duration-1000 delay-1100 ${achievementInView
+                                ? "translate-y-0 opacity-100"
+                                : "translate-y-10 opacity-0"
+                                } hover:scale-105 transition-transform duration-300`}
+                        >
+                            <h3 className="text-4xl font-medium animate-pulse">
                                 LEADING MOBILE ACCESSORY MANUFACTURER IN SRI LANKA
                             </h3>
+                            {/* Animated decorative elements */}
+                            <div className="flex justify-center mt-4 space-x-2">
+                                <div className="w-3 h-3 bg-white rounded-full animate-bounce"></div>
+                                <div className="w-3 h-3 bg-white rounded-full animate-bounce delay-100"></div>
+                                <div className="w-3 h-3 bg-white rounded-full animate-bounce delay-200"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -472,7 +596,6 @@ export default function Home() {
                                             refX="0"
                                             refY="3.5"
                                             orient="auto"
-
                                         >
                                             <polygon points="0 0, 5 3.5, 0 7" fill="#3B82F6" />
                                         </marker>
@@ -628,6 +751,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+
+
             </main>
 
             <Footer />

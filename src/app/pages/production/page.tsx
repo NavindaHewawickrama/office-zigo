@@ -3,9 +3,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function Production() {
+  const router = useRouter();
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
@@ -130,7 +132,7 @@ export default function Production() {
                     {/* Process Steps Grid - Updated to match Home page layout */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                       {/* Step 1 */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
                             1
@@ -152,7 +154,7 @@ export default function Production() {
                       </div>
 
                       {/* Step 2 */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-green-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
                             2
@@ -173,7 +175,7 @@ export default function Production() {
                       </div>
 
                       {/* Step 3 */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-purple-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
                             3
@@ -195,7 +197,7 @@ export default function Production() {
                       </div>
 
                       {/* Step 4 */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-red-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-red-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-red-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
                             4
@@ -215,7 +217,7 @@ export default function Production() {
                       </div>
 
                       {/* Step 5 */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-yellow-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-yellow-600 hover:shadow-lg transition-all hover:scale-105 hover:bg-yellow-100 cursor-pointer duration-300">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
                             5
@@ -235,7 +237,7 @@ export default function Production() {
                       </div>
 
                       {/* Step 6 */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition-all hover: duration-300 hover:scale-105 hover:bg-indigo-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
                             6
@@ -255,7 +257,7 @@ export default function Production() {
                       </div>
 
                       {/* Step 7 */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-teal-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-teal-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-teal-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
                             7
@@ -322,7 +324,7 @@ export default function Production() {
                     {/* Grid container for distribution steps */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                       {/* Direct Order Processing */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-green-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center">
                             <svg
@@ -355,7 +357,7 @@ export default function Production() {
                       </div>
 
                       {/* Courier-Based Delivery */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center">
                             <svg
@@ -389,7 +391,7 @@ export default function Production() {
                       </div>
 
                       {/* Centralized Inventory */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-purple-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center">
                             <svg
@@ -423,7 +425,7 @@ export default function Production() {
                       </div>
 
                       {/* Retail and Corporate Supply */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-amber-600 hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-amber-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-amber-100 cursor-pointer">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center">
                             <svg
