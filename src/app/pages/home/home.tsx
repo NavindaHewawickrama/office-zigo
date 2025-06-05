@@ -60,7 +60,7 @@ export default function Home() {
           {/* Background circuit pattern */}
           <div className="relative w-full h-full overflow-hidden shadow-2xl bg-white">
             <video
-              src="/images/banner 1.mp4"
+              src="/images/Banner1.mp4"
               className="w-full h-[80%] object-fill"
               autoPlay
               loop
