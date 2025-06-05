@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -7,39 +7,38 @@ import {
   FaWhatsapp,
   FaTiktok,
 } from "react-icons/fa";
+import Link from 'next/link';
 
 
 const Footer: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
 
   // Handle smooth scroll to Hero section
-  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const aboutSection = document.getElementById('hero-section');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-    // Close mobile menu if open
-    setIsOpen(false);
-  };
+  // const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault();
+  //   const aboutSection = document.getElementById('hero-section');
+  //   if (aboutSection) {
+  //     aboutSection.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'start'
+  //     });
+  //   }
+  //   // Close mobile menu if open
+  //   setIsOpen(false);
+  // };
 
-  // Handle smooth scroll to About Us section
-  const handleAboutUsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const aboutSection = document.getElementById('about-us-section');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-    // Close mobile menu if open
-    setIsOpen(false);
-  };
+  // // Handle smooth scroll to About Us section
+  // const handleAboutUsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault();
+  //   const aboutSection = document.getElementById('about-us-section');
+  //   if (aboutSection) {
+  //     aboutSection.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'start'
+  //     });
+  //   }
+  //   // Close mobile menu if open
+  //   setIsOpen(false);
+  // };
 
   return (
     <footer className="bg-black text-white py-6">
@@ -88,32 +87,56 @@ const Footer: React.FC = () => {
           {/* Navigation Links - Mobile Grid */}
           <div className="grid grid-cols-2 gap-8 mb-6">
             <div className="space-y-3">
-              <a href="/" className="block text-gray-400 hover:text-white transition-colors text-sm">
+              {/* <a href="/" className="block text-gray-400 hover:text-white transition-colors text-sm">
                 Home
-              </a>
-              <a href="/?#about-us" className="block text-gray-400 hover:text-white transition-colors text-sm">
+              </a> */}
+              <Link href="/" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                Home
+              </Link>
+              {/* <a href="/?#about-us" className="block text-gray-400 hover:text-white transition-colors text-sm">
                 About Us
-              </a>
-              <a href="/pages/brands" className="block text-gray-400 hover:text-white transition-colors text-sm">
+              </a> */}
+              <Link href="/?#about-us" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                About Us
+              </Link>
+              {/* <a href="/pages/brands" className="block text-gray-400 hover:text-white transition-colors text-sm">
                 Our Brands
-              </a>
-              <a href="/pages/production" className="block text-gray-400 hover:text-white transition-colors text-sm">
+              </a> */}
+              <Link href="/pages/brands" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                Our Brands
+              </Link>
+              {/* <a href="/pages/production" className="block text-gray-400 hover:text-white transition-colors text-sm">
                 Production
-              </a>
+              </a> */}
+              <Link href="/pages/production" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                Production
+              </Link>
             </div>
             <div className="space-y-3">
-              <a href="/pages/brands/oms" className="block text-gray-400 hover:text-white transition-colors text-sm">
+              {/* <a href="/pages/brands/oms" className="block text-gray-400 hover:text-white transition-colors text-sm">
                 OMS
-              </a>
-              <a href="/pages/brands/onesam" className="block text-gray-400 hover:text-white transition-colors text-sm">
+              </a> */}
+              <Link href="/pages/brands/oms" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                OMS
+              </Link>
+              {/* <a href="/pages/brands/onesam" className="block text-gray-400 hover:text-white transition-colors text-sm">
                 ONESAM
-              </a>
-              <a href="/pages/brands/xpert" className="block text-gray-400 hover:text-white transition-colors text-sm">
+              </a> */}
+              <Link href="/pages/brands/onesam" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                ONESAM
+              </Link>
+              {/* <a href="/pages/brands/xpert" className="block text-gray-400 hover:text-white transition-colors text-sm">
                 X-PERT
-              </a>
-              <a href="/pages/contact" className="block text-gray-400 hover:text-white transition-colors text-sm">
+              </a> */}
+              <Link href="/pages/brands/xpert" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                X-PERT
+              </Link>
+              {/* <a href="/pages/contact" className="block text-gray-400 hover:text-white transition-colors text-sm">
                 Contact us
-              </a>
+              </a> */}
+              <Link href="/pages/contact" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                Contact us
+              </Link>
             </div>
           </div>
 
@@ -176,36 +199,60 @@ const Footer: React.FC = () => {
           {/* Right side - Navigation links */}
           <div className="flex gap-8 flex-shrink-0">
             <div className="flex flex-col gap-2">
-              <a href="/" className="text-gray-400 hover:text-white transition-colors">
+              {/* <a href="/" className="text-gray-400 hover:text-white transition-colors">
                 Home
               </a>
               <a href="/pages/brands/oms" className="text-gray-400 hover:text-white transition-colors">
                 OMS
-              </a>
+              </a> */}
+              <Link href="/" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                Home
+              </Link>
+              <Link href="/pages/brands/oms" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                OMS
+              </Link>
             </div>
             <div className="flex flex-col gap-2">
-              <a href="/#about-us" className="text-gray-400 hover:text-white transition-colors">
+              {/* <a href="/#about-us" className="text-gray-400 hover:text-white transition-colors">
                 About Us
               </a>
               <a href="/pages/brands/onesam" className="text-gray-400 hover:text-white transition-colors">
                 ONESAM
-              </a>
+              </a> */}
+              <Link href="/?#about-us" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                About Us
+              </Link>
+              <Link href="/pages/brands/onesam" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                ONESAM
+              </Link>
             </div>
             <div className="flex flex-col gap-2">
-              <a href="/pages/brands" className="text-gray-400 hover:text-white transition-colors">
+              {/* <a href="/pages/brands" className="text-gray-400 hover:text-white transition-colors">
                 Our Brands
               </a>
               <a href="/pages/brands/xpert" className="text-gray-400 hover:text-white transition-colors">
                 X-PERT
-              </a>
+              </a> */}
+              <Link href="/pages/brands" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                Our Brands
+              </Link>
+              <Link href="/pages/brands/xpert" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                X-PERT
+              </Link>
             </div>
             <div className="flex flex-col gap-2">
-              <a href="/pages/production" className="text-gray-400 hover:text-white transition-colors">
+              {/* <a href="/pages/production" className="text-gray-400 hover:text-white transition-colors">
                 Production
               </a>
               <a href="/pages/contact" className="text-gray-400 hover:text-white transition-colors">
                 Contact us
-              </a>
+              </a> */}
+              <Link href="/pages/production" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                Production
+              </Link>
+              <Link href="/pages/contact" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                Contact us
+              </Link>
             </div>
           </div>
         </div>
