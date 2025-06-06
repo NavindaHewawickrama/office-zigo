@@ -31,7 +31,7 @@ export default function OMS() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <div className="bg-blue-900 relative ">
+        <div className="bg-gradient-to-r from-gray-800 to-gray-900 relative">
           {/* Background circuit pattern */}
           <div className="absolute inset-0 z-0 opacity-30">
             <Image
@@ -44,7 +44,9 @@ export default function OMS() {
           </div>
           <div className="relative z-10 container mx-auto px-4 py-20 text-start text-white">
             {/* Welcome text */}
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">OUR BRANDS</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+              OUR <span className="text-red-500">BRANDS</span>
+            </h1>
 
             {/* Placeholder text - replace with actual content */}
             <p className="max-w-3xl text-lg">
@@ -55,32 +57,32 @@ export default function OMS() {
           </div>
         </div>
 
-        <div className="bg-white py-6">
+        <div className="bg-gray-50 py-6">
           <div className="container mx-auto px-4">
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="p-5">
               <ol className="flex space-x-2">
                 <li>
-                  <Link href="/" className="text-blue-500 hover:underline">
+                  <Link href="/" className="text-red-600 hover:underline hover:text-red-700">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <span className="text-blue-500">/</span>
+                  <span className="text-gray-500">/</span>
                 </li>
                 <li>
                   <Link
                     href="/pages/brands"
-                    className="text-blue-500 hover:underline"
+                    className="text-red-600 hover:underline hover:text-red-700"
                   >
                     Our Brands
                   </Link>
                 </li>
                 <li>
-                  <span className="text-blue-500">/</span>
+                  <span className="text-gray-500">/</span>
                 </li>
                 <li>
-                  <Link href="#" className="text-blue-500 hover:underline">
+                  <Link href="#" className="text-red-600 hover:underline hover:text-red-700">
                     OMS
                   </Link>
                 </li>
@@ -88,17 +90,18 @@ export default function OMS() {
             </nav>
             {/* Heading */}
             <div className="flex flex-col items-center">
-              <div className="mt-8 h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
+              <div className="mt-8 h-[3px] w-11/12 bg-gradient-to-r from-red-400 to-red-600 rounded-md mx-auto"></div>
             </div>
 
             {/* brands */}
             <div className="flex flex-col md:flex-row justify-between mt-10">
               {/* Vertical line */}
-              <div className="w-0.5 bg-gray-200 mx-2 h-1vh mt-10"></div>
+              <div className="w-0.5 bg-gradient-to-b from-red-400 to-gray-400 mx-2 h-1vh mt-10"></div>
               {/* OMS */}
-              <div className="flex-1 text-center justify-center mt-[-50]">
+              <div className="flex-1 text-center p-6 justify-center mt-[-50]">
                 <div className="flex justify-start mb-10">
-                  <div className="w-2xl h-48  relative">
+                  <div className="w-2xl h-48 relative">
+                    {/* Logo section unchanged */}
                     <Image
                       src="/images/Web site images-01.png"
                       alt="Vision Icon"
@@ -108,108 +111,111 @@ export default function OMS() {
                     />
                   </div>
                 </div>
-                <p className="text-gray-600 p-4 max-w-auto text-justify">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                  nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                  veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                  adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                  laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                  minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                  consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                  tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                  wisi enim ad minim veniam, quis nostrud Lorem ipsum dolor sit
-                  amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                  euismod tincidunt ut laoreet dolore magna aliquam erat
-                  volutpat. Ut wisi enim ad minim veniam, quis nostrud Lorem
-                  ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                  erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                  nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                  veniam, quis nostrud
-                </p>
-                <p className="text-gray-600 p-4 max-w-auto text-justify">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                  nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                  veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                  adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                  laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                  minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                  consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                  tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                  wisi enim ad minim veniam, quis nostrud
-                </p>
-                <p className="text-gray-600 p-4 max-w-auto text-justify">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                  nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                  veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                  adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                  laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                  minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                  consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                  tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                  wisi enim ad minim veniam, quis nostrud
-                </p>
+
+                <div className="bg-white rounded-lg shadow-sm border-l-4 border-red-500 p-6 mb-6">
+                  <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                    veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                    minim veniam, quis nostrud Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                    wisi enim ad minim veniam, quis nostrud Lorem ipsum dolor sit
+                    amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat
+                    volutpat. Ut wisi enim ad minim veniam, quis nostrud Lorem
+                    ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                    veniam, quis nostrud
+                  </p>
+                </div>
+
+                <div className="bg-gray-100 rounded-lg p-6 mb-6">
+                  <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                    veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                    minim veniam, quis nostrud Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                    wisi enim ad minim veniam, quis nostrud
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-sm border-r-4 border-gray-500 p-6 mb-6">
+                  <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                    veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                    minim veniam, quis nostrud Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                    wisi enim ad minim veniam, quis nostrud
+                  </p>
+                </div>
+
                 <div>
                   <div className="flex flex-col items-center">
-                    <div className="py-10">
-                      <h1 className="text-gray-700 font-bold text-4xl uppercase tracking-wide">
-                        Products
+                    <div className="p-10">
+                      <h1 className="text-gray-600 font-bold text-4xl uppercase relative">
+                        <span className="text-red-500">PRO</span>DUCTS
+                        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-red-400 to-gray-400 rounded"></div>
                       </h1>
                     </div>
                   </div>
-                  {/* Option 1: Clean Minimal Grid */}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-6 pb-12">
-                    {[
-                      pro1,
-                      pro2,
-                      pro3,
-                      pro4,
-                      pro5,
-                      pro6,
-                      pro7,
-                      pro8,
-                      pro9,
-                      pro10,
-                      pro11,
-                      pro12,
-                    ].map((product, index) => (
-                      <div key={index} className="group cursor-pointer">
-                        <div className="relative w-full aspect-square bg-white border border-gray-100 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-gray-200">
-                          <Image
-                            src={product}
-                            alt={`OMS Product ${index + 1}`}
-                            fill
-                            className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
-                          />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 pb-12">
+                    {[pro1, pro2, pro3, pro4, pro5, pro6, pro7, pro8, pro9, pro10, pro11, pro12].map(
+                      (product, index) => (
+                        <div
+                          key={index}
+                          className="bg-white shadow-md rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl border-t-4 border-red-400 group"
+                        >
+                          <div className="relative w-full h-64 bg-gray-50 group-hover:bg-gray-100 transition-colors duration-300">
+                            <Image
+                              src={product}
+                              alt={`OMS Product ${index + 1}`}
+                              layout="fill"
+                              className="object-contain p-6"
+                            />
+                          </div>
+                          <div className="p-4 text-center bg-gradient-to-r from-gray-50 to-red-50">
+                            <h3 className="text-lg font-semibold text-gray-700 group-hover:text-red-600 transition-colors duration-300">
+                              Product {index + 1}
+                            </h3>
+                          </div>
                         </div>
-                        <div className="mt-3 text-center">
-                          <p className="text-sm text-gray-600 font-medium">
-                            Product {String(index + 1).padStart(2, "0")}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>{" "}
-                </div>{" "}
+                      )
+                    )}
+                  </div>
+                </div>
               </div>
-              <div className="w-0.5 bg-gray-200 mx-2 h-1vh mt-10"></div>
+              <div className="w-0.5 bg-gradient-to-b from-gray-400 to-red-400 mx-2 h-1vh mt-10"></div>
             </div>
           </div>
         </div>

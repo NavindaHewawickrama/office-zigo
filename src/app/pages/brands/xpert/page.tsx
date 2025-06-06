@@ -23,7 +23,7 @@ export default function XPert() {
 
             <main className="flex-grow">
                 {/* Hero Section */}
-                <div className="bg-blue-900 relative ">
+                <div className="bg-gradient-to-r from-blue-800 to-pink-700 relative">
                     {/* Background circuit pattern */}
                     <div className="absolute inset-0 z-0 opacity-30">
                         <Image
@@ -36,7 +36,9 @@ export default function XPert() {
                     </div>
                     <div className="relative z-10 container mx-auto px-4 py-20 text-start text-white">
                         {/* Welcome text */}
-                        <h1 className="text-4xl sm:text-5xl font-bold mb-4">OUR BRANDS</h1>
+                        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+                            OUR <span className="text-pink-300">BRANDS</span>
+                        </h1>
 
                         {/* Placeholder text - replace with actual content */}
                         <p className="max-w-3xl text-lg">
@@ -47,13 +49,13 @@ export default function XPert() {
                     </div>
                 </div>
 
-                <div className="bg-white py-6">
+                <div className="bg-gradient-to-br from-pink-50 to-blue-50 py-6">
                     <div className="container mx-auto px-4">
                         {/* Breadcrumb */}
                         <nav aria-label="Breadcrumb" className="p-5">
                             <ol className="flex space-x-2">
                                 <li>
-                                    <Link href="/" className="text-blue-500 hover:underline">
+                                    <Link href="/" className="text-blue-600 hover:underline hover:text-pink-600 transition-colors">
                                         Home
                                     </Link>
                                 </li>
@@ -63,7 +65,7 @@ export default function XPert() {
                                 <li>
                                     <Link
                                         href="/pages/brands"
-                                        className="text-blue-500 hover:underline"
+                                        className="text-blue-600 hover:underline hover:text-pink-600 transition-colors"
                                     >
                                         Our Brands
                                     </Link>
@@ -72,7 +74,7 @@ export default function XPert() {
                                     <span className="text-blue-500">/</span>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-blue-500 hover:underline">
+                                    <Link href="#" className="text-pink-600 hover:underline hover:text-blue-600 transition-colors">
                                         X-Pert
                                     </Link>
                                 </li>
@@ -80,17 +82,17 @@ export default function XPert() {
                         </nav>
                         {/* Heading */}
                         <div className="flex flex-col items-center">
-                            <div className="mt-8 h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
+                            <div className="mt-8 h-[3px] w-11/12 bg-gradient-to-r from-blue-400 via-pink-400 to-blue-400 rounded-md mx-auto"></div>
                         </div>
 
                         {/* brands */}
                         <div className="flex flex-col md:flex-row justify-between mt-10">
                             {/* Vertical line */}
-                            <div className="w-0.5 bg-gray-200 mx-2 h-1vh mt-10"></div>
+                            <div className="w-0.5 bg-gradient-to-b from-pink-400 to-blue-400 mx-2 h-1vh mt-10"></div>
                             {/* X-PERT */}
                             <div className="flex-1 text-center p-6 justify-center mt-[-50]">
                                 <div className="flex justify-start mb-15">
-                                    <div className="w-2xl h-48  relative">
+                                    <div className="w-2xl h-48 relative">
                                         <Image
                                             src="/images/Web site images-03.png"
                                             alt="Vision Icon"
@@ -100,70 +102,80 @@ export default function XPert() {
                                         />
                                     </div>
                                 </div>
-                                <p className="text-gray-600 p-4 max-w-auto text-justify">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                    veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                    minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                                    consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                    wisi enim ad minim veniam, quis nostrud Lorem ipsum dolor sit
-                                    amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat
-                                    volutpat. Ut wisi enim ad minim veniam, quis nostrud Lorem
-                                    ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                    veniam, quis nostrud
-                                </p>
 
-                                <p className="text-gray-600 p-4 max-w-auto text-justify">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                    veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                    minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                                    consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                    wisi enim ad minim veniam, quis nostrud
-                                </p>
-                                <p className="text-gray-600 p-4 max-w-auto text-justify">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                    nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                    veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                    minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                                    consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                    wisi enim ad minim veniam, quis nostrud
-                                </p>
+                                <div className="bg-white rounded-lg shadow-md border-l-4 border-pink-500 p-6 mb-6">
+                                    <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                        veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
+                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                                        minim veniam, quis nostrud Lorem ipsum dolor sit amet,
+                                        consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                        wisi enim ad minim veniam, quis nostrud Lorem ipsum dolor sit
+                                        amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                        euismod tincidunt ut laoreet dolore magna aliquam erat
+                                        volutpat. Ut wisi enim ad minim veniam, quis nostrud Lorem
+                                        ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                        erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                        veniam, quis nostrud
+                                    </p>
+                                </div>
+
+                                <div className="bg-gradient-to-r from-blue-50 to-pink-50 rounded-lg p-6 mb-6 border border-blue-200">
+                                    <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                        veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
+                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                                        minim veniam, quis nostrud Lorem ipsum dolor sit amet,
+                                        consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                        wisi enim ad minim veniam, quis nostrud
+                                    </p>
+                                </div>
+
+                                <div className="bg-white rounded-lg shadow-md border-r-4 border-blue-500 p-6 mb-6">
+                                    <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                        veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
+                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                                        minim veniam, quis nostrud Lorem ipsum dolor sit amet,
+                                        consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                        wisi enim ad minim veniam, quis nostrud
+                                    </p>
+                                </div>
+
                                 <div>
                                     <div className="flex flex-col items-center">
-                                        <div className="p-20">
-                                            <h1 className="text-gray-500 font-bold text-4xl uppercase">
-                                                Products
+                                        <div className="p-10">
+                                            <h1 className="text-gray-600 font-bold text-4xl uppercase relative">
+                                                <span className="text-pink-500">PRO</span><span className="text-blue-500">DUCTS</span>
+                                                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-pink-400 to-blue-400 rounded"></div>
                                             </h1>
                                         </div>
                                     </div>
@@ -172,18 +184,19 @@ export default function XPert() {
                                             (product, index) => (
                                                 <div
                                                     key={index}
-                                                    className="bg-gray-200 shadow-md rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+                                                    className="bg-white shadow-md rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl border-t-4 border-gradient-to-r from-pink-400 to-blue-400 group"
+                                                    style={{ borderImage: 'linear-gradient(to right, #f472b6, #60a5fa) 1' }}
                                                 >
-                                                    <div className="relative w-full h-64">
+                                                    <div className="relative w-full h-64 bg-gradient-to-br from-pink-50 to-blue-50 group-hover:from-pink-100 group-hover:to-blue-100 transition-all duration-300">
                                                         <Image
                                                             src={product}
-                                                            alt={`product ${index + 1}`}
+                                                            alt={`X-Pert Product ${index + 1}`}
                                                             layout="fill"
                                                             className="object-contain p-6"
                                                         />
                                                     </div>
-                                                    <div className="p-4 text-center">
-                                                        <h3 className="text-lg font-semibold text-gray-700">
+                                                    <div className="p-4 text-center bg-gradient-to-r from-pink-50 to-blue-50">
+                                                        <h3 className="text-lg font-semibold text-gray-700 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-600 group-hover:to-blue-600 transition-all duration-300">
                                                             Product {index + 1}
                                                         </h3>
                                                     </div>
@@ -193,7 +206,7 @@ export default function XPert() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-0.5 bg-gray-200 mx-2 h-1vh mt-10"></div>
+                            <div className="w-0.5 bg-gradient-to-b from-blue-400 to-pink-400 mx-2 h-1vh mt-10"></div>
                         </div>
                     </div>
                 </div>
