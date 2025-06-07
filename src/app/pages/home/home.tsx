@@ -232,7 +232,7 @@ export default function Home() {
                     OUR VISION
                   </h3>
                   <p className="text-gray-600 transform transition-all duration-500 group-hover:text-gray-700 leading-relaxed">
-                    To become the world's leading brand in mobile accessories
+                    To become the world&apos;s leading brand in mobile accessories
                     and electronic equipment, recognized for innovation,
                     superior quality and exceptional customer experience.
                   </p>
