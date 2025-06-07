@@ -53,12 +53,11 @@ export default function Home() {
       </Head>
 
       <Navbar />
-
       <main className="flex-grow">
         {/* Hero Section */}
         <div id="hero-section" className="bg-blue-900 relative">
           {/* Background circuit pattern */}
-          <div className="relative w-full h-full overflow-hidden shadow-2xl bg-white">
+          <div className="relative w-full h-full overflow-hidden bg-white">
             <video
               src="/images/Banner1.mp4"
               className="w-full h-[80%] object-fill"
@@ -69,21 +68,6 @@ export default function Home() {
               controls={false}
             />
           </div>
-
-          <div className="relative z-10 container mx-auto px-4 py-16 text-center text-white">
-            {/* Hero Section */}
-
-            <h1 className="text-xl sm:text-5xl font-bold mb-8">
-              Your trusted partner in mobile phone accessories.
-            </h1>
-
-            {/* Placeholder text - replace with actual content */}
-            <p className="max-w-4xl mx-auto text-lg">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-            </p>
-          </div>
         </div>
 
         {/* Service Icons Section */}
@@ -91,64 +75,70 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-around items-center gap-8">
               {/* Brands */}
-              <div className="text-center">
+              <div className="text-center group">
                 <div className="flex justify-center mb-4">
-                  <div className="w-24 h-24 relative cursor-pointer hover:scale-110 transition duration-300">
+                  <div className="w-24 h-24 relative cursor-pointer transition-all duration-500 ease-out group-hover:scale-125 group-hover:rotate-3 transform">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full opacity-0 group-hover:opacity-20 transition-all duration-500 ease-out transform scale-75 group-hover:scale-100"></div>
+                    <div className="absolute inset-0 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out transform scale-90 group-hover:scale-110 blur-sm"></div>
                     <Link href="/pages/brands">
                       <Image
-                        src="/images/brand.webp"
+                        src="/images/Brands.png"
                         alt="Brands Icon"
                         fill
-                        className="object-contain"
+                        className="object-contain relative z-10 transition-all duration-300 group-hover:brightness-110"
                       />
                     </Link>
                   </div>
                 </div>
-                <h3 className="text-gray-500 uppercase text-xl font-medium">
+                <h3 className="text-gray-500 uppercase text-xl font-medium transition-all duration-300 group-hover:text-blue-600 group-hover:font-semibold group-hover:scale-105 group-hover:tracking-wider">
                   BRANDS
                 </h3>
               </div>
 
               {/* Production */}
-              <div className="text-center">
+              <div className="text-center group">
                 <div className="flex justify-center mb-4">
-                  <div className="w-24 h-24 relative cursor-pointer hover:scale-110 transition duration-300">
+                  <div className="w-24 h-24 relative cursor-pointer transition-all duration-500 ease-out group-hover:scale-125 group-hover:rotate-[-3deg] transform">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full opacity-0 group-hover:opacity-20 transition-all duration-500 ease-out transform scale-75 group-hover:scale-100"></div>
+                    <div className="absolute inset-0 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out transform scale-90 group-hover:scale-110 blur-sm"></div>
                     <Link href="/pages/production">
                       <Image
-                        src="/images/production.avif"
+                        src="/images/Products.png"
                         alt="Production Icon"
                         fill
-                        className="object-contain"
+                        className="object-contain relative z-10 transition-all duration-300 group-hover:brightness-110"
                       />
                     </Link>
                   </div>
                 </div>
-                <h3 className="text-gray-500 uppercase text-xl font-medium">
+                <h3 className="text-gray-500 uppercase text-xl font-medium transition-all duration-300 group-hover:text-blue-600 group-hover:font-semibold group-hover:scale-105 group-hover:tracking-wider">
                   PRODUCTION
                 </h3>
               </div>
 
-              {/* Contact Us */}
-              <div className="text-center">
+              {/* Distribution */}
+              <div className="text-center group">
                 <div className="flex justify-center mb-4">
-                  <div className="w-24 h-24 relative cursor-pointer hover:scale-110 transition duration-300">
-                    <Link href="/pages/contact">
+                  <div className="w-24 h-24 relative cursor-pointer transition-all duration-500 ease-out group-hover:scale-125 group-hover:rotate-3 transform">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full opacity-0 group-hover:opacity-20 transition-all duration-500 ease-out transform scale-75 group-hover:scale-100"></div>
+                    <div className="absolute inset-0 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out transform scale-90 group-hover:scale-110 blur-sm"></div>
+                    <Link href="/pages/production#distribution-network">
                       <Image
-                        src="/images/contact.png"
+                        src="/images/Distribution.png"
                         alt="Contact Us Icon"
                         fill
-                        className="object-contain"
+                        className="object-contain relative z-10 transition-all duration-300 group-hover:brightness-110"
                       />
                     </Link>
                   </div>
                 </div>
-                <h3 className="text-gray-500 uppercase text-xl font-medium">
-                  CONTACT US
+                <h3 className="text-gray-500 uppercase text-xl font-medium transition-all duration-300 group-hover:text-blue-600 group-hover:font-semibold group-hover:scale-105 group-hover:tracking-wider">
+                  DISTRIBUTION
                 </h3>
               </div>
             </div>
             <div className="container mx-auto px-4 sm:px-8 md:px-16">
-              <div className="h-[3px] w-full bg-blue-200 rounded-md mt-4"></div>
+              <div className="h-[3px] w-full bg-blue-200 rounded-md mt-4 transition-all duration-500 hover:bg-gradient-to-r hover:from-blue-400 hover:via-purple-500 hover:to-orange-400 hover:h-[4px] hover:shadow-lg"></div>
             </div>
           </div>
         </div>
@@ -242,7 +232,7 @@ export default function Home() {
                     OUR VISION
                   </h3>
                   <p className="text-gray-600 transform transition-all duration-500 group-hover:text-gray-700 leading-relaxed">
-                    To become the world&apos;s leading brand in mobile accessories
+                    To become the world's leading brand in mobile accessories
                     and electronic equipment, recognized for innovation,
                     superior quality and exceptional customer experience.
                   </p>
@@ -554,23 +544,43 @@ export default function Home() {
         </div>
 
         {/* Milestones */}
-        {/* <div className="bg-white py-5 flex flex-col items-center">
+        <div className="bg-gradient-to-br from-pink-100 via-purple-100 via-blue-100 via-cyan-100 to-blue-100 py-5 flex flex-col items-center relative overflow-hidden">
+          {/* Animated background elements */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute top-20 right-20 w-40 h-40 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute bottom-20 left-1/4 w-36 h-36 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute bottom-10 right-1/3 w-28 h-28 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+          </div>
           <div className="container mx-auto px-4 sm:px-8 md:px-16">
-            <div className="h-[3px] w-full bg-blue-200 rounded-md mt-4"></div>
-          </div> */}
-        {/* <div className="container mx-auto">
-            <h2 className="text-gray-500 text-4xl font-medium text-center mb-5 pt-12">
+            <div
+              className="h-[3px] w-full bg-blue-200 rounded-md mt-4 animate-pulse"
+              style={{
+                animation: 'slideInLeft 1.2s ease-out forwards, pulse 2s infinite 1.2s'
+              }}
+            ></div>
+          </div>
+          <div className="container mx-auto">
+            <h2
+              className="text-gray-500 text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-5 pt-12 opacity-0"
+              style={{
+                animation: 'fadeInUp 1s ease-out 0.3s forwards'
+              }}
+            >
               MILESTONES
             </h2>
-            <div className="flex flex-col items-center mb-10"> */}
-        {/* <div className="relative h-[500px] w-lvw"> */}
-        {/* SVG Graph Path */}
-        {/* <svg
+            <div className="flex flex-col items-center mb-10">
+              <div className="relative h-[300px] sm:h-[400px] md:h-[500px] w-full max-w-7xl">
+                {/* SVG Graph Path */}
+                <svg
                   viewBox="0 0 1200 500"
-                  className="absolute w-full h-full"
+                  className="absolute w-full h-full opacity-0"
                   preserveAspectRatio="xMidYMid meet"
-                > */}
-        {/* <defs>
+                  style={{
+                    animation: 'fadeIn 1.5s ease-out 0.8s forwards'
+                  }}
+                >
+                  <defs>
                     <marker
                       id="arrowhead"
                       markerWidth="10"
@@ -591,20 +601,34 @@ export default function Home() {
                       <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.9" />
                       <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
                     </linearGradient>
-                  </defs> */}
-        {/* <path
+                  </defs>
+
+                  {/* Animated path stroke */}
+                  <path
                     d="M150,450 C500,450 900,400,1150,150"
                     fill="none"
                     stroke="#3B82F6"
                     strokeWidth="2"
+                    strokeDasharray="2000"
+                    strokeDashoffset="2000"
+                    style={{
+                      animation: 'drawPath 3s ease-in-out 1.2s forwards'
+                    }}
                   />
+
+                  {/* Gradient fill with delayed animation */}
                   <path
                     d="M150,450 C500,450 900,400,1150,150 L1150,500 L150,500 Z"
                     fill="url(#curveFillGradient)"
                     stroke="none"
-                  /> */}
-        {/* Milestone Bubbles */}
-        {/* {[
+                    opacity="0"
+                    style={{
+                      animation: 'fadeIn 1s ease-out 3.5s forwards'
+                    }}
+                  />
+
+                  {/* Milestone Bubbles */}
+                  {[
                     {
                       x: 150,
                       y: 450,
@@ -621,8 +645,7 @@ export default function Home() {
                       x: 410,
                       y: 438,
                       year: "2014",
-                      label:
-                        "INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS",
+                      label: "INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS",
                     },
                     {
                       x: 560,
@@ -662,306 +685,92 @@ export default function Home() {
                     },
                   ].map((milestone, i) => {
                     // Calculate tooltip position - place above bubble with minimum distance from top
-                    // const tooltipY = Math.max(milestone.y - 140, 40);
-                    // const arrowEndY = milestone.y - 60;
+                    const tooltipY = Math.max(milestone.y - 140, 40);
+                    const arrowEndY = milestone.y - 60;
 
-                    // // Determine tooltip dimensions based on text length
-                    // const isLongText = milestone.label.length > 35;
-                    // const tooltipWidth = isLongText ? 280 : 200;
-                    // const tooltipHeight = isLongText ? 60 : 40;
-                    // const tooltipX = milestone.x - tooltipWidth / 2;
+                    // Determine tooltip dimensions based on text length
+                    const isLongText = milestone.label.length > 35;
+                    const tooltipWidth = isLongText ? 280 : 200;
+                    const tooltipHeight = isLongText ? 60 : 40;
 
-                    // return (
-                    //  <g key={i} className="group">
-                    //   //   {/* Bubble */}
-        {/* <circle
-                    //   //     cx={milestone.x}
-                    //   //     cy={milestone.y}
-                    //   //     r="10"
-                    //   //     className="fill-blue-200 stroke-blue-200 stroke-2 cursor-pointer group hover:fill-blue-500 hover:stroke-blue-400 hover:cursor-pointer duration-200 ease-in-out"
-                    //   //     style={{ filter: "drop-shadow(0 0 6px #3B82F6)" }}
-                    //   //   /> */}
-        {/* Year */}
-        {/* <text
-                    //   //     x={milestone.x}
-                    //   //     y={milestone.y + 45}
-                    //   //     textAnchor="middle"
-                    //   //     className="fill-blue-700 text-sm font-semibold"
-                    //   //   >
-                    //   //     {milestone.year}
-                    //   //   </text> */}
-        {/* Tooltip Group */}
-        {/* <g className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"> */}
-        {/* Arrow */}
-        {/* <path
-                    //   //       d={`M${milestone.x},${tooltipY + tooltipHeight} L${milestone.x
-                    //   //         },${arrowEndY}`}
-                    //   //       stroke="#3B82F6"
-                    //   //       strokeWidth="2"
-                    //   //       markerEnd="url(#arrowhead)"
-                    //   //     /> */}
-        {/* Tooltip Background */}
-        {/* <rect
-                    //   //       x={tooltipX}
-                    //   //       y={tooltipY}
-                    //   //       width={tooltipWidth}
-                    //   //       height={tooltipHeight}
-                    //   //       rx="8"
-                    //   //       ry="8"
-                    //   //       fill="white"
-                    //   //       stroke="#3B82F6"
-                    //   //       strokeWidth="1"
-                    //   //       className="drop-shadow-md"
-                    //   //     /> */}
-        {/* Tooltip Text */}
-        {/* <foreignObject
-                    //   //       x={tooltipX + 8}
-                    //   //       y={tooltipY + 8}
-                    //   //       width={tooltipWidth - 16}
-                    //   //       height={tooltipHeight - 16}
-                    //   //     >
-                    //   //       <div className="text-xs font-medium text-blue-600 text-center px-2 leading-tight flex items-center justify-center h-full">
-                    //   //         {milestone.label}
-                    //   //       </div>
-                    //   //     </foreignObject> */}
-        {/* </g> */}
-        {/* </g> */}
-        {/* );
+                    // Constrain tooltip X position to prevent going off-screen
+                    let tooltipX = milestone.x - tooltipWidth / 2;
+                    const minX = 20;
+                    const maxX = 1180 - tooltipWidth;
+                    tooltipX = Math.max(minX, Math.min(maxX, tooltipX));
+
+                    return (
+                      <g key={i} className="group">
+                        {/* Bubble with staggered animation */}
+                        <circle
+                          cx={milestone.x}
+                          cy={milestone.y}
+                          r="10"
+                          className="fill-blue-200 stroke-blue-200 stroke-2 cursor-pointer group hover:fill-blue-500 hover:stroke-blue-400 hover:cursor-pointer duration-200 ease-in-out opacity-0"
+                          style={{
+                            filter: "drop-shadow(0 0 6px #3B82F6)",
+                            animation: `bubbleIn 0.6s ease-out ${2 + i * 0.2}s forwards`
+                          }}
+                        />
+
+                        {/* Year with staggered animation */}
+                        <text
+                          x={milestone.x}
+                          y={milestone.y + 45}
+                          textAnchor="middle"
+                          className="fill-blue-700 text-xs sm:text-sm font-semibold opacity-0"
+                          style={{
+                            animation: `fadeInUp 0.5s ease-out ${2.3 + i * 0.2}s forwards`
+                          }}
+                        >
+                          {milestone.year}
+                        </text>
+
+                        {/* Tooltip Group with enhanced animations */}
+                        <g className="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform group-hover:scale-105">
+                          {/* Arrow */}
+                          <path
+                            d={`M${milestone.x},${tooltipY + tooltipHeight} L${milestone.x},${arrowEndY}`}
+                            stroke="#3B82F6"
+                            strokeWidth="2"
+                            markerEnd="url(#arrowhead)"
+                          />
+
+                          {/* Tooltip Background with slide up effect */}
+                          <rect
+                            x={tooltipX}
+                            y={tooltipY}
+                            width={tooltipWidth}
+                            height={tooltipHeight}
+                            rx="8"
+                            ry="8"
+                            fill="white"
+                            stroke="#3B82F6"
+                            strokeWidth="1"
+                            className="drop-shadow-lg transform group-hover:translate-y-[-5px] transition-transform duration-300"
+                          />
+
+                          {/* Tooltip Text */}
+                          <foreignObject
+                            x={tooltipX + 8}
+                            y={tooltipY + 8}
+                            width={tooltipWidth - 16}
+                            height={tooltipHeight - 16}
+                          >
+                            <div className="text-xs font-medium text-blue-600 text-center px-2 leading-tight flex items-center justify-center h-full transform group-hover:text-blue-800 transition-colors duration-300">
+                              {milestone.label}
+                            </div>
+                          </foreignObject>
+                        </g>
+                      </g>
+                    );
                   })}
-                </svg> */}
-        {/* </div> */}
-        {/* </div> */}
-        {/* </div> */}
-        {/* </div> */}
+                </svg>
+              </div>
+            </div>
+          </div>
 
-        {/* Milestones */}
-<div className="bg-gradient-to-br from-pink-100 via-purple-100 via-blue-100 via-cyan-100 to-blue-100 py-5 flex flex-col items-center relative overflow-hidden">
-  {/* Animated background elements */}
-  <div className="absolute inset-0 opacity-20">
-    <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full blur-xl animate-pulse"></div>
-    <div className="absolute top-20 right-20 w-40 h-40 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-    <div className="absolute bottom-20 left-1/4 w-36 h-36 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-    <div className="absolute bottom-10 right-1/3 w-28 h-28 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-  </div>
-  <div className="container mx-auto px-4 sm:px-8 md:px-16">
-    <div 
-      className="h-[3px] w-full bg-blue-200 rounded-md mt-4 animate-pulse"
-      style={{
-        animation: 'slideInLeft 1.2s ease-out forwards, pulse 2s infinite 1.2s'
-      }}
-    ></div>
-  </div>
-  <div className="container mx-auto">
-    <h2 
-      className="text-gray-500 text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-5 pt-12 opacity-0"
-      style={{
-        animation: 'fadeInUp 1s ease-out 0.3s forwards'
-      }}
-    >
-      MILESTONES
-    </h2>
-    <div className="flex flex-col items-center mb-10">
-      <div className="relative h-[300px] sm:h-[400px] md:h-[500px] w-full max-w-7xl">
-        {/* SVG Graph Path */}
-        <svg
-          viewBox="0 0 1200 500"
-          className="absolute w-full h-full opacity-0"
-          preserveAspectRatio="xMidYMid meet"
-          style={{
-            animation: 'fadeIn 1.5s ease-out 0.8s forwards'
-          }}
-        >
-          <defs>
-            <marker
-              id="arrowhead"
-              markerWidth="10"
-              markerHeight="7"
-              refX="0"
-              refY="3.5"
-              orient="auto"
-            >
-              <polygon points="0 0, 5 3.5, 0 7" fill="#3B82F6" />
-            </marker>
-            <linearGradient
-              id="curveFillGradient"
-              x1="0"
-              y1="0"
-              x2="0"
-              y2="1"
-            >
-              <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.9" />
-              <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          
-          {/* Animated path stroke */}
-          <path
-            d="M150,450 C500,450 900,400,1150,150"
-            fill="none"
-            stroke="#3B82F6"
-            strokeWidth="2"
-            strokeDasharray="2000"
-            strokeDashoffset="2000"
-            style={{
-              animation: 'drawPath 3s ease-in-out 1.2s forwards'
-            }}
-          />
-          
-          {/* Gradient fill with delayed animation */}
-          <path
-            d="M150,450 C500,450 900,400,1150,150 L1150,500 L150,500 Z"
-            fill="url(#curveFillGradient)"
-            stroke="none"
-            opacity="0"
-            style={{
-              animation: 'fadeIn 1s ease-out 3.5s forwards'
-            }}
-          />
-          
-          {/* Milestone Bubbles */}
-          {[
-            {
-              x: 150,
-              y: 450,
-              year: "2006",
-              label: "FOUND THE COMPANY",
-            },
-            {
-              x: 280,
-              y: 445,
-              year: "2014",
-              label: "INCORPORATE THE COMPANY",
-            },
-            {
-              x: 410,
-              y: 438,
-              year: "2014",
-              label: "INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS",
-            },
-            {
-              x: 560,
-              y: 420,
-              year: "2014",
-              label: "LAUNCH OMS BRAND TO THE SRILANKA MARKET",
-            },
-            {
-              x: 700,
-              y: 390,
-              year: "2015",
-              label: "START DEALER NETWORK OPERATION",
-            },
-            {
-              x: 820,
-              y: 355,
-              year: "2016",
-              label: "LAUNCH THE ONESAM BRAND",
-            },
-            {
-              x: 930,
-              y: 305,
-              year: "2019",
-              label: "MANUFACTURING PLANT STARTED",
-            },
-            {
-              x: 1020,
-              y: 255,
-              year: "2020",
-              label: "EXPLORE INDONESIAN MARKET",
-            },
-            {
-              x: 1142,
-              y: 160,
-              year: "2022",
-              label: "EXPLORE UAE MARKET",
-            },
-          ].map((milestone, i) => {
-            // Calculate tooltip position - place above bubble with minimum distance from top
-            const tooltipY = Math.max(milestone.y - 140, 40);
-            const arrowEndY = milestone.y - 60;
-
-            // Determine tooltip dimensions based on text length
-            const isLongText = milestone.label.length > 35;
-            const tooltipWidth = isLongText ? 280 : 200;
-            const tooltipHeight = isLongText ? 60 : 40;
-            
-            // Constrain tooltip X position to prevent going off-screen
-            let tooltipX = milestone.x - tooltipWidth / 2;
-            const minX = 20;
-            const maxX = 1180 - tooltipWidth;
-            tooltipX = Math.max(minX, Math.min(maxX, tooltipX));
-
-            return (
-              <g key={i} className="group">
-                {/* Bubble with staggered animation */}
-                <circle
-                  cx={milestone.x}
-                  cy={milestone.y}
-                  r="10"
-                  className="fill-blue-200 stroke-blue-200 stroke-2 cursor-pointer group hover:fill-blue-500 hover:stroke-blue-400 hover:cursor-pointer duration-200 ease-in-out opacity-0"
-                  style={{ 
-                    filter: "drop-shadow(0 0 6px #3B82F6)",
-                    animation: `bubbleIn 0.6s ease-out ${2 + i * 0.2}s forwards`
-                  }}
-                />
-                
-                {/* Year with staggered animation */}
-                <text
-                  x={milestone.x}
-                  y={milestone.y + 45}
-                  textAnchor="middle"
-                  className="fill-blue-700 text-xs sm:text-sm font-semibold opacity-0"
-                  style={{
-                    animation: `fadeInUp 0.5s ease-out ${2.3 + i * 0.2}s forwards`
-                  }}
-                >
-                  {milestone.year}
-                </text>
-                
-                {/* Tooltip Group with enhanced animations */}
-                <g className="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform group-hover:scale-105">
-                  {/* Arrow */}
-                  <path
-                    d={`M${milestone.x},${tooltipY + tooltipHeight} L${milestone.x},${arrowEndY}`}
-                    stroke="#3B82F6"
-                    strokeWidth="2"
-                    markerEnd="url(#arrowhead)"
-                  />
-                  
-                  {/* Tooltip Background with slide up effect */}
-                  <rect
-                    x={tooltipX}
-                    y={tooltipY}
-                    width={tooltipWidth}
-                    height={tooltipHeight}
-                    rx="8"
-                    ry="8"
-                    fill="white"
-                    stroke="#3B82F6"
-                    strokeWidth="1"
-                    className="drop-shadow-lg transform group-hover:translate-y-[-5px] transition-transform duration-300"
-                  />
-                  
-                  {/* Tooltip Text */}
-                  <foreignObject
-                    x={tooltipX + 8}
-                    y={tooltipY + 8}
-                    width={tooltipWidth - 16}
-                    height={tooltipHeight - 16}
-                  >
-                    <div className="text-xs font-medium text-blue-600 text-center px-2 leading-tight flex items-center justify-center h-full transform group-hover:text-blue-800 transition-colors duration-300">
-                      {milestone.label}
-                    </div>
-                  </foreignObject>
-                </g>
-              </g>
-            );
-          })}
-        </svg>
-      </div>
-    </div>
-  </div>
-  
-  <style jsx>{`
+          <style jsx>{`
     @keyframes slideInLeft {
       from {
         transform: translateX(-100%);
@@ -1024,7 +833,7 @@ export default function Home() {
       }
     }
   `}</style>
-</div>
+        </div>
 
 
       </main>
