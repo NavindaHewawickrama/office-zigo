@@ -23,39 +23,53 @@ export default function XPert() {
 
             <main className="flex-grow">
                 {/* Hero Section */}
-                <div className="bg-gradient-to-r from-blue-800 to-pink-700 relative">
+                <div className="relative">
                     {/* Background circuit pattern */}
-                    <div className="absolute inset-0 z-0 opacity-30">
-                        <Image
-                            src="/images/production_monitoring.jpg"
-                            alt="Circuit Board Background"
-                            fill
-                            className="object-cover"
-                            priority
+                    <div className="relative w-full h-full overflow-hidden bg-white">
+                        <video
+                            src="/images/Commonbanner.mp4"
+                            className="w-full h-[80%] object-fill"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            controls={false}
                         />
                     </div>
-                    <div className="relative z-10 container mx-auto px-4 py-20 text-start text-white">
+                    <div className="relative z-10 container mx-auto px-4 py-10 text-start text-black">
                         {/* Welcome text */}
                         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
                             OUR <span className="text-pink-300">BRANDS</span>
                         </h1>
 
                         {/* Placeholder text - replace with actual content */}
-                        <p className="max-w-3xl text-lg">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                        <p className="text-lg">
+                            <strong>OMS, ONESAM, and XPERT</strong> are three distinct mobile
+                            accessory brands under Zigo Technology (Pvt) Ltd, each tailored to
+                            meet different user needs. <strong>OMS</strong> focuses on
+                            everyday reliability and affordability, offering a wide range of
+                            durable mobile accessories suited for general users.{" "}
+                            <strong>ONESAM</strong> stands out with its international appeal
+                            and stylish, ergonomic designs, delivering premium-quality
+                            products that blend innovation with user comfort.{" "}
+                            <strong>XPERT</strong> targets performance-driven users, providing
+                            fast-charging, high-safety accessories built with advanced
+                            technology and sleek aesthetics—ideal for professionals and tech
+                            enthusiasts seeking speed, durability, and efficiency.
                         </p>
                     </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-pink-50 to-blue-50 py-6">
+                <div className="bg-gray-50 py-3">
                     <div className="container mx-auto px-4">
                         {/* Breadcrumb */}
                         <nav aria-label="Breadcrumb" className="p-5">
                             <ol className="flex space-x-2">
                                 <li>
-                                    <Link href="/" className="text-blue-600 hover:underline hover:text-pink-600 transition-colors">
+                                    <Link
+                                        href="/"
+                                        className="text-blue-600 hover:underline hover:text-pink-600 transition-colors"
+                                    >
                                         Home
                                     </Link>
                                 </li>
@@ -74,7 +88,10 @@ export default function XPert() {
                                     <span className="text-blue-500">/</span>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-pink-600 hover:underline hover:text-blue-600 transition-colors">
+                                    <Link
+                                        href="#"
+                                        className="text-pink-600 hover:underline hover:text-blue-600 transition-colors"
+                                    >
                                         X-Pert
                                     </Link>
                                 </li>
@@ -105,68 +122,39 @@ export default function XPert() {
 
                                 <div className="bg-white rounded-lg shadow-md border-l-4 border-pink-500 p-6 mb-6">
                                     <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                        veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                        minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                                        consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                        wisi enim ad minim veniam, quis nostrud Lorem ipsum dolor sit
-                                        amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                        euismod tincidunt ut laoreet dolore magna aliquam erat
-                                        volutpat. Ut wisi enim ad minim veniam, quis nostrud Lorem
-                                        ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                        erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                        veniam, quis nostrud
-                                    </p>
-                                </div>
-
-                                <div className="bg-gradient-to-r from-blue-50 to-pink-50 rounded-lg p-6 mb-6 border border-blue-200">
-                                    <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                        veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                        minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                                        consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                        wisi enim ad minim veniam, quis nostrud
+                                        XPERT is the performance-driven mobile accessory line from
+                                        Zigo Technology (Pvt) Ltd., engineered for users who refuse
+                                        to compromise on speed, safety, and style. Every charger,
+                                        cable, power bank, and audio device is built on rigorous R
+                                        &D and certified components, ensuring rapid charging, stable
+                                        connectivity, and long-life durability that stand up to
+                                        everyday wear—whether you’re commuting across town or
+                                        crossing borders for business.
                                     </p>
                                 </div>
 
                                 <div className="bg-white rounded-lg shadow-md border-r-4 border-blue-500 p-6 mb-6">
                                     <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                        veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                        minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                                        consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                        wisi enim ad minim veniam, quis nostrud
+                                        Beyond raw specs, XPERT products reflect a design language
+                                        that blends minimal aesthetics with practical ergonomics.
+                                        Sleek anodized finishes, reinforced braided cables, and
+                                        compact, travel-friendly form factors make each piece as
+                                        visually appealing as it is functional, while smart-chip
+                                        protection shields both devices and users from over-voltage,
+                                        overheating, and short circuits.
+                                    </p>
+                                </div>
+
+                                <div className="bg-white rounded-lg shadow-md border-l-4 border-pink-500 p-6 mb-6">
+                                    <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
+                                        From flagship-grade USB-C PD chargers to Bluetooth earphones
+                                        tuned for crisp highs and punchy bass, XPERT’s portfolio is
+                                        continually expanding alongside new mobile standards. Backed
+                                        by Zigo’s country-wide service network and stringent quality
+                                        assurance, the brand promises not just accessories, but a
+                                        reliable ecosystem that empowers professionals, gamers, and
+                                        everyday users to stay effortlessly connected—anytime,
+                                        anywhere.
                                     </p>
                                 </div>
 
@@ -174,7 +162,8 @@ export default function XPert() {
                                     <div className="flex flex-col items-center">
                                         <div className="p-10">
                                             <h1 className="text-gray-600 font-bold text-4xl uppercase relative">
-                                                <span className="text-pink-500">PRO</span><span className="text-blue-500">DUCTS</span>
+                                                <span className="text-pink-500">PRO</span>
+                                                <span className="text-blue-500">DUCTS</span>
                                                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-pink-400 to-blue-400 rounded"></div>
                                             </h1>
                                         </div>
@@ -185,7 +174,10 @@ export default function XPert() {
                                                 <div
                                                     key={index}
                                                     className="bg-white shadow-md rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl border-t-4 border-gradient-to-r from-pink-400 to-blue-400 group"
-                                                    style={{ borderImage: 'linear-gradient(to right, #f472b6, #60a5fa) 1' }}
+                                                    style={{
+                                                        borderImage:
+                                                            "linear-gradient(to right, #f472b6, #60a5fa) 1",
+                                                    }}
                                                 >
                                                     <div className="relative w-full h-64 bg-gradient-to-br from-pink-50 to-blue-50 group-hover:from-pink-100 group-hover:to-blue-100 transition-all duration-300">
                                                         <Image

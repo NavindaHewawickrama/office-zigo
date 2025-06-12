@@ -35,29 +35,18 @@ export default function Brands() {
 
             <main className="flex-grow">
                 {/* Hero Section */}
-                <div className="bg-blue-900 relative">
+                <div>
                     {/* Background circuit pattern */}
-                    <div className="absolute inset-0 z-0 opacity-30">
-                        <Image
-                            src="/images/production_monitoring.jpg"
-                            alt="Circuit Board Background"
-                            fill
-                            className="object-cover"
-                            priority
+                    <div className="relative w-full h-full overflow-hidden bg-white">
+                        <video
+                            src="/images/Brandstopbanner.mp4"
+                            className="w-full h-[80%] object-fill"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            controls={false}
                         />
-                    </div>
-                    <div className="relative z-10 container mx-auto px-4 py-12 md:py-16 text-start text-white">
-                        {/* Welcome text */}
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 mt-4 md:mt-8">
-                            OUR BRANDS
-                        </h1>
-
-                        {/* Placeholder text */}
-                        <p className="max-w-3xl text-base md:text-lg">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                        </p>
                     </div>
                 </div>
 
@@ -121,10 +110,9 @@ export default function Brands() {
                                         OMS
                                     </h3>
                                     <p className="text-gray-600 px-4 text-sm">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                        magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                        quis nostrud
+                                        <strong>OMS</strong> focuses on everyday reliability and
+                                        affordability, offering a wide range of durable mobile
+                                        accessories suited for general users.
                                     </p>
                                     <button
                                         className="border-solid border-2 border-red-400 px-4 py-2 rounded-2xl text-red-400 mt-4 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-105 transition-all duration-300"
@@ -153,10 +141,10 @@ export default function Brands() {
                                         ONESAM
                                     </h3>
                                     <p className="text-gray-600 px-4 text-sm">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                        magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                        quis nostrud
+                                        <strong>ONESAM</strong> stands out with its international
+                                        appeal and stylish, ergonomic designs, delivering
+                                        premium-quality products that blend innovation with user
+                                        comfort.
                                     </p>
                                     <button
                                         className="border-solid border-2 border-black px-4 py-2 rounded-2xl text-black mt-4 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-105 transition-all duration-300"
@@ -185,10 +173,10 @@ export default function Brands() {
                                         X-PERT
                                     </h3>
                                     <p className="text-gray-600 px-4 text-sm">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                        magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                        quis nostrud
+                                        <strong>XPERT</strong> targets performance-driven users, providing
+                                        fast-charging, high-safety accessories built with advanced
+                                        technology and sleek aesthetics—ideal for professionals and
+                                        tech enthusiasts seeking speed, durability, and efficiency.
                                     </p>
                                     <button
                                         className="border-solid border-2 border-pink-400 px-4 py-2 rounded-2xl text-pink-400 mt-4 hover:bg-gray-200 hover:cursor-pointer hover:ring-2 hover:scale-105 transition-all duration-300"

@@ -7,12 +7,11 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Production() {
-  
   useEffect(() => {
     if (window.location.hash) {
       const element = document.querySelector(window.location.hash);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, []);
@@ -31,39 +30,23 @@ export default function Production() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <div className="bg-blue-900 relative">
+        <div className="relative">
           {/* Background manufacturing image */}
-          <div className="absolute inset-0 z-0 h-70 sm:h-100">
-            <Image
-              src="/images/production_background.webp"
-              alt="Manufacturing Floor Background"
-              fill
-              className="object-cover"
-              priority
+          <div className="relative w-full h-full overflow-hidden bg-white">
+            <video
+              src="/images/ProductiontopBanner.mp4"
+              className="w-full h-[80%] object-fill"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls={false}
             />
-          </div>
-
-          <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-16 text-start text-white">
-            {/* Header text */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 mt-3">
-              PRODUCTION AND DISTRIBUTION
-            </h1>
-
-            {/* Actual content about production */}
-            <p className="max-w-4xl text-sm sm:text-xl">
-              Zigo Technology (Private) Limited follows a{" "}
-              <span className="font-bold">direct distribution </span>
-              model to supply its brands{" "}
-              <span className="font-bold">OMS, Onesam, and Xpert </span>across
-              Sri Lanka. Instead of using an in-house distribution team, the
-              company partners with a trusted courier service, to ensure fast
-              and reliable product delivery nationwide.
-            </p>
           </div>
         </div>
 
         {/* Manufacturing Plant Section */}
-        <div className="bg-white py-8 sm:py-12 mt-2 md:mt-20">
+        <div className="bg-white py-8 sm:py-12 mt-2 md:mt-6">
           {/* Breadcrumb */}
           <nav
             aria-label="Breadcrumb"
@@ -93,7 +76,7 @@ export default function Production() {
           </nav>
 
           {/* Decorative Line */}
-          <div className="container mx-auto px-4 sm:px-8 md:px-16">
+          <div className="container mx-auto px-4 sm:px-8 md:px-16 mt-4">
             <div className="h-[3px] w-full bg-blue-200 rounded-md"></div>
           </div>
 
@@ -498,12 +481,16 @@ export default function Production() {
               </h2>
             </div>
 
-            <div className="relative w-full h-64 sm:h-96 md:h-128">
-              <Image
-                src="/images/distribution_network.jpg"
-                alt="Sri Lanka Distribution Network Map"
-                fill
-              />
+            <div className="relative w-full overflow-hidden">
+              <div className="relative w-full" style={{ paddingBottom: "60%" }}>
+                <Image
+                  src="/images/SRILANKAMAP.png"
+                  alt="Sri Lanka Distribution Network Map"
+                  fill
+                  className="object-contain p-4"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -521,9 +508,9 @@ export default function Production() {
 
             <div className="flex flex-col md:flex-row gap-8">
               {/* Middle East Map */}
-              <div className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-96">
+              <div className="relative w-full md:w-3/4 h-72 sm:h-90 md:h-128">
                 <Image
-                  src="/images/international_distribution.png"
+                  src="/images/UAEMAP.png"
                   alt="International Distribution Network Map"
                   fill
                   className="object-contain"
@@ -580,3 +567,5 @@ export default function Production() {
     </div>
   );
 }
+
+

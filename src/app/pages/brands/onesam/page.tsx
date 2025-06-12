@@ -3,10 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import pro1 from "../../../../../public/images/products/pro1.png";
-import pro2 from "../../../../../public/images/products/pro2.png";
-import pro3 from "../../../../../public/images/products/pro3.png";
-import pro4 from "../../../../../public/images/products/pro4.png";
+import pro1 from "../../../../../public/images/products/ONESAM/Airpods.png";
+import pro2 from "../../../../../public/images/products/ONESAM/Cable.png";
+import pro3 from "../../../../../public/images/products/ONESAM/Car cha.png";
+import pro4 from "../../../../../public/images/products/ONESAM/Chargers.png";
+import pro5 from "../../../../../public/images/products/ONESAM/Earphone.png";
+import pro6 from "../../../../../public/images/products/ONESAM/Neckband.png";
+import pro7 from "../../../../../public/images/products/ONESAM/Phone holder.png";
+import pro8 from "../../../../../public/images/products/ONESAM/Power banks.png";
+import pro9 from "../../../../../public/images/products/ONESAM/Power extentions.png";
+import pro10 from "../../../../../public/images/products/ONESAM/Selfie Sticks.png";
+import pro11 from "../../../../../public/images/products/ONESAM/Speakers.png";
 
 export default function OneSam() {
     return (
@@ -23,39 +30,53 @@ export default function OneSam() {
 
             <main className="flex-grow">
                 {/* Hero Section */}
-                <div className="bg-gradient-to-r from-gray-800 to-gray-900 relative">
+                <div className="relative">
                     {/* Background circuit pattern */}
-                    <div className="absolute inset-0 z-0 opacity-30">
-                        <Image
-                            src="/images/production_monitoring.jpg"
-                            alt="Circuit Board Background"
-                            fill
-                            className="object-cover"
-                            priority
+                    <div className="relative w-full h-full overflow-hidden bg-white">
+                        <video
+                            src="/images/Commonbanner.mp4"
+                            className="w-full h-[80%] object-fill"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            controls={false}
                         />
                     </div>
-                    <div className="relative z-10 container mx-auto px-4 py-20 text-start text-white">
+                    <div className="relative z-10 container mx-auto px-4 py-10 text-start text-black">
                         {/* Welcome text */}
                         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
                             OUR <span className="text-orange-500">BRANDS</span>
                         </h1>
 
                         {/* Placeholder text - replace with actual content */}
-                        <p className="max-w-3xl text-lg">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                        <p className="text-lg">
+                            <strong>OMS, ONESAM, and XPERT</strong> are three distinct mobile
+                            accessory brands under Zigo Technology (Pvt) Ltd, each tailored to
+                            meet different user needs. <strong>OMS</strong> focuses on
+                            everyday reliability and affordability, offering a wide range of
+                            durable mobile accessories suited for general users.{" "}
+                            <strong>ONESAM</strong> stands out with its international appeal
+                            and stylish, ergonomic designs, delivering premium-quality
+                            products that blend innovation with user comfort.{" "}
+                            <strong>XPERT</strong> targets performance-driven users, providing
+                            fast-charging, high-safety accessories built with advanced
+                            technology and sleek aesthetics—ideal for professionals and tech
+                            enthusiasts seeking speed, durability, and efficiency.
                         </p>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 py-6">
+                <div className="bg-gray-50 py-4">
                     <div className="container mx-auto px-4">
                         {/* Breadcrumb */}
                         <nav aria-label="Breadcrumb" className="p-5">
                             <ol className="flex space-x-2">
                                 <li>
-                                    <Link href="/" className="text-orange-600 hover:underline hover:text-orange-700">
+                                    <Link
+                                        href="/"
+                                        className="text-orange-600 hover:underline hover:text-orange-700"
+                                    >
                                         Home
                                     </Link>
                                 </li>
@@ -74,7 +95,10 @@ export default function OneSam() {
                                     <span className="text-gray-500">/</span>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-orange-600 hover:underline hover:text-orange-700">
+                                    <Link
+                                        href="#"
+                                        className="text-orange-600 hover:underline hover:text-orange-700"
+                                    >
                                         ONESAM
                                     </Link>
                                 </li>
@@ -103,74 +127,40 @@ export default function OneSam() {
                                         />
                                     </div>
                                 </div>
-                                
+
                                 <div className="bg-white rounded-lg shadow-sm border-l-4 border-orange-500 p-6 mb-6">
                                     <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                        veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                        minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                                        consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                        wisi enim ad minim veniam, quis nostrud Lorem ipsum dolor sit
-                                        amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                        euismod tincidunt ut laoreet dolore magna aliquam erat
-                                        volutpat. Ut wisi enim ad minim veniam, quis nostrud Lorem
-                                        ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                        erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                        veniam, quis nostrud
+                                        ONESAM is a trusted and innovative brand specializing in
+                                        high-quality mobile phone accessories and electronic
+                                        gadgets. Designed to enhance everyday digital experiences,
+                                        ONESAM products combine durability, functionality, and sleek
+                                        design. The brand offers a wide range of accessories
+                                        including USB cables, chargers, power banks, handsfree
+                                        devices, phone holders, and more—crafted to meet the needs
+                                        of modern tech users.
                                     </p>
                                 </div>
 
-                                <div className="bg-gray-100 rounded-lg p-6 mb-6">
+                                <div className="bg-white rounded-lg shadow-sm border-r-4 border-black-500 p-6 mb-6">
                                     <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                        veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                        minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                                        consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                        wisi enim ad minim veniam, quis nostrud
+                                        Each product is developed using advanced technology and
+                                        premium materials to ensure optimal performance, safety, and
+                                        user convenience. ONESAM stands out for its commitment to
+                                        quality and affordability, making it a popular choice for
+                                        consumers seeking reliable mobile solutions.
                                     </p>
                                 </div>
-                                
-                                <div className="bg-white rounded-lg shadow-sm border-r-4 border-gray-500 p-6 mb-6">
+
+                                <div className="bg-white rounded-lg shadow-sm border-l-4 border-orange-500 p-6 mb-6">
                                     <p className="text-gray-700 max-w-auto text-justify leading-relaxed">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                                        nostrud Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                        veniam, quis nostrud Lorem ipsum dolor sit amet, consectetuer
-                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                        minim veniam, quis nostrud Lorem ipsum dolor sit amet,
-                                        consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                        wisi enim ad minim veniam, quis nostrud
+                                        With a strong presence in local and international markets,
+                                        ONESAM continues to expand its portfolio by adapting to the
+                                        latest trends and customer demands—offering smart, stylish,
+                                        and practical accessories that elevate mobile device
+                                        usability.
                                     </p>
                                 </div>
-                                
+
                                 <div>
                                     <div className="flex flex-col items-center">
                                         <div className="p-10">
@@ -182,7 +172,7 @@ export default function OneSam() {
                                     </div>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 pb-12">
-                                        {[pro1, pro2, pro3, pro4, pro3, pro2].map(
+                                        {[pro1, pro2, pro3, pro4, pro5, pro6, pro7, pro8, pro9, pro10, pro11].map(
                                             (product, index) => (
                                                 <div
                                                     key={index}
@@ -191,7 +181,7 @@ export default function OneSam() {
                                                     <div className="relative w-full h-64 bg-gray-50 group-hover:bg-gray-100 transition-colors duration-300">
                                                         <Image
                                                             src={product}
-                                                            alt={`product ${index + 1}`}
+                                                            alt={"product images"}
                                                             layout="fill"
                                                             className="object-contain p-6"
                                                         />

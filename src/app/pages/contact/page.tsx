@@ -1,6 +1,5 @@
 "use client";
 import Head from "next/head";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -21,27 +20,24 @@ export default function Contact() {
 
             <main className="flex-grow">
                 {/* Hero Section */}
-                <div className="bg-blue-900 relative">
-                    <div className="absolute inset-0 z-0 h-100">
-                        <Image
-                            src="/images/contact_us_background.jpg"
-                            alt="Manufacturing Floor Background"
-                            fill
-                            className="object-cover"
-                            priority
+                <div className="relative">
+                    <div className="relative w-full h-full overflow-hidden bg-white">
+                        <video
+                            src="/images/Contactus.mp4"
+                            className="w-full h-[80%] object-fill"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            controls={false}
                         />
-                    </div>
-                    <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-16 text-center text-white">
-                        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 mt-18">
-                            CONTACT US
-                        </h1>
                     </div>
                 </div>
 
                 {/* Breadcrumb Navigation */}
                 <nav
                     aria-label="Breadcrumb"
-                    className="bg-white container mx-auto px-4 sm:px-8 md:px-16 pt-8 pb-4 mt-30"
+                    className="bg-white container mx-auto px-4 sm:px-8 md:px-16 pt-8 pb-4 mt-10"
                 >
                     <ol className="flex items-center space-x-2 text-sm sm:text-base">
                         <li>
@@ -288,3 +284,6 @@ export default function Contact() {
         </div>
     );
 }
+
+
+

@@ -463,11 +463,9 @@ export default function Home() {
                         onEnd={() => console.log("3500+ animation complete")}
                       />
                     )}
+                    +
                   </h3>
                 </div>
-                <p className="text-blue-700 font-semibold uppercase text-xl group-hover:text-blue-800 transition-colors duration-300">
-                  PLUS
-                </p>
                 <p className="text-blue-700 text-sm group-hover:text-blue-800 transition-colors duration-300">
                   PRODUCTS
                 </p>
@@ -484,14 +482,22 @@ export default function Home() {
               >
                 <div className="relative">
                   <div className="relative z-10">
-                    <h3 className="text-blue-700 text-2xl font-bold mb-2 group-hover:text-blue-800 transition-colors">
-                      ISLAND WIDE
+                    <h3 className="text-blue-700 text-5xl font-bold mb-2 group-hover:text-blue-800 transition-colors">
+                      {achievementInView && (
+                        <CountUp
+                          key={`products-${achievementInView}`}
+                          end={15000}
+                          duration={4}
+                          separator=","
+                          delay={0.8}
+                          onEnd={() => console.log("3500+ animation complete")}
+                        />
+                      )}
+                      +
                     </h3>
-                    <p className="text-blue-700 font-bold text-3xl uppercase group-hover:text-blue-800 transition-colors duration-300">
-                      CUSTOMER
-                    </p>
-                    <p className="text-blue-700 font-bold text-2xl group-hover:text-blue-800 transition-colors duration-300">
-                      BASE
+
+                    <p className="text-blue-700 text-sm group-hover:text-blue-800 transition-colors duration-300">
+                      ISLAND WIDE CUSTOMER BASE
                     </p>
                   </div>
                 </div>
@@ -508,13 +514,13 @@ export default function Home() {
               >
                 <div className="relative">
                   <div className="relative z-10">
-                    <h3 className="text-blue-700 text-2xl font-bold mb-2 group-hover:text-blue-800 transition-colors">
+                    <h3 className="text-blue-700 text-3xl font-bold mb-2 group-hover:text-blue-800 transition-colors">
                       ISLAND WIDE
                     </h3>
-                    <p className="text-blue-700 font-bold text-3xl uppercase group-hover:text-blue-800 transition-colors duration-300">
+                    <p className="text-blue-700 text-sm uppercase group-hover:text-blue-800 transition-colors duration-300">
                       DISTRIBUTION
                     </p>
-                    <p className="text-blue-700 font-bold text-2xl group-hover:text-blue-800 transition-colors duration-300">
+                    <p className="text-blue-700 text-sm group-hover:text-blue-800 transition-colors duration-300">
                       NETWORK
                     </p>
                   </div>
@@ -834,7 +840,6 @@ export default function Home() {
     }
   `}</style>
         </div>
-
 
       </main>
 
