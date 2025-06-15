@@ -12,8 +12,6 @@ type MenuItem = {
     ) => void;
 };
 
-
-
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolling, setScrolling] = useState(false);
@@ -37,6 +35,26 @@ const Navbar = () => {
         setIsOpen(false);
     };
 
+    // Handle smooth scroll to Distribution section
+    const handleDistributionClick = (
+        e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+    ) => {
+        e.preventDefault();
+
+        if (window.location.pathname === "/pages/production") {
+            // If on production page, scroll to distribution section
+            const distributionSection = document.getElementById("distribution");
+            if (distributionSection) {
+                distributionSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }
+        } else {
+            window.location.href = "/pages/production#distribution";
+        }
+        setIsOpen(false);
+    };
 
     const menuItems: MenuItem[] = [
         { name: "Home", path: "/", type: "link" },
@@ -48,9 +66,14 @@ const Navbar = () => {
         },
         { name: "Our Brands", path: "/pages/brands", type: "link" },
         { name: "Production", path: "/pages/production", type: "link" },
+        {
+            name: "Distribution",
+            path: "#distribution",
+            type: "scroll",
+            onClick: handleDistributionClick,
+        },
         { name: "Contact Us", path: "/pages/contact", type: "link" },
     ];
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -77,7 +100,7 @@ const Navbar = () => {
                         <Link href="/" className="flex-shrink-0">
                             <div
                                 className={`relative bg-white rounded-bl-3xl rounded-br-3xl ${scrolling ? "opacity-0" : ""
-                                    }  items-center justify-center hidden sm:flex sm:w-48 sm:h-16 md:w-64 md:h-20 lg:w-80 lg:h-24`}
+                                    }  items-center justify-center hidden sm:flex sm:w-32 sm:h-16 md:w-36 md:h-20 lg:w-64 lg:h-24`}
                             >
                                 <Image
                                     src="/images/Web site images-04.png"

@@ -41,6 +41,27 @@ export default function Home() {
     };
   }, []);
 
+  // Handle smooth scroll to Distribution section
+  const handleDistributionClick = (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => {
+    e.preventDefault();
+
+    if (window.location.pathname === "/pages/production") {
+      // If on production page, scroll to distribution section
+      const distributionSection = document.getElementById("distribution");
+      if (distributionSection) {
+        distributionSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    } else {
+      window.location.href = "/pages/production#distribution";
+    }
+  };
+
+
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Head>
@@ -122,7 +143,7 @@ export default function Home() {
                   <div className="w-24 h-24 relative cursor-pointer transition-all duration-500 ease-out group-hover:scale-125 group-hover:rotate-3 transform">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full opacity-0 group-hover:opacity-20 transition-all duration-500 ease-out transform scale-75 group-hover:scale-100"></div>
                     <div className="absolute inset-0 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out transform scale-90 group-hover:scale-110 blur-sm"></div>
-                    <Link href="/pages/production#distribution-network">
+                    <Link href="/pages/production#distribution" onClick={handleDistributionClick}>
                       <Image
                         src="/images/Distribution.png"
                         alt="Contact Us Icon"
@@ -146,7 +167,7 @@ export default function Home() {
         {/* About Us Section */}
         <div id="about-us-section" className="bg-white py-8">
           <div className="container mx-auto px-4">
-            <h2 className="text-gray-500 text-4xl font-medium text-center mb-6">
+            <h2 className="text-gray-500 text-4xl font-medium text-center mb-6 mt-6">
               ABOUT US
             </h2>
             <h3 className="text-gray-600 text-2xl font-medium text-center mb-6">
@@ -196,7 +217,7 @@ export default function Home() {
                   island-wide while maintaining a strong focus on customer
                   satisfaction. Our dedication to excellence has enabled us to
                   build strategic partnerships with international markets,
-                  including the People &apos s Republic of China (PRC),
+                  including the People&apos;s Republic of China (PRC),
                   Thailand, Singapore, Bangladesh, and India.
                 </p>
 
@@ -415,7 +436,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-8">
               {/* 15 Years Experience */}
               <div
-                className={`p-8 text-center w-full md:w-64 transform transition-all duration-1000 delay-300 ${achievementInView
+                className={`p-8 text-center w-full md:w-64 transform transition-all duration-300 delay-300 ${achievementInView
                   ? "translate-y-0 opacity-100 scale-100"
                   : "translate-y-20 opacity-0 scale-95"
                   } hover:scale-110 hover:shadow-2xl hover:bg-white hover:bg-opacity-20 rounded-xl transition-all duration-300 cursor-pointer group`}
@@ -446,7 +467,7 @@ export default function Home() {
 
               {/* 3500+ Products */}
               <div
-                className={`p-8 text-center w-full md:w-64 transform transition-all duration-1000 delay-500 ${achievementInView
+                className={`p-8 text-center w-full md:w-64 transform transition-all duration-300 delay-500 ${achievementInView
                   ? "translate-y-0 opacity-100 scale-100"
                   : "translate-y-20 opacity-0 scale-95"
                   } hover:scale-110 hover:shadow-2xl hover:bg-white hover:bg-opacity-20 rounded-xl transition-all duration-300 cursor-pointer group`}
@@ -475,7 +496,7 @@ export default function Home() {
 
               {/* Island-wide Customer Base */}
               <div
-                className={`p-8 text-center w-full md:w-64 transform transition-all duration-1000 delay-700 ${achievementInView
+                className={`p-8 text-center w-full md:w-64 transform transition-all duration-300 delay-700 ${achievementInView
                   ? "translate-y-0 opacity-100 scale-100"
                   : "translate-y-20 opacity-0 scale-95"
                   } hover:scale-110 hover:shadow-2xl hover:bg-white hover:bg-opacity-20 rounded-xl transition-all duration-300 cursor-pointer group`}
@@ -485,12 +506,12 @@ export default function Home() {
                     <h3 className="text-blue-700 text-5xl font-bold mb-2 group-hover:text-blue-800 transition-colors">
                       {achievementInView && (
                         <CountUp
-                          key={`products-${achievementInView}`}
-                          end={15000}
+                          key={`customers-${achievementInView}`}
+                          end={7500}
                           duration={4}
                           separator=","
                           delay={0.8}
-                          onEnd={() => console.log("3500+ animation complete")}
+                          onEnd={() => console.log("7500+ animation complete")}
                         />
                       )}
                       +
@@ -507,7 +528,7 @@ export default function Home() {
 
               {/* Island-wide Distribution Network */}
               <div
-                className={`p-8 text-center w-full md:w-64 transform transition-all duration-1000 delay-900 ${achievementInView
+                className={`p-8 text-center w-full md:w-64 transform transition-all duration-300 delay-900 ${achievementInView
                   ? "translate-y-0 opacity-100 scale-100"
                   : "translate-y-20 opacity-0 scale-95"
                   } hover:scale-110 hover:shadow-2xl hover:bg-white hover:bg-opacity-20 rounded-xl transition-all duration-300 cursor-pointer group`}
@@ -645,20 +666,20 @@ export default function Home() {
                       x: 280,
                       y: 445,
                       year: "2014",
-                      label: "INCORPORATE THE COMPANY",
+                      label: "INCORPORATE THE COMPANY INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS LAUNCH OMS BRAND TO THE SRILANKA MARKET",
                     },
-                    {
-                      x: 410,
-                      y: 438,
-                      year: "2014",
-                      label: "INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS",
-                    },
-                    {
-                      x: 560,
-                      y: 420,
-                      year: "2014",
-                      label: "LAUNCH OMS BRAND TO THE SRILANKA MARKET",
-                    },
+                    // {
+                    //   x: 410,
+                    //   y: 438,
+                    //   year: "2014",
+                    //   label: "INITIATE THE STRATEGIC RELATION WITH CHINESE BUSINESS PARTNERS",
+                    // },
+                    // {
+                    //   x: 560,
+                    //   y: 420,
+                    //   year: "2014",
+                    //   label: "LAUNCH OMS BRAND TO THE SRILANKA MARKET",
+                    // },
                     {
                       x: 700,
                       y: 390,
@@ -841,9 +862,10 @@ export default function Home() {
   `}</style>
         </div>
 
-      </main>
 
+      </main>
       <Footer />
     </div>
+
   );
 }

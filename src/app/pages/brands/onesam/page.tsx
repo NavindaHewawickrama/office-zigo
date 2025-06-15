@@ -16,6 +16,20 @@ import pro10 from "../../../../../public/images/products/ONESAM/Selfie Sticks.pn
 import pro11 from "../../../../../public/images/products/ONESAM/Speakers.png";
 
 export default function OneSam() {
+    const productCategories = [
+        { image: pro1, name: "Chargers" },
+        { image: pro2, name: "Car Chargers" },
+        { image: pro3, name: "Power Banks" },
+        { image: pro4, name: "Earbuds" },
+        { image: pro5, name: "Earphones" },
+        { image: pro6, name: "Neck Brands" },
+        { image: pro7, name: "Headsets" },
+        { image: pro8, name: "Cables" },
+        { image: pro9, name: "Speakers" },
+        { image: pro10, name: "SD Cards" },
+        { image: pro11, name: "Pen Drives" },
+    ];
+
     return (
         <div className="min-h-screen flex flex-col">
             <Head>
@@ -42,29 +56,23 @@ export default function OneSam() {
                             playsInline
                             controls={false}
                         />
+                        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-10">
+                            <Image
+                                src="/images/Web site images-02.png"
+                                alt="Vision Icon"
+                                height={350}
+                                width={350}
+                                className="object-contain mx-auto"
+                            />
+                            {/* Main title with gradient and effects */}
+                            {/* <h1 className="text-7xl md:text-8xl lg:text-9xl font-black mb-2 tracking-wider">
+                              <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent drop-shadow-lg">
+                                OMS
+                              </span>
+                            </h1> */}
+                        </div>
                     </div>
-                    <div className="relative z-10 container mx-auto px-4 py-10 text-start text-black">
-                        {/* Welcome text */}
-                        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                            OUR <span className="text-orange-500">BRANDS</span>
-                        </h1>
 
-                        {/* Placeholder text - replace with actual content */}
-                        <p className="text-lg">
-                            <strong>OMS, ONESAM, and XPERT</strong> are three distinct mobile
-                            accessory brands under Zigo Technology (Pvt) Ltd, each tailored to
-                            meet different user needs. <strong>OMS</strong> focuses on
-                            everyday reliability and affordability, offering a wide range of
-                            durable mobile accessories suited for general users.{" "}
-                            <strong>ONESAM</strong> stands out with its international appeal
-                            and stylish, ergonomic designs, delivering premium-quality
-                            products that blend innovation with user comfort.{" "}
-                            <strong>XPERT</strong> targets performance-driven users, providing
-                            fast-charging, high-safety accessories built with advanced
-                            technology and sleek aesthetics—ideal for professionals and tech
-                            enthusiasts seeking speed, durability, and efficiency.
-                        </p>
-                    </div>
                 </div>
 
                 <div className="bg-gray-50 py-4">
@@ -165,14 +173,14 @@ export default function OneSam() {
                                     <div className="flex flex-col items-center">
                                         <div className="p-10">
                                             <h1 className="text-gray-600 font-bold text-4xl uppercase relative">
-                                                <span className="text-orange-500">PRO</span>DUCTS
+                                                <span className="text-orange-500">PRODUCT</span> CATEGORIES
                                                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-orange-400 to-gray-400 rounded"></div>
                                             </h1>
                                         </div>
                                     </div>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 pb-12">
-                                        {[pro1, pro2, pro3, pro4, pro5, pro6, pro7, pro8, pro9, pro10, pro11].map(
+                                        {productCategories.map(
                                             (product, index) => (
                                                 <div
                                                     key={index}
@@ -180,15 +188,15 @@ export default function OneSam() {
                                                 >
                                                     <div className="relative w-full h-64 bg-gray-50 group-hover:bg-gray-100 transition-colors duration-300">
                                                         <Image
-                                                            src={product}
-                                                            alt={"product images"}
+                                                            src={product.image}
+                                                            alt={product.name}
                                                             layout="fill"
                                                             className="object-contain p-6"
                                                         />
                                                     </div>
                                                     <div className="p-4 text-center bg-gradient-to-r from-gray-50 to-orange-50">
                                                         <h3 className="text-lg font-semibold text-gray-700 group-hover:text-orange-600 transition-colors duration-300">
-                                                            Product {index + 1}
+                                                            {product.name}
                                                         </h3>
                                                     </div>
                                                 </div>

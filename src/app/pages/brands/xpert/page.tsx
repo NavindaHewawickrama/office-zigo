@@ -3,12 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import pro1 from "../../../../../public/images/products/pro1.png";
-import pro2 from "../../../../../public/images/products/pro2.png";
-import pro3 from "../../../../../public/images/products/pro3.png";
-import pro4 from "../../../../../public/images/products/pro4.png";
+import pro1 from "../../../../../public/images/products/XPERT/Cables.png";
+import pro2 from "../../../../../public/images/products/XPERT/Chargers.png";
+import pro3 from "../../../../../public/images/products/XPERT/Power Banks.png";
 
 export default function XPert() {
+    const productCategories = [
+        { image: pro1, name: "Chargers" },
+        { image: pro2, name: "Car Chargers" },
+        { image: pro3, name: "Power Banks" },
+    ];
+
     return (
         <div className="min-h-screen flex flex-col">
             <Head>
@@ -35,29 +40,23 @@ export default function XPert() {
                             playsInline
                             controls={false}
                         />
+                        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-10">
+                            <Image
+                                src="/images/Web site images-03.png"
+                                alt="Vision Icon"
+                                height={350}
+                                width={350}
+                                className="object-contain mx-auto"
+                            />
+                            {/* Main title with gradient and effects */}
+                            {/* <h1 className="text-7xl md:text-8xl lg:text-9xl font-black mb-2 tracking-wider">
+                                          <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent drop-shadow-lg">
+                                            OMS
+                                          </span>
+                                        </h1> */}
+                        </div>
                     </div>
-                    <div className="relative z-10 container mx-auto px-4 py-10 text-start text-black">
-                        {/* Welcome text */}
-                        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                            OUR <span className="text-pink-300">BRANDS</span>
-                        </h1>
 
-                        {/* Placeholder text - replace with actual content */}
-                        <p className="text-lg">
-                            <strong>OMS, ONESAM, and XPERT</strong> are three distinct mobile
-                            accessory brands under Zigo Technology (Pvt) Ltd, each tailored to
-                            meet different user needs. <strong>OMS</strong> focuses on
-                            everyday reliability and affordability, offering a wide range of
-                            durable mobile accessories suited for general users.{" "}
-                            <strong>ONESAM</strong> stands out with its international appeal
-                            and stylish, ergonomic designs, delivering premium-quality
-                            products that blend innovation with user comfort.{" "}
-                            <strong>XPERT</strong> targets performance-driven users, providing
-                            fast-charging, high-safety accessories built with advanced
-                            technology and sleek aesthetics—ideal for professionals and tech
-                            enthusiasts seeking speed, durability, and efficiency.
-                        </p>
-                    </div>
                 </div>
 
                 <div className="bg-gray-50 py-3">
@@ -163,13 +162,14 @@ export default function XPert() {
                                         <div className="p-10">
                                             <h1 className="text-gray-600 font-bold text-4xl uppercase relative">
                                                 <span className="text-pink-500">PRO</span>
-                                                <span className="text-blue-500">DUCTS</span>
+                                                <span className="text-pink-500">DUCT</span>
+                                                <span className="text-blue-500"> CATEGORIES</span>
                                                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-pink-400 to-blue-400 rounded"></div>
                                             </h1>
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 pb-12">
-                                        {[pro1, pro2, pro3, pro4, pro3, pro2].map(
+                                        {productCategories.map(
                                             (product, index) => (
                                                 <div
                                                     key={index}
@@ -181,15 +181,15 @@ export default function XPert() {
                                                 >
                                                     <div className="relative w-full h-64 bg-gradient-to-br from-pink-50 to-blue-50 group-hover:from-pink-100 group-hover:to-blue-100 transition-all duration-300">
                                                         <Image
-                                                            src={product}
-                                                            alt={`X-Pert Product ${index + 1}`}
+                                                            src={product.image}
+                                                            alt={product.name}
                                                             layout="fill"
                                                             className="object-contain p-6"
                                                         />
                                                     </div>
                                                     <div className="p-4 text-center bg-gradient-to-r from-pink-50 to-blue-50">
                                                         <h3 className="text-lg font-semibold text-gray-700 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-600 group-hover:to-blue-600 transition-all duration-300">
-                                                            Product {index + 1}
+                                                            {product.name}
                                                         </h3>
                                                     </div>
                                                 </div>

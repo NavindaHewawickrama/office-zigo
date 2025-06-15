@@ -157,7 +157,7 @@ export default function Contact() {
                             <div className="w-full md:w-[500px] h-120 border-black border-2">
                                 <div className="w-full h-full relative">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.575084097891!2d79.8730162!3d6.914682899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTQnNTIuOSJOIDc5wrA1MicyMi45IkU!5e0!3m2!1sen!2slk!4v1622543928096!5m2!1sen!2slk"
+                                        src="https://maps.google.com/maps?q=Zigo+Technology,01,+Main+Street,+Colombo+01&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                         width="100%"
                                         height="100%"
                                         style={{ border: 0 }}
@@ -171,110 +171,113 @@ export default function Contact() {
 
                         {/* Island Wide Sales Officers Section */}
                         <div className="mt-16 sm:mt-20 md:mt-8">
-                            <div className="bg-white">
-                                <div className="flex items-center mb-6">
-                                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
-                                        <svg
-                                            className="w-5 h-5 text-white"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <h3 className="text-2xl font-medium text-gray-800">
-                                        Island Wide Sales Officers
-                                    </h3>
-                                </div>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                                        <span className="font-medium text-gray-700 text-base sm:text-lg">
-                                            Colombo
-                                        </span>
-                                        <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                                            07654566544
-                                        </p>
-                                    </div>
+                            {/* <div className="mt-16 sm:mt-20 md:mt-8">
+              <div className="bg-white">
+                <div className="flex items-center mb-6">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-medium text-gray-800">
+                    Island Wide Sales Officers
+                  </h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
+                    <span className="font-medium text-gray-700 text-base sm:text-lg">
+                      Colombo
+                    </span>
+                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
+                      07654566544
+                    </p>
+                  </div>
 
-                                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                                        <span className="font-medium text-gray-700 text-base sm:text-lg">
-                                            Kalutara
-                                        </span>
-                                        <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                                            07654566544
-                                        </p>
-                                    </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
+                    <span className="font-medium text-gray-700 text-base sm:text-lg">
+                      Kalutara
+                    </span>
+                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
+                      07654566544
+                    </p>
+                  </div>
 
-                                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                                        <span className="font-medium text-gray-700 text-base sm:text-lg">
-                                            Gampaha
-                                        </span>
-                                        <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                                            07654566544
-                                        </p>
-                                    </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
+                    <span className="font-medium text-gray-700 text-base sm:text-lg">
+                      Gampaha
+                    </span>
+                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
+                      07654566544
+                    </p>
+                  </div>
 
-                                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                                        <span className="font-medium text-gray-700 text-base sm:text-lg">
-                                            Galle
-                                        </span>
-                                        <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                                            07654566544
-                                        </p>
-                                    </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
+                    <span className="font-medium text-gray-700 text-base sm:text-lg">
+                      Galle
+                    </span>
+                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
+                      07654566544
+                    </p>
+                  </div>
 
-                                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                                        <span className="font-medium text-gray-700 text-base sm:text-lg">
-                                            Kandy
-                                        </span>
-                                        <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                                            07654566544
-                                        </p>
-                                    </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
+                    <span className="font-medium text-gray-700 text-base sm:text-lg">
+                      Kandy
+                    </span>
+                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
+                      07654566544
+                    </p>
+                  </div>
 
-                                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                                        <span className="font-medium text-gray-700 text-base sm:text-lg">
-                                            Anuradhapura
-                                        </span>
-                                        <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                                            07654566544
-                                        </p>
-                                    </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
+                    <span className="font-medium text-gray-700 text-base sm:text-lg">
+                      Anuradhapura
+                    </span>
+                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
+                      07654566544
+                    </p>
+                  </div>
 
-                                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                                        <span className="font-medium text-gray-700 text-base sm:text-lg">
-                                            Polonnaruwa
-                                        </span>
-                                        <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                                            07654566544
-                                        </p>
-                                    </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
+                    <span className="font-medium text-gray-700 text-base sm:text-lg">
+                      Polonnaruwa
+                    </span>
+                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
+                      07654566544
+                    </p>
+                  </div>
 
-                                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                                        <span className="font-medium text-gray-700 text-base sm:text-lg">
-                                            Ampara/ Badulla
-                                        </span>
-                                        <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                                            07654566544
-                                        </p>
-                                    </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
+                    <span className="font-medium text-gray-700 text-base sm:text-lg">
+                      Ampara/ Badulla
+                    </span>
+                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
+                      07654566544
+                    </p>
+                  </div>
 
-                                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                                        <span className="font-medium text-gray-700 text-base sm:text-lg">
-                                            Jaffna Area
-                                        </span>
-                                        <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                                            07654566544
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
+                    <span className="font-medium text-gray-700 text-base sm:text-lg">
+                      Jaffna Area
+                    </span>
+                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
+                      07654566544
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> */}
                         </div>
                     </div>
                 </div>
@@ -284,6 +287,3 @@ export default function Contact() {
         </div>
     );
 }
-
-
-

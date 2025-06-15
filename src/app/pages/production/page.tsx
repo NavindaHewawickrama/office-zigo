@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { useEffect } from "react";
+import SriLankaMap from "@/components/SriLankaMap";
+import UaeMap from "@/components/UaeMap";
 
 export default function Production() {
   useEffect(() => {
@@ -58,6 +60,7 @@ export default function Production() {
                   href="/"
                   className="text-blue-500 hover:text-blue-700 hover:underline transition-colors"
                 >
+
                   Home
                 </Link>
               </li>
@@ -277,285 +280,280 @@ export default function Production() {
           <div className=" h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
         </div>
         {/* Distribution Network Section */}
-        <div className="py-8 sm:py-12">
-          <div className="container mx-auto px-4 sm:px-8 md:px-16">
-            <div className="py-4">
-              <div className="flex flex-col items-start">
-                <div className="mb-6 sm:mb-5 w-full">
-                  <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-extrabold text-start">
-                    DISTRIBUTION NETWORK
-                  </h2>
-                  <div className="w-24 h-1 rounded-full"></div>
-                </div>
-
-                {/* Distribution Content */}
-                <div className="w-full">
-                  {/* Introduction */}
-                  <div className="mb-8">
-                    <div className="rounded-xl p-6">
-                      <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                        Zigo Technology (Private) Limited operates through an
-                        innovative <strong>direct distribution </strong>
-                        model, delivering our premium brands{" "}
-                        <strong>OMS, Onesam, and Xpert </strong>
-                        efficiently across Sri Lanka. By partnering with trusted
-                        courier services instead of maintaining in-house
-                        distribution teams, we ensure rapid, reliable product
-                        delivery to every corner of the nation.
-                      </p>
-                    </div>
+        <div id="distribution" className="py-8 sm:py-12">
+          <div className="py-8 sm:py-12">
+            <div className="container mx-auto px-4 sm:px-8 md:px-16">
+              <div className="py-4">
+                <div className="flex flex-col items-start">
+                  <div className="mb-6 sm:mb-5 w-full">
+                    <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-extrabold text-start">
+                      DISTRIBUTION NETWORK
+                    </h2>
+                    <div className="w-24 h-1 rounded-full"></div>
                   </div>
 
-                  {/* How Distribution Works */}
-                  <div className="mb-6">
-                    <h3 className="text-blue-900 text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
-                      HOW THE DISTRIBUTION WORKS
+                  {/* Distribution Content */}
+                  <div className="w-full">
+                    {/* Introduction */}
+                    <div className="mb-8">
+                      <div className="rounded-xl p-6">
+                        <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                          Zigo Technology (Private) Limited operates through an
+                          innovative <strong>direct distribution </strong>
+                          model, delivering our premium brands{" "}
+                          <strong>OMS, Onesam, and Xpert </strong>
+                          efficiently across Sri Lanka. By partnering with trusted
+                          courier services instead of maintaining in-house
+                          distribution teams, we ensure rapid, reliable product
+                          delivery to every corner of the nation.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* How Distribution Works */}
+                    <div className="mb-6">
+                      <h3 className="text-blue-900 text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
+                        HOW THE DISTRIBUTION WORKS
+                      </h3>
+
+                      {/* Grid container for distribution steps */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                        {/* Direct Order Processing */}
+                        <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-green-100 cursor-pointer">
+                          <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center">
+                              <svg
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div className="flex-grow">
+                              <h4 className="font-bold text-green-800 text-base sm:text-lg mb-2 uppercase">
+                                Direct Order Processing
+                              </h4>
+                              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                Retailers, mobile accessory shops, and corporate
+                                clients place orders directly with{" "}
+                                <strong>Zigo Technology.</strong> This eliminates
+                                intermediaries and ensures customers receive
+                                authentic products at competitive prices.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Courier-Based Delivery */}
+                        <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-100 cursor-pointer">
+                          <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center">
+                              <svg
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4h.5a2.5 2.5 0 012.5 2.5V12a2.5 2.5 0 01-2.5 2.5H17v5a1 1 0 01-1 1H8a1 1 0 01-1-1v-5H5.5A2.5 2.5 0 013 12V9.5A2.5 2.5 0 015.5 7H8z"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div className="flex-grow">
+                              <h4 className="font-bold text-blue-800 text-base sm:text-lg mb-2 uppercase">
+                                Courier-Based Delivery
+                              </h4>
+                              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                Once an order is processed, the products are
+                                dispatched using <strong>courier service.</strong>{" "}
+                                This enables efficient and timely delivery to
+                                retailers across{" "}
+                                <strong>all regions of Sri Lanka, </strong>
+                                including urban and rural areas.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Centralized Inventory */}
+                        <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-purple-100 cursor-pointer">
+                          <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center">
+                              <svg
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div className="flex-grow">
+                              <h4 className="font-bold text-purple-800 text-base sm:text-lg mb-2 uppercase">
+                                Centralized Inventory Management
+                              </h4>
+                              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                Zigo Technology operates a{" "}
+                                <strong>centralized warehouse </strong>
+                                where all OMS, Onesam, and Xpert products are
+                                stored and dispatched. Orders are packed and
+                                shipped directly from this facility, ensuring
+                                stock accuracy and quick turnaround times.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Retail and Corporate Supply */}
+                        <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-amber-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-amber-100 cursor-pointer">
+                          <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center">
+                              <svg
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div className="flex-grow">
+                              <h4 className="font-bold text-amber-800 text-base sm:text-lg mb-2 uppercase">
+                                Retail & Corporate Supply
+                              </h4>
+                              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                The company directly supplies{" "}
+                                <strong>
+                                  mobile accessory shops, repair centers, and
+                                  corporate clients{" "}
+                                </strong>
+                                with bulk and individual orders. This direct model
+                                strengthens business relationships and maintains
+                                consistent product quality.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="mt-8">
+                        <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                          <strong>By leveraging logistics network,</strong> Zigo
+                          Technology ensures
+                          <strong> fast, secure, and efficient </strong> product
+                          distribution across Sri Lanka while maintaining complete
+                          control over its supply chain.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
+          </div>
+
+          {/* Local Distribution Section */}
+          <div className="py-4 sm:py-6 md:py-8 relative">
+            <div className="container mx-auto px-4 sm:px-8 md:px-16">
+              <div className="mb-4 sm:mb-8">
+                <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-bold text-start">
+                  LOCAL DISTRIBUTION
+                </h2>
+              </div>
+              <SriLankaMap />
+              {/* <div className="relative w-full overflow-hidden">
+                <div className="relative w-full" style={{ paddingBottom: "60%" }}>
+                  <Image
+                    src="/images/srilanka.png"
+                    alt="Sri Lanka Distribution Network Map"
+                    fill
+                    className="object-contain p-4"
+                    priority
+                  />
+                  <SriLankaMap />
+                </div>
+              </div> */}
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="mt-8 h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
+          </div>
+          {/* International Distribution Section */}
+          <div className="py-4 sm:py-6 md:py-8 relative">
+            <div className="container mx-auto px-4 sm:px-8 md:px-16">
+              <div className="mb-4 sm:mb-8">
+                <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-bold text-start">
+                  INTERNATIONAL DISTRIBUTION
+                </h2>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-8">
+                <UaeMap />
+
+                {/* Country information */}
+                <div className="w-full md:w-1/2 space-y-6 sm:space-y-8">
+                  {/* UAE Section */}
+                  <div>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl text-gray-500 font-medium mb-2 sm:mb-4">
+                      UAE
                     </h3>
-
-                    {/* Grid container for distribution steps */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                      {/* Direct Order Processing */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-green-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-green-100 cursor-pointer">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center">
-                            <svg
-                              className="w-6 h-6"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div className="flex-grow">
-                            <h4 className="font-bold text-green-800 text-base sm:text-lg mb-2 uppercase">
-                              Direct Order Processing
-                            </h4>
-                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                              Retailers, mobile accessory shops, and corporate
-                              clients place orders directly with{" "}
-                              <strong>Zigo Technology.</strong> This eliminates
-                              intermediaries and ensures customers receive
-                              authentic products at competitive prices.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Courier-Based Delivery */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-100 cursor-pointer">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center">
-                            <svg
-                              className="w-6 h-6"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4h.5a2.5 2.5 0 012.5 2.5V12a2.5 2.5 0 01-2.5 2.5H17v5a1 1 0 01-1 1H8a1 1 0 01-1-1v-5H5.5A2.5 2.5 0 013 12V9.5A2.5 2.5 0 015.5 7H8z"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div className="flex-grow">
-                            <h4 className="font-bold text-blue-800 text-base sm:text-lg mb-2 uppercase">
-                              Courier-Based Delivery
-                            </h4>
-                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                              Once an order is processed, the products are
-                              dispatched using <strong>courier service.</strong>{" "}
-                              This enables efficient and timely delivery to
-                              retailers across{" "}
-                              <strong>all regions of Sri Lanka, </strong>
-                              including urban and rural areas.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Centralized Inventory */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-purple-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-purple-100 cursor-pointer">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center">
-                            <svg
-                              className="w-6 h-6"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div className="flex-grow">
-                            <h4 className="font-bold text-purple-800 text-base sm:text-lg mb-2 uppercase">
-                              Centralized Inventory Management
-                            </h4>
-                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                              Zigo Technology operates a{" "}
-                              <strong>centralized warehouse </strong>
-                              where all OMS, Onesam, and Xpert products are
-                              stored and dispatched. Orders are packed and
-                              shipped directly from this facility, ensuring
-                              stock accuracy and quick turnaround times.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Retail and Corporate Supply */}
-                      <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border-l-4 border-amber-600 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-amber-100 cursor-pointer">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center">
-                            <svg
-                              className="w-6 h-6"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div className="flex-grow">
-                            <h4 className="font-bold text-amber-800 text-base sm:text-lg mb-2 uppercase">
-                              Retail & Corporate Supply
-                            </h4>
-                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                              The company directly supplies{" "}
-                              <strong>
-                                mobile accessory shops, repair centers, and
-                                corporate clients{" "}
-                              </strong>
-                              with bulk and individual orders. This direct model
-                              strengthens business relationships and maintains
-                              consistent product quality.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="mt-8">
-                      <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                        <strong>By leveraging logistics network,</strong> Zigo
-                        Technology ensures
-                        <strong> fast, secure, and efficient </strong> product
-                        distribution across Sri Lanka while maintaining complete
-                        control over its supply chain.
-                      </p>
-                    </div>
+                    <p className="text-gray-600 text-sm sm:text-base">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                      magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                      quis nostrud exerci tation ullamcorper suscipit lobortis
+                      nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+                      iriure dolor in hendrerit in vulputate velit esse molestie
+                      consequat, vel illum dolore eu feugiat nulla facilisi at
+                      vero eros et accumsan et iusto odio dignissim qui blandit
+                      praesent luptatum zzril delenit augue duis dolore te feugait
+                      nulla facilisi.
+                    </p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="flex flex-col items-center">
-          <div className="h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
-        </div>
-
-        {/* Local Distribution Section */}
-        <div className="py-4 sm:py-6 md:py-8 relative">
-          <div className="container mx-auto px-4 sm:px-8 md:px-16">
-            <div className="mb-4 sm:mb-8">
-              <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-bold text-start">
-                LOCAL DISTRIBUTION
-              </h2>
-            </div>
-
-            <div className="relative w-full overflow-hidden">
-              <div className="relative w-full" style={{ paddingBottom: "60%" }}>
-                <Image
-                  src="/images/SRILANKAMAP.png"
-                  alt="Sri Lanka Distribution Network Map"
-                  fill
-                  className="object-contain p-4"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="mt-8 h-[3px] w-11/12 bg-blue-200 rounded-md mx-auto"></div>
-        </div>
-        {/* International Distribution Section */}
-        <div className="py-4 sm:py-6 md:py-8 relative">
-          <div className="container mx-auto px-4 sm:px-8 md:px-16">
-            <div className="mb-4 sm:mb-8">
-              <h2 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl font-bold text-start">
-                INTERNATIONAL DISTRIBUTION
-              </h2>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-8">
-              {/* Middle East Map */}
-              <div className="relative w-full md:w-3/4 h-72 sm:h-90 md:h-128">
-                <Image
-                  src="/images/UAEMAP.png"
-                  alt="International Distribution Network Map"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-
-              {/* Country information */}
-              <div className="w-full md:w-1/2 space-y-6 sm:space-y-8">
-                {/* UAE Section */}
-                <div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl text-gray-500 font-medium mb-2 sm:mb-4">
-                    UAE
-                  </h3>
-                  <p className="text-gray-600 text-sm sm:text-base">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                    iriure dolor in hendrerit in vulputate velit esse molestie
-                    consequat, vel illum dolore eu feugiat nulla facilisi at
-                    vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait
-                    nulla facilisi.
-                  </p>
-                </div>
-
-                {/* Oman Section */}
-                <div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl text-gray-500 font-medium mb-2 sm:mb-4">
-                    Oman
-                  </h3>
-                  <p className="text-gray-600 text-sm sm:text-base">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                    iriure dolor in hendrerit in vulputate velit esse molestie
-                    consequat, vel illum dolore eu feugiat nulla facilisi at
-                    vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait
-                    nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer
-                    adipiscing elit, sed diam nonummy
-                  </p>
+                  {/* Oman Section */}
+                  <div>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl text-gray-500 font-medium mb-2 sm:mb-4">
+                      Abu Dhabi
+                    </h3>
+                    <p className="text-gray-600 text-sm sm:text-base">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                      magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                      quis nostrud exerci tation ullamcorper suscipit lobortis
+                      nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+                      iriure dolor in hendrerit in vulputate velit esse molestie
+                      consequat, vel illum dolore eu feugiat nulla facilisi at
+                      vero eros et accumsan et iusto odio dignissim qui blandit
+                      praesent luptatum zzril delenit augue duis dolore te feugait
+                      nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer
+                      adipiscing elit, sed diam nonummy
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -567,5 +565,3 @@ export default function Production() {
     </div>
   );
 }
-
-
