@@ -12,33 +12,6 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
 
-  // Handle smooth scroll to Hero section
-  // const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-  //   e.preventDefault();
-  //   const aboutSection = document.getElementById('hero-section');
-  //   if (aboutSection) {
-  //     aboutSection.scrollIntoView({
-  //       behavior: 'smooth',
-  //       block: 'start'
-  //     });
-  //   }
-  //   // Close mobile menu if open
-  //   setIsOpen(false);
-  // };
-
-  // // Handle smooth scroll to About Us section
-  // const handleAboutUsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-  //   e.preventDefault();
-  //   const aboutSection = document.getElementById('about-us-section');
-  //   if (aboutSection) {
-  //     aboutSection.scrollIntoView({
-  //       behavior: 'smooth',
-  //       block: 'start'
-  //     });
-  //   }
-  //   // Close mobile menu if open
-  //   setIsOpen(false);
-  // };
 
   return (
     <footer className="bg-black text-white py-6">
@@ -51,7 +24,7 @@ const Footer: React.FC = () => {
               <span className="text-gray-500 font-medium block mb-3 text-sm">FOLLOW US ON</span>
               <div className="flex justify-center gap-3">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/zigotechnology"
                   className="bg-blue-600 p-2 rounded-md hover:opacity-90 transition-opacity"
                 >
                   <FaFacebookF className="text-white text-sm" />
@@ -156,7 +129,7 @@ const Footer: React.FC = () => {
             <span className="text-gray-500 font-medium mb-3 text-sm">FOLLOW US ON</span>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/zigotechnology"
                 className="bg-blue-600 p-2 rounded-md hover:opacity-90 transition-opacity"
               >
                 <FaFacebookF className="text-white" />

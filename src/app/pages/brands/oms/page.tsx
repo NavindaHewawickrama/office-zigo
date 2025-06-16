@@ -76,29 +76,6 @@ export default function OMS() {
           </div>
         </div>
 
-        {/* <div className="relative z-10 container mx-auto px-4 py-10 text-start text-black"> */}
-        {/* Welcome text */}
-        {/* <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              OUR <span className="text-red-500">BRANDS</span>
-            </h1> */}
-
-        {/* Placeholder text - replace with actual content */}
-        {/* <p className="text-lg">
-              <strong>OMS, ONESAM, and XPERT</strong> are three distinct mobile accessory brands
-              under Zigo Technology (Pvt) Ltd, each tailored to meet different
-              user needs. <strong>OMS</strong> focuses on everyday reliability and affordability,
-              offering a wide range of durable mobile accessories suited for
-              general users. <strong>ONESAM</strong> stands out with its international appeal and
-              stylish, ergonomic designs, delivering premium-quality products
-              that blend innovation with user comfort. <strong>XPERT</strong> targets
-              performance-driven users, providing fast-charging, high-safety
-              accessories built with advanced technology and sleek
-              aesthetics—ideal for professionals and tech enthusiasts seeking
-              speed, durability, and efficiency.
-            </p> */}
-        {/* </div> */}
-        {/* </div> */}
-
         <div className="bg-gray-50 py-4">
           <div className="container mx-auto px-4">
             {/* Breadcrumb */}
@@ -147,18 +124,6 @@ export default function OMS() {
               <div className="w-0.5 bg-gradient-to-b from-red-400 to-gray-400 mx-2 h-1vh mt-10"></div>
               {/* OMS */}
               <div className="flex-1 text-center p-6 justify-center mt-[-50]">
-                <div className="flex justify-start mb-10">
-                  <div className="w-2xl h-48 relative">
-                    {/* Logo section unchanged */}
-                    <Image
-                      src="/images/Web site images-01.png"
-                      alt="Vision Icon"
-                      height={300}
-                      width={300}
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
 
                 <div className="bg-white rounded-lg shadow-sm border-l-4 border-red-500 p-6 mb-6">
                   <p className="text-gray-700 max-w-auto text-justify leading-relaxed">

@@ -48,12 +48,6 @@ export default function XPert() {
                                 width={350}
                                 className="object-contain mx-auto"
                             />
-                            {/* Main title with gradient and effects */}
-                            {/* <h1 className="text-7xl md:text-8xl lg:text-9xl font-black mb-2 tracking-wider">
-                                          <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent drop-shadow-lg">
-                                            OMS
-                                          </span>
-                                        </h1> */}
                         </div>
                     </div>
 
@@ -107,17 +101,7 @@ export default function XPert() {
                             <div className="w-0.5 bg-gradient-to-b from-pink-400 to-blue-400 mx-2 h-1vh mt-10"></div>
                             {/* X-PERT */}
                             <div className="flex-1 text-center p-6 justify-center mt-[-50]">
-                                <div className="flex justify-start mb-15">
-                                    <div className="w-2xl h-48 relative">
-                                        <Image
-                                            src="/images/Web site images-03.png"
-                                            alt="Vision Icon"
-                                            height={300}
-                                            width={300}
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                </div>
+
 
                                 <div className="bg-white rounded-lg shadow-md border-l-4 border-pink-500 p-6 mb-6">
                                     <p className="text-gray-700 max-w-auto text-justify leading-relaxed">

@@ -17,17 +17,17 @@ import pro11 from "../../../../../public/images/products/ONESAM/Speakers.png";
 
 export default function OneSam() {
     const productCategories = [
-        { image: pro1, name: "Earbuds" },
-        { image: pro2, name: "Cables" },
-        { image: pro3, name: "Car Charges" },
-        { image: pro4, name: "Chargers" },
+        { image: pro1, name: "Chargers" },
+        { image: pro2, name: "Car Chargers" },
+        { image: pro3, name: "Power Banks" },
+        { image: pro4, name: "Earbuds" },
         { image: pro5, name: "Earphones" },
         { image: pro6, name: "Neck Brands" },
-        { image: pro7, name: "Phone Holders" },
-        { image: pro8, name: "Power Banks" },
-        { image: pro9, name: "Extentions" },
-        { image: pro10, name: "Tripods" },
-        { image: pro11, name: "Speakers" },
+        { image: pro7, name: "Headsets" },
+        { image: pro8, name: "Cables" },
+        { image: pro9, name: "Speakers" },
+        { image: pro10, name: "SD Cards" },
+        { image: pro11, name: "Pen Drives" },
     ];
 
     return (
@@ -64,12 +64,6 @@ export default function OneSam() {
                                 width={350}
                                 className="object-contain mx-auto"
                             />
-                            {/* Main title with gradient and effects */}
-                            {/* <h1 className="text-7xl md:text-8xl lg:text-9xl font-black mb-2 tracking-wider">
-                              <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent drop-shadow-lg">
-                                OMS
-                              </span>
-                            </h1> */}
                         </div>
                     </div>
 
@@ -123,18 +117,7 @@ export default function OneSam() {
                             <div className="w-0.5 bg-gradient-to-b from-orange-400 to-gray-400 mx-2 h-1vh mt-10"></div>
                             {/* ONE SAM */}
                             <div className="flex-1 text-center p-6 justify-center mt-[-50]">
-                                <div className="flex justify-start mb-10">
-                                    <div className="w-2xl h-48 relative">
-                                        {/* Logo section unchanged */}
-                                        <Image
-                                            src="/images/Web site images-02.png"
-                                            alt="Vision Icon"
-                                            height={300}
-                                            width={300}
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                </div>
+
 
                                 <div className="bg-white rounded-lg shadow-sm border-l-4 border-orange-500 p-6 mb-6">
                                     <p className="text-gray-700 max-w-auto text-justify leading-relaxed">

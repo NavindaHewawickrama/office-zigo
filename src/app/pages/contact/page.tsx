@@ -5,173 +5,173 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function Contact() {
-    return (
-        <div className="min-h-screen flex flex-col">
-            <Head>
-                <title>Contact Us | Zigo Technology (Pvt) Ltd.</title>
-                <meta
-                    name="description"
-                    content="Leading manufacturer and distributor of mobile phone accessories in Sri Lanka."
-                />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Head>
+        <title>Contact Us | Zigo Technology (Pvt) Ltd.</title>
+        <meta
+          name="description"
+          content="Leading manufacturer and distributor of mobile phone accessories in Sri Lanka."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-            <Navbar />
+      <Navbar />
 
-            <main className="flex-grow">
-                {/* Hero Section */}
-                <div className="relative">
-                    <div className="relative w-full h-full overflow-hidden bg-white">
-                        <video
-                            src="/images/Contactus.mp4"
-                            className="w-full h-[80%] object-fill"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            controls={false}
+      <main className="flex-grow">
+        {/* Hero Section */}
+        <div className="relative">
+          <div className="relative w-full h-full overflow-hidden bg-white">
+            <video
+              src="/images/Contactus.mp4"
+              className="w-full h-[80%] object-fill"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls={false}
+            />
+          </div>
+        </div>
+
+        {/* Breadcrumb Navigation */}
+        <nav
+          aria-label="Breadcrumb"
+          className="bg-white container mx-auto px-4 sm:px-8 md:px-16 pt-8 pb-4 mt-10"
+        >
+          <ol className="flex items-center space-x-2 text-sm sm:text-base">
+            <li>
+              <Link
+                href="/"
+                className="text-blue-500 hover:text-blue-700 hover:underline transition-colors"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <span className="text-gray-400 mx-1">/</span>
+            </li>
+            <li>
+              <Link
+                href="/pages/contact"
+                className="text-blue-500 hover:text-blue-700 hover:underline transition-colors"
+              >
+                Contact us
+              </Link>
+            </li>
+          </ol>
+        </nav>
+
+        <div className="flex flex-col items-center">
+          <div className="bg-blue-200 rounded-md mx-auto h-[3px] w-11/12"></div>
+        </div>
+
+        {/* Main Contact Section */}
+        <div className="bg-white py-12 sm:py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-8 md:px-16">
+            {/* Company Name Header */}
+            <h2 className="text-gray-500 text-3xl sm:text-4xl md:text-5xl font-bold mb-10">
+              ZIGO TECHNOLOGY (PVT) LTD
+            </h2>
+
+            <div className="flex flex-col md:flex-row gap-20">
+              {/* Contact Information Section */}
+              <div className="w-full md:w-1/2 space-y-8">
+                {/* Company Description */}
+                <div className="bg-white">
+                  <p className="text-gray-600 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    quis nostrud exerci tation ullamcorper suscipit lobortis
+                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+                    iriure dolor in
+                  </p>
+                </div>
+
+                {/* Address */}
+                <div className="bg-white">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-3">
+                      <svg
+                        className="w-5 h-5 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                         />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
                     </div>
+                    <h3 className="text-2xl font-medium text-gray-800">
+                      Address
+                    </h3>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed ml-13">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam nonummy nibh euismod tincidunt ut
+                  </p>
                 </div>
 
-                {/* Breadcrumb Navigation */}
-                <nav
-                    aria-label="Breadcrumb"
-                    className="bg-white container mx-auto px-4 sm:px-8 md:px-16 pt-8 pb-4 mt-10"
-                >
-                    <ol className="flex items-center space-x-2 text-sm sm:text-base">
-                        <li>
-                            <Link
-                                href="/"
-                                className="text-blue-500 hover:text-blue-700 hover:underline transition-colors"
-                            >
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <span className="text-gray-400 mx-1">/</span>
-                        </li>
-                        <li>
-                            <Link
-                                href="/pages/contact"
-                                className="text-blue-500 hover:text-blue-700 hover:underline transition-colors"
-                            >
-                                Contact us
-                            </Link>
-                        </li>
-                    </ol>
-                </nav>
-
-                <div className="flex flex-col items-center">
-                    <div className="bg-blue-200 rounded-md mx-auto h-[3px] w-11/12"></div>
+                {/* Hotline */}
+                <div className="bg-white">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-3">
+                        <svg
+                          className="w-5 h-5 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                          />
+                        </svg>
+                      </div>
+                      <h3 className="text-2xl font-medium text-gray-800">
+                        Hotline
+                      </h3>
+                    </div>
+                    <p className="text-blue-600 font-medium text-base sm:text-lg transition-colors">
+                      +94 012345678
+                    </p>
+                  </div>
                 </div>
+              </div>
 
-                {/* Main Contact Section */}
-                <div className="bg-white py-12 sm:py-16 md:py-20">
-                    <div className="container mx-auto px-4 sm:px-8 md:px-16">
-                        {/* Company Name Header */}
-                        <h2 className="text-gray-500 text-3xl sm:text-4xl md:text-5xl font-bold mb-10">
-                            ZIGO TECHNOLOGY (PVT) LTD
-                        </h2>
+              {/* Map Section */}
+              <div className="w-full md:w-[500px] h-120 border-black border-2">
+                <div className="w-full h-full relative">
+                  <iframe
+                    src="https://maps.google.com/maps?q=Zigo+Technology,01,+Main+Street,+Colombo+01&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
 
-                        <div className="flex flex-col md:flex-row gap-20">
-                            {/* Contact Information Section */}
-                            <div className="w-full md:w-1/2 space-y-8">
-                                {/* Company Description */}
-                                <div className="bg-white">
-                                    <p className="text-gray-600 leading-relaxed">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                        magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                        quis nostrud exerci tation ullamcorper suscipit lobortis
-                                        nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                                        iriure dolor in
-                                    </p>
-                                </div>
-
-                                {/* Address */}
-                                <div className="bg-white">
-                                    <div className="flex items-center mb-4">
-                                        <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-3">
-                                            <svg
-                                                className="w-5 h-5 text-white"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth={2}
-                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                                                />
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth={2}
-                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                                                />
-                                            </svg>
-                                        </div>
-                                        <h3 className="text-2xl font-medium text-gray-800">
-                                            Address
-                                        </h3>
-                                    </div>
-                                    <p className="text-gray-600 leading-relaxed ml-13">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut
-                                    </p>
-                                </div>
-
-                                {/* Hotline */}
-                                <div className="bg-white">
-                                    <div className="flex items-center justify-between gap-2">
-                                        <div className="flex items-center">
-                                            <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-3">
-                                                <svg
-                                                    className="w-5 h-5 text-white"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                                    />
-                                                </svg>
-                                            </div>
-                                            <h3 className="text-2xl font-medium text-gray-800">
-                                                Hotline
-                                            </h3>
-                                        </div>
-                                        <p className="text-blue-600 font-medium text-base sm:text-lg transition-colors">
-                                            +94 012345678
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Map Section */}
-                            <div className="w-full md:w-[500px] h-120 border-black border-2">
-                                <div className="w-full h-full relative">
-                                    <iframe
-                                        src="https://maps.google.com/maps?q=Zigo+Technology,01,+Main+Street,+Colombo+01&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
-                                        loading="lazy"
-                                        allowFullScreen
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                    ></iframe>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Island Wide Sales Officers Section */}
-                        <div className="mt-16 sm:mt-20 md:mt-8">
-                            {/* <div className="mt-16 sm:mt-20 md:mt-8">
+            {/* Island Wide Sales Officers Section */}
+            <div className="mt-16 sm:mt-20 md:mt-8">
+              {/* <div className="mt-16 sm:mt-20 md:mt-8">
               <div className="bg-white">
                 <div className="flex items-center mb-6">
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
@@ -278,12 +278,12 @@ export default function Contact() {
               </div>
             </div>
             </div> */}
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-            <Footer />
+            </div>
+          </div>
         </div>
-    );
+      </main>
+
+      <Footer />
+    </div>
+  );
 }
