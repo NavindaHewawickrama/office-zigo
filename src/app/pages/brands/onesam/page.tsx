@@ -17,17 +17,17 @@ import pro11 from "../../../../../public/images/products/ONESAM/Speakers.png";
 
 export default function OneSam() {
     const productCategories = [
-        { image: pro1, name: "Chargers" },
-        { image: pro2, name: "Car Chargers" },
-        { image: pro3, name: "Power Banks" },
-        { image: pro4, name: "Earbuds" },
+        { image: pro1, name: "Earbuds" },
+        { image: pro2, name: "Cables" },
+        { image: pro3, name: "Car Charges" },
+        { image: pro4, name: "Chargers" },
         { image: pro5, name: "Earphones" },
         { image: pro6, name: "Neck Brands" },
-        { image: pro7, name: "Headsets" },
-        { image: pro8, name: "Cables" },
-        { image: pro9, name: "Speakers" },
-        { image: pro10, name: "SD Cards" },
-        { image: pro11, name: "Pen Drives" },
+        { image: pro7, name: "Phone Holders" },
+        { image: pro8, name: "Power Banks" },
+        { image: pro9, name: "Extentions" },
+        { image: pro10, name: "Tripods" },
+        { image: pro11, name: "Speakers" },
     ];
 
     return (
