@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
 const AnimatedMilestones = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -11,13 +11,12 @@ const AnimatedMilestones = () => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         setIsVisible(true);
-                        // Start animation 
-                        setTimeout(() => setAnimationStage(1), 100);   // Header animation
-                        setTimeout(() => setAnimationStage(2), 800);   // Path drawing
-                        setTimeout(() => setAnimationStage(3), 2000);  // Bubbles
-                        setTimeout(() => setAnimationStage(4), 3500);  // Fill gradient
+                        // Start animation
+                        setTimeout(() => setAnimationStage(1), 100); // Header animation
+                        setTimeout(() => setAnimationStage(2), 100); // Path drawing
+                        setTimeout(() => setAnimationStage(3), 100); // Bubbles
+                        setTimeout(() => setAnimationStage(4), 100); // Fill gradient
                     } else {
-                        // Reset animations when section leaves viewport
                         setIsVisible(false);
                         setAnimationStage(0);
                     }
@@ -25,7 +24,7 @@ const AnimatedMilestones = () => {
             },
             {
                 threshold: 0.3,
-                rootMargin: '-50px 0px'
+                rootMargin: "-50px 0px",
             }
         );
 
@@ -51,7 +50,8 @@ const AnimatedMilestones = () => {
             x: 280,
             y: 445,
             year: "2014",
-            label: "INCORPORATE THE COMPANY \n LAUNCH OMS BRAND \n INTRODUCE OMS BRAND TO THE SRILANKA MARKET",
+            label:
+                "INCORPORATE THE COMPANY \n LAUNCH OMS BRAND \n INTRODUCE OMS BRAND TO THE SRILANKA MARKET",
         },
         {
             x: 420,
@@ -69,13 +69,14 @@ const AnimatedMilestones = () => {
             x: 690,
             y: 395,
             year: "2019",
-            label: "START MANUFACTURING PLANT WITH MANUFACTURING DATA CABLES IN SRI LANKA",
+            label:
+                "START MANUFACTURING PLANT WITH MANUFACTURING \nDATA CABLES IN SRI LANKA",
         },
         {
             x: 790,
             y: 362,
             year: "2020",
-            label: "FEB LAUNCH XPERT BRAND (CHINTHAKA)",
+            label: "FEB  LAUNCH XPERT BRAND (CHINTHAKA)",
         },
         {
             x: 880,
@@ -93,40 +94,43 @@ const AnimatedMilestones = () => {
             x: 1070,
             y: 220,
             year: "2024",
-            label: "DECEMBER EXPAND TO ABHU DHABI MARKET WITH INCORPORATE NEW COMPANY",
+            label:
+                "DECEMBER EXPAND TO ABHU DHABI MARKET WITH INCORPORATE NEW COMPANY",
         },
         {
             x: 1145,
             y: 155,
             year: "2025",
-            label: "START TO MANUFACTURE MOBILE CHARGERS \n JUNE INCORPORATE ZENZUL INDUSTRIES (PRIVATE) LIMITED ",
+            label:
+                "START TO MANUFACTURE MOBILE CHARGERS \n JUNE INCORPORATE ZENZUL INDUSTRIES (PRIVATE) LIMITED ",
         },
     ];
 
     const getTooltipDimensions = (text: string) => {
-        // const words = text.split(' ');
-        // console.log(words);
         const avgCharsPerLine = 35;
         const lineHeight = 16;
         const padding = 24;
 
         // Calculate estimated lines needed
-        const estimatedLines = Math.max(1, Math.ceil(text.length / avgCharsPerLine));
+        const estimatedLines = Math.max(
+            1,
+            Math.ceil(text.length / avgCharsPerLine)
+        );
 
         // Dynamic width based on content length
         let width;
         if (text.length > 80) {
-            width = 350;
+            width = 450;
         } else if (text.length > 50) {
-            width = 280;
+            width = 380;
         } else if (text.length > 25) {
-            width = 220;
+            width = 320;
         } else {
-            width = 180;
+            width = 280;
         }
 
         // Dynamic height based on estimated lines
-        const height = Math.max(50, (estimatedLines * lineHeight) + padding + 10);
+        const height = Math.max(50, estimatedLines * lineHeight + padding + 10);
 
         return { width, height };
     };
@@ -139,33 +143,37 @@ const AnimatedMilestones = () => {
             {/* Animated background elements */}
             <div className="absolute inset-0 opacity-20">
                 <div
-                    className={`absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full blur-xl transition-all duration-1000 ${isVisible ? 'animate-pulse' : 'opacity-0'
+                    className={`absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full blur-xl transition-all duration-1000 ${isVisible ? "animate-pulse" : "opacity-0"
                         }`}
                 />
                 <div
-                    className={`absolute top-20 right-20 w-40 h-40 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full blur-xl transition-all duration-1000 delay-300 ${isVisible ? 'animate-pulse' : 'opacity-0'
+                    className={`absolute top-20 right-20 w-40 h-40 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full blur-xl transition-all duration-1000 delay-300 ${isVisible ? "animate-pulse" : "opacity-0"
                         }`}
                 />
                 <div
-                    className={`absolute bottom-20 left-1/4 w-36 h-36 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full blur-xl transition-all duration-1000 delay-500 ${isVisible ? 'animate-pulse' : 'opacity-0'
+                    className={`absolute bottom-20 left-1/4 w-36 h-36 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full blur-xl transition-all duration-1000 delay-500 ${isVisible ? "animate-pulse" : "opacity-0"
                         }`}
                 />
                 <div
-                    className={`absolute bottom-10 right-1/3 w-28 h-28 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full blur-xl transition-all duration-1000 delay-700 ${isVisible ? 'animate-pulse' : 'opacity-0'
+                    className={`absolute bottom-10 right-1/3 w-28 h-28 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full blur-xl transition-all duration-1000 delay-700 ${isVisible ? "animate-pulse" : "opacity-0"
                         }`}
                 />
             </div>
 
             <div className="container mx-auto px-4 sm:px-8 md:px-16">
                 <div
-                    className={`h-[3px] w-full bg-blue-200 rounded-md mt-4 transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
+                    className={`h-[3px] w-full bg-blue-200 rounded-md mt-4 transition-all duration-1000 ${isVisible
+                        ? "translate-x-0 opacity-100"
+                        : "-translate-x-full opacity-0"
                         }`}
                 />
             </div>
 
             <div className="container mx-auto">
                 <h2
-                    className={`text-gray-500 text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-5 pt-12 transition-all duration-1000 ${animationStage >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    className={`text-gray-500 text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-5 pt-12 transition-all duration-1000 ${animationStage >= 1
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-8"
                         }`}
                 >
                     MILESTONES
@@ -176,7 +184,7 @@ const AnimatedMilestones = () => {
                         {/* SVG Graph Path */}
                         <svg
                             viewBox="0 0 1200 500"
-                            className={`absolute w-full h-full transition-opacity duration-1000 ${animationStage >= 2 ? 'opacity-100' : 'opacity-0'
+                            className={`absolute w-full h-full transition-opacity duration-1000 ${animationStage >= 2 ? "opacity-100" : "opacity-0"
                                 }`}
                             preserveAspectRatio="xMidYMid meet"
                         >
@@ -201,19 +209,13 @@ const AnimatedMilestones = () => {
                                     <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.9" />
                                     <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
                                 </linearGradient>
-                                <linearGradient
-                                    id="lineGradient"
-                                    x1="0"
-                                    y1="0"
-                                    x2="0"
-                                    y2="1"
-                                >
+                                <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
                                     <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.8" />
                                     <stop offset="100%" stopColor="#60A5FA" stopOpacity="0.4" />
                                 </linearGradient>
                             </defs>
 
-                            {/* Enhanced animated path stroke */}
+                            {/* animated path stroke */}
                             <path
                                 d="M150,450 C500,450 900,400,1150,150"
                                 fill="none"
@@ -223,7 +225,7 @@ const AnimatedMilestones = () => {
                                 strokeDashoffset={animationStage >= 2 ? "0" : "2000"}
                                 className="transition-all duration-[2000ms] ease-in-out"
                                 style={{
-                                    filter: "drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3))"
+                                    filter: "drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3))",
                                 }}
                             />
 
@@ -239,12 +241,14 @@ const AnimatedMilestones = () => {
                             {/* Milestone Bubbles */}
                             {milestones.map((milestone, i) => {
                                 // Get dynamic tooltip dimensions
-                                const { width: tooltipWidth, height: tooltipHeight } = getTooltipDimensions(milestone.label);
+                                const { width: tooltipWidth, height: tooltipHeight } =
+                                    getTooltipDimensions(milestone.label);
 
                                 // tooltip positioning with better calculations
                                 const baseTooltipY = milestone.y - tooltipHeight - 80;
                                 const tooltipY = Math.max(baseTooltipY, 20);
                                 const arrowStartY = milestone.y - 20;
+                                console.log(arrowStartY);
 
                                 // X positioning with viewport boundaries
                                 let tooltipX = milestone.x - tooltipWidth / 2;
@@ -252,26 +256,31 @@ const AnimatedMilestones = () => {
                                 const minX = padding;
                                 const maxX = 1200 - tooltipWidth - padding;
                                 tooltipX = Math.max(minX, Math.min(maxX, tooltipX));
+                                console.log(tooltipX);
 
                                 // Calculate arrow position relative to tooltip
                                 const arrowX = milestone.x;
                                 const arrowEndY = tooltipY + tooltipHeight + 5;
+                                console.log(arrowX, arrowEndY);
 
                                 const bubbleDelay = i * 200;
                                 const showBubble = animationStage >= 3;
 
                                 return (
                                     <g key={i} className="group cursor-pointer">
-                                        {/* Enhanced bubble with glow effect */}
+                                        {/* bubble with glow effect */}
                                         <circle
                                             cx={milestone.x}
                                             cy={milestone.y}
                                             r="12"
-                                            className={`fill-white stroke-blue-400 stroke-3 cursor-pointer group-hover:fill-blue-500 group-hover:stroke-blue-600 transition-all duration-300 ease-out ${showBubble ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                                            className={`fill-white stroke-blue-400 stroke-3 cursor-pointer group-hover:fill-blue-500 group-hover:stroke-blue-600 transition-all duration-300 ease-out ${showBubble
+                                                ? "opacity-100 scale-100"
+                                                : "opacity-0 scale-0"
                                                 }`}
                                             style={{
-                                                filter: "drop-shadow(0 4px 12px rgba(59, 130, 246, 0.4))",
-                                                transitionDelay: `${bubbleDelay}ms`
+                                                filter:
+                                                    "drop-shadow(0 4px 12px rgba(59, 130, 246, 0.4))",
+                                                transitionDelay: `${bubbleDelay}ms`,
                                             }}
                                         />
 
@@ -279,92 +288,109 @@ const AnimatedMilestones = () => {
                                             cx={milestone.x}
                                             cy={milestone.y}
                                             r="5"
-                                            className={`fill-blue-500 group-hover:fill-white transition-all duration-300 ${showBubble ? 'opacity-100' : 'opacity-0'
+                                            className={`fill-blue-500 group-hover:fill-white transition-all duration-300 ${showBubble ? "opacity-100" : "opacity-0"
                                                 }`}
                                             style={{
-                                                transitionDelay: `${bubbleDelay + 100}ms`
+                                                transitionDelay: `${bubbleDelay + 50}ms`,
                                             }}
                                         />
 
-                                        {/* Enhanced year label */}
+                                        {/* year label - Always visible */}
                                         <text
                                             x={milestone.x}
                                             y={milestone.y + 50}
                                             textAnchor="middle"
-                                            className={`fill-blue-800 text-sm sm:text-base font-bold transition-all duration-500 ${showBubble ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                                            className={`fill-blue-800 text-sm sm:text-base font-bold transition-all duration-500 ${showBubble
+                                                ? "opacity-100 translate-y-0"
+                                                : "opacity-0 translate-y-4"
                                                 }`}
                                             style={{
                                                 transitionDelay: `${bubbleDelay + 200}ms`,
-                                                filter: "drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))"
+                                                filter: "drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))",
                                             }}
                                         >
                                             {milestone.year}
                                         </text>
-
-                                        {/* tooltip with better positioning */}
-                                        <g className="opacity-0 group-hover:opacity-100 transition-all duration-400 ease-out pointer-events-none">
-                                            {/* Connecting line with gradient */}
+                                        <g
+                                            className={`opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out ${showBubble ? "translate-y-0" : "translate-y-4"
+                                                }`}
+                                            style={{
+                                                transitionDelay: `${bubbleDelay + 100}ms`,
+                                            }}
+                                        >
+                                            {/* Connecting line */}
                                             <line
                                                 x1={milestone.x}
-                                                y1={arrowStartY}
-                                                x2={arrowX}
-                                                y2={arrowEndY}
-                                                stroke="url(#lineGradient)"
+                                                y1={milestone.y - 20}
+                                                x2={milestone.x}
+                                                y2={milestone.y - 80}
+                                                stroke="#60A5FA"
                                                 strokeWidth="2"
-                                                strokeDasharray="4,2"
-                                                className="animate-pulse"
                                             />
 
-                                            {/* tooltip background with shadow */}
-                                            <rect
-                                                x={tooltipX}
-                                                y={tooltipY}
-                                                width={tooltipWidth}
-                                                height={tooltipHeight}
-                                                rx="12"
-                                                ry="12"
-                                                fill="white"
-                                                stroke="#3B82F6"
-                                                strokeWidth="2"
-                                                className="drop-shadow-2xl transform group-hover:-translate-y-2 transition-all duration-400"
-                                                style={{
-                                                    filter: "drop-shadow(0 10px 25px rgba(59, 130, 246, 0.15))"
-                                                }}
-                                            />
+                                            {(() => {
+                                                // Calculate dynamic dimensions for tooltip
+                                                const lines = milestone.label
+                                                    .split("\n")
+                                                    .filter((line) => line.trim());
+                                                const maxLineLength = Math.max(
+                                                    ...lines.map((line) => line.length)
+                                                );
+                                                const tooltipWidth = Math.max(
+                                                    180,
+                                                    Math.min(350, maxLineLength * 8 + 40)
+                                                );
+                                                const tooltipHeight = Math.max(
+                                                    77,
+                                                    lines.length * 16 + 35
+                                                );
 
-                                            {/* Tooltip pointer/arrow */}
-                                            <polygon
-                                                points={`${arrowX - 8},${arrowEndY} ${arrowX + 8},${arrowEndY} ${arrowX},${arrowEndY + 40}`}
-                                                fill="white"
-                                                stroke="#3B82F6"
-                                                strokeWidth="2"
-                                                className="transform group-hover:-translate-y-2 transition-all duration-400"
-                                            />
+                                                // Calculate positioning to keep tooltip in bounds
+                                                let tooltipX = milestone.x - tooltipWidth / 2;
+                                                const padding = 20;
+                                                const minX = padding;
+                                                const maxX = 1200 - tooltipWidth - padding;
+                                                tooltipX = Math.max(minX, Math.min(maxX, tooltipX));
 
-                                            {/* tooltip text with proper dimensions */}
-                                            <foreignObject
-                                                x={tooltipX + 12}
-                                                y={tooltipY + 4}
-                                                width={tooltipWidth - 24}
-                                                height={tooltipHeight - 24}
-                                            >
-                                                <div
-                                                    className="text-xs font-semibold text-blue-700 text-center px-2 py-1 leading-relaxed group-hover:text-blue-900 transition-colors duration-300"
-                                                    style={{
-                                                        wordWrap: 'break-word',
-                                                        overflowWrap: 'break-word',
-                                                        hyphens: 'auto',
-                                                        //lineHeight: '1.4'
-                                                    }}
-                                                >
-                                                    {milestone.label.split('\n').map((line, index) => (
-                                                        <span key={index}>
-                                                            {line}
-                                                            <br />
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </foreignObject>
+                                                const tooltipY = milestone.y - 80 - tooltipHeight;
+
+                                                return (
+                                                    <>
+                                                        {/* Dynamic label background */}
+                                                        <rect
+                                                            x={tooltipX}
+                                                            y={tooltipY}
+                                                            width={tooltipWidth}
+                                                            height={tooltipHeight}
+                                                            rx="8"
+                                                            ry="8"
+                                                            fill="rgba(147, 197, 253, 0.95)"
+                                                            stroke="#3B82F6"
+                                                            strokeWidth="1"
+                                                            className="drop-shadow-lg"
+                                                        />
+
+                                                        {/* Dynamic label text */}
+                                                        <foreignObject
+                                                            x={tooltipX + 8}
+                                                            y={tooltipY + 8}
+                                                            width={tooltipWidth - 16}
+                                                            height={tooltipHeight - 16}
+                                                        >
+                                                            <div className="text-xs font-semibold text-blue-800 px-2 py-1 leading-relaxed">
+                                                                {lines.map((line, lineIndex) => (
+                                                                    <div
+                                                                        key={lineIndex}
+                                                                        className="text-center mb-1 last:mb-0"
+                                                                    >
+                                                                        {line.trim()}
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        </foreignObject>
+                                                    </>
+                                                );
+                                            })()}
                                         </g>
                                     </g>
                                 );

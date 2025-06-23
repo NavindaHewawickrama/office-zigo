@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                   <FaInstagram className="text-white text-sm" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/@TheZigomobile"
                   className="bg-red-600 p-2 rounded-md hover:opacity-90 transition-opacity"
                 >
                   <FaYoutube className="text-white text-sm" />
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                   <FaWhatsapp className="text-white text-sm" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.tiktok.com/@oms.lk"
                   className="bg-black p-2 rounded-md hover:opacity-90 transition-opacity"
                 >
                   <FaTiktok className="text-white text-sm" />
@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
                 <FaInstagram className="text-white" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@TheZigomobile"
                 className="bg-red-600 p-2 rounded-md hover:opacity-90 transition-opacity"
               >
                 <FaYoutube className="text-white" />
@@ -153,7 +153,7 @@ const Footer: React.FC = () => {
                 <FaWhatsapp className="text-white" />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@oms.lk"
                 className="bg-black p-2 rounded-md hover:opacity-90 transition-opacity"
               >
                 <FaTiktok className="text-white" />

@@ -74,19 +74,22 @@ export default function Contact() {
               ZIGO TECHNOLOGY (PVT) LTD
             </h2>
 
-            <div className="flex flex-col md:flex-row gap-20">
+            <div className="flex flex-col lg:flex-row gap-20">
               {/* Contact Information Section */}
-              <div className="w-full md:w-1/2 space-y-8">
+              <div className="w-full lg:w-1/2 space-y-8">
                 {/* Company Description */}
-                <div className="bg-white">
-                  <p className="text-gray-600 leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                    iriure dolor in
-                  </p>
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-lg border border-blue-100">
+                  <div className="space-y-4">
+                    <p className="text-gray-700 leading-relaxed text-lg">
+                      Have questions or need assistance? We&apos;re here to help! Reach
+                      out to <strong className="text-blue-700">Zigo Technology (Private) Limited</strong>{" "}
+                      for inquiries about our products, services, or distribution
+                      opportunities. Our team is ready to support you across Sri
+                      Lanka and international markets. Get in touch via phone,
+                      email, or visit us at our head office — we&apos;d love
+                      to hear from you!
+                    </p>
+                  </div>
                 </div>
 
                 {/* Address */}
@@ -118,8 +121,7 @@ export default function Contact() {
                     </h3>
                   </div>
                   <p className="text-gray-600 leading-relaxed ml-13">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut
+                    <strong>No 99, Rathnapura Road, Horana.</strong>
                   </p>
                 </div>
 
@@ -146,15 +148,35 @@ export default function Contact() {
                         Hotline
                       </h3>
                     </div>
-                    <p className="text-blue-600 font-medium text-base sm:text-lg transition-colors">
-                      +94 012345678
-                    </p>
+                    <div className="flex flex-col">
+                      <p className="text-blue-600 font-medium text-base sm:text-lg transition-colors">
+                        034 2266990
+                      </p>
+                      <p className="text-blue-600 font-medium text-base sm:text-lg transition-colors">
+                        034 2266990
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Map Section - Shows below hotline on tablet screens */}
+                <div className="block lg:hidden w-full h-120 border-black border-2">
+                  <div className="w-full h-full relative">
+                    <iframe
+                      src="https://maps.google.com/maps?q=Zigo+Technology,01,+Main+Street,+Colombo+01&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                   </div>
                 </div>
               </div>
 
-              {/* Map Section */}
-              <div className="w-full md:w-[500px] h-120 border-black border-2">
+              {/* Map Section - Shows on right side for desktop */}
+              <div className="hidden lg:block w-full lg:w-[500px] h-120 border-black border-2">
                 <div className="w-full h-full relative">
                   <iframe
                     src="https://maps.google.com/maps?q=Zigo+Technology,01,+Main+Street,+Colombo+01&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -171,113 +193,6 @@ export default function Contact() {
 
             {/* Island Wide Sales Officers Section */}
             <div className="mt-16 sm:mt-20 md:mt-8">
-              {/* <div className="mt-16 sm:mt-20 md:mt-8">
-              <div className="bg-white">
-                <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
-                    <svg
-                      className="w-5 h-5 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-medium text-gray-800">
-                    Island Wide Sales Officers
-                  </h3>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                    <span className="font-medium text-gray-700 text-base sm:text-lg">
-                      Colombo
-                    </span>
-                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                      07654566544
-                    </p>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                    <span className="font-medium text-gray-700 text-base sm:text-lg">
-                      Kalutara
-                    </span>
-                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                      07654566544
-                    </p>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                    <span className="font-medium text-gray-700 text-base sm:text-lg">
-                      Gampaha
-                    </span>
-                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                      07654566544
-                    </p>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                    <span className="font-medium text-gray-700 text-base sm:text-lg">
-                      Galle
-                    </span>
-                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                      07654566544
-                    </p>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                    <span className="font-medium text-gray-700 text-base sm:text-lg">
-                      Kandy
-                    </span>
-                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                      07654566544
-                    </p>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                    <span className="font-medium text-gray-700 text-base sm:text-lg">
-                      Anuradhapura
-                    </span>
-                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                      07654566544
-                    </p>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                    <span className="font-medium text-gray-700 text-base sm:text-lg">
-                      Polonnaruwa
-                    </span>
-                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                      07654566544
-                    </p>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                    <span className="font-medium text-gray-700 text-base sm:text-lg">
-                      Ampara/ Badulla
-                    </span>
-                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                      07654566544
-                    </p>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg transition-colors">
-                    <span className="font-medium text-gray-700 text-base sm:text-lg">
-                      Jaffna Area
-                    </span>
-                    <p className="text-blue-600 transition-colors font-medium text-base sm:text-lg">
-                      07654566544
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div> */}
             </div>
           </div>
         </div>

@@ -36,12 +36,12 @@ const UaeMap = () => {
         { name: 'Abu Dhabi', x: 40, y: 80, width: 15, height: 8 },
     ];
 
-    const handleMouseEnter = (district: District, event: React.MouseEvent<SVGRectElement>) => {
+    const handleMouseEnter = (district: District, event: React.MouseEvent<SVGCircleElement>) => {
         setHoveredDistrict(district);
         setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
-    const handleMouseMove = (event: React.MouseEvent<SVGRectElement>) => {
+    const handleMouseMove = (event: React.MouseEvent<SVGCircleElement>) => {
         setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
@@ -68,21 +68,22 @@ const UaeMap = () => {
                     preserveAspectRatio="xMidYMid meet"
                 >
                     {districts.map((district, index) => (
-                        <rect
-                            key={index}
-                            x={`${district.x}%`}
-                            y={`${district.y}%`}
-                            width={`${district.width}%`}
-                            height={`${district.height}%`}
-                            fill="transparent"
-                            stroke="transparent"
-                            strokeWidth="0.5"
-                            // className="hover:fill-red-50 hover:stroke-red-600 transition-all duration-200 cursor-pointer"
-                            className='transition-all duration-200 cursor-pointer'
-                            onMouseEnter={(e) => handleMouseEnter(district, e)}
-                            onMouseMove={handleMouseMove}
-                            onMouseLeave={handleMouseLeave}
-                        />
+                                    <circle
+              key={index}
+              cx={`${district.x}%`}
+              cy={`${district.y}%`}
+              r="1.2"
+              fill="white"
+              stroke="blue"
+              strokeWidth="0.3"
+              className="transition-all duration-200 cursor-pointer hover:stroke-yellow-400 hover:stroke-2 drop-shadow-md"
+              style={{
+                filter: "drop-shadow(0 0 3px rgba(220, 38, 38, 0.6))",
+              }}
+              onMouseEnter={(e) => handleMouseEnter(district, e)}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+            />
                     ))}
                 </svg>
             </div>

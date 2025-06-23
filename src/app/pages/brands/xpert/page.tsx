@@ -9,8 +9,8 @@ import pro3 from "../../../../../public/images/products/XPERT/Power Banks.png";
 
 export default function XPert() {
     const productCategories = [
-        { image: pro1, name: "Chargers" },
-        { image: pro2, name: "Car Chargers" },
+        { image: pro1, name: "Cables" },
+        { image: pro2, name: "Chargers" },
         { image: pro3, name: "Power Banks" },
     ];
 
