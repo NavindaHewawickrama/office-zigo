@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Image from "next/image";
 
 // Define the District type
 interface District {
@@ -9,36 +9,33 @@ interface District {
     width: number;
     height: number;
 }
-
 const UaeMap = () => {
     const [hoveredDistrict, setHoveredDistrict] = useState<District | null>(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [selectedDistrict, setSelectedDistrict] = useState<District | null>(null);
 
-    // District coordinates and names (approximate positions based on typical Sri Lanka map)
+    // District coordinates and names (one dot per district)
     const districts: District[] = [
-        { name: 'Umm-AL-Quwain', x: 75, y: 35, width: 4, height: 2 },
-        { name: 'Ajman', x: 72, y: 38, width: 3, height: 2 },
-        { name: 'Sharajh', x: 75, y: 40, width: 7, height: 12 },
-        { name: 'Dubai', x: 66, y: 45, width: 10, height: 12 },
-        { name: 'Al-Ain', x: 63, y: 58, width: 15, height: 12 },
+        { name: 'UMM-AL-QUWAIN', x: 78, y: 37, width: 4, height: 2 },
+        { name: 'AJMAN', x: 74, y: 39, width: 3, height: 2 },
+        { name: 'SHARJAH', x: 78, y: 43, width: 7, height: 12 },
+        { name: 'DUBAI', x: 70, y: 50, width: 10, height: 12 },
+        { name: 'AL-AIN', x: 77, y: 65, width: 15, height: 12 },
 
-        { name: 'Abu Dhabi', x: 52, y: 52, width: 12, height: 8 },
-        { name: 'Abu Dhabi', x: 45, y: 60, width: 10, height: 8 },
+        { name: 'ABU-DHABI', x: 57, y: 60, width: 12, height: 8 },
+        { name: 'FUJAIRAH', x: 87, y: 37, width: 15, height: 5 },
+        { name: 'FUJAIRAH', x: 88, y: 45, width: 15, height: 5 },
 
-        { name: 'Abu Dhabi', x: 58, y: 68, width: 10, height: 8 },
-        { name: 'Abu Dhabi', x: 58, y: 58, width: 5, height: 8 },
-        { name: 'Abu Dhabi', x: 52, y: 68, width: 5, height: 8 },
-
-
-        { name: 'Abu Dhabi', x: 38, y: 72, width: 10, height: 8 },
-        { name: 'Abu Dhabi', x: 48, y: 72, width: 15, height: 5 },
-
-        { name: 'Abu Dhabi', x: 40, y: 80, width: 15, height: 8 },
+        { name: 'RAS-AL-KHAIMAH', x: 84, y: 30, width: 15, height: 8 },
     ];
 
-    const handleMouseEnter = (district: District, event: React.MouseEvent<SVGCircleElement>) => {
+    const handleMouseEnter = (
+        district: District,
+        event: React.MouseEvent<SVGCircleElement>
+    ) => {
         setHoveredDistrict(district);
         setMousePosition({ x: event.clientX, y: event.clientY });
+        setSelectedDistrict(district);
     };
 
     const handleMouseMove = (event: React.MouseEvent<SVGCircleElement>) => {
@@ -47,11 +44,12 @@ const UaeMap = () => {
 
     const handleMouseLeave = () => {
         setHoveredDistrict(null);
+        setSelectedDistrict(null);
     };
 
     return (
         <div className="relative w-full overflow-hidden">
-            <div className="relative w-full" style={{ paddingBottom: "60%" }}>
+            <div className="relative w-full" style={{ paddingBottom: "100%" }}>
                 {/* Base Map Image */}
                 <Image
                     src="/images/uaemapNew.png"
@@ -60,30 +58,44 @@ const UaeMap = () => {
                     width={800}
                     height={800}
                 />
-
-                {/* Interactive SVG Overlay */}
+                {selectedDistrict && (
+                    <Image
+                        src={`/images/districts/${selectedDistrict.name.toLowerCase()}.png`}
+                        alt={`${selectedDistrict.name} Overlay`}
+                        className="absolute inset-0 w-full h-full object-contain pointer-events-none transition-opacity duration-300 ease-in-out"
+                        width={200}
+                        height={200}
+                        style={{
+                            opacity: 1,
+                            // border: '2px solid white',
+                            filter: 'drop-shadow(0 0 20px rgba(255, 255, 246, 0.9))'
+                        }}
+                    />
+                )}
+                {/* white dots */}
                 <svg
                     className="absolute inset-0 w-full h-full cursor-pointer"
                     viewBox="0 0 100 100"
                     preserveAspectRatio="xMidYMid meet"
                 >
                     {districts.map((district, index) => (
-                                    <circle
-              key={index}
-              cx={`${district.x}%`}
-              cy={`${district.y}%`}
-              r="1.2"
-              fill="white"
-              stroke="blue"
-              strokeWidth="0.3"
-              className="transition-all duration-200 cursor-pointer hover:stroke-yellow-400 hover:stroke-2 drop-shadow-md"
-              style={{
-                filter: "drop-shadow(0 0 3px rgba(220, 38, 38, 0.6))",
-              }}
-              onMouseEnter={(e) => handleMouseEnter(district, e)}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-            />
+                        <circle
+                            key={index}
+                            cx={`${district.x}%`}
+                            cy={`${district.y}%`}
+                            r="0.8"
+                            fill="white"
+                            //stroke="blue-"
+                            strokeWidth="0.2"
+                            className="transition-all duration-200 cursor-pointer hover:stroke-blue-300 hover:stroke-1 drop-shadow-md"
+                            style={{
+                                filter: "drop-shadow(0 0 3px rgba(220, 38, 38, 0.6))",
+                            }}
+                            onMouseEnter={(e) => handleMouseEnter(district, e)}
+                            onMouseMove={handleMouseMove}
+                            onMouseLeave={handleMouseLeave}
+                        // onClick={() => setSelectedDistrict(district)}
+                        />
                     ))}
                 </svg>
             </div>
@@ -104,10 +116,12 @@ const UaeMap = () => {
                         }}
                     >
                         {/* Glowing background effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-md opacity-75 animate-pulse" />
+                        {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-md opacity-75 animate-pulse" /> */}
+                        <div className="absolute inset-0  rounded-xs blur-md animate-pulse" />
 
                         {/* Main tooltip */}
-                        <div className="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-md border border-white/20 overflow-hidden">
+                        {/* <div className="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-md border border-white/20 overflow-hidden"> */}
+                        <div className="relative min-w-2xs z-10 bg-blue-400 text-white px-6 py-4 rounded-xs shadow-2xl overflow-hidden">
                             {/* Animated shine effect */}
                             <div
                                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
@@ -118,14 +132,14 @@ const UaeMap = () => {
                             />
                             <div className="relative z-10">
                                 <div
-                                    className="text-lg font-bold mb-1"
+                                    className="text-xl font-bold mb-1"
                                     style={{
                                         animation: "typewriter 0.8s steps(20) 0.2s both",
                                     }}
                                 >
                                     {hoveredDistrict.name}
                                 </div>
-                                <div className="text-sm opacity-90">📍 District Region</div>
+                                <div className="text-sm opacity-90 underline"> Sales Area</div>
                             </div>
 
                             <div className="absolute top-1 right-2 w-1 h-1 bg-white rounded-full opacity-70 animate-ping" />
@@ -134,9 +148,9 @@ const UaeMap = () => {
                         {/* Longer arrow */}
                         <div className="flex justify-center">
                             <div
-                                className="w-0 h-0 border-l-[10px] border-r-[10px] border-t-[25px] border-transparent border-t-blue-600 relative"
+                                className="w-0 h-0 border-l-[10px] border-r-[10px] border-t-[45px] border-transparent border-t-blue-400 relative"
                                 style={{
-                                    filter: "drop-shadow(0 0 8px rgba(59, 130, 246, 0.6))",
+                                    filter: "drop-shadow(0 0 8px rgba(96,165,250))",
                                     animation: "arrowBounce 1s ease-in-out infinite alternate",
                                 }}
                             ></div>
@@ -145,6 +159,52 @@ const UaeMap = () => {
                 </div>
             )}
 
+            {/* Add CSS animations */}
+            <style jsx>{`
+        @keyframes bounceIn {
+          0% {
+            transform: scale(0.3) translateY(10px);
+            opacity: 0;
+          }
+          50% {
+            transform: scale(1.05) translateY(-5px);
+          }
+          70% {
+            transform: scale(0.9) translateY(0px);
+          }
+          100% {
+            transform: scale(1) translateY(0px);
+            opacity: 1;
+          }
+        }
+
+        @keyframes shine {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+
+        @keyframes typewriter {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+
+        @keyframes arrowBounce {
+          0% {
+            transform: translateY(0px);
+          }
+          100% {
+            transform: translateY(-3px);
+          }
+        }
+      `}</style>
         </div>
     );
 };

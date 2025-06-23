@@ -168,70 +168,130 @@ export default function Home() {
         {/* About Us Section */}
         <div id="about-us-section" className="bg-white py-8">
           <div className="container mx-auto px-4">
-            <h2 className="text-gray-500 text-4xl font-medium text-center mb-6 mt-6">
+            <h2 className="text-gray-700 text-5xl font-bold text-center mb-12 tracking-wide">
               ABOUT US
             </h2>
-            <h3 className="text-gray-600 text-2xl font-medium text-center mb-6">
-              COMPANY OVERVIEW
-            </h3>
+            <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
+              {/* Image Section */}
+              <div className="relative group">
+                <div className="overflow-hidden rounded-2xl shadow-2xl">
+                  <img
+                    src="/images/Aboutus.png"
+                    alt="About us"
+                    className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-blue-500/20 rounded-full blur-xl"></div>
+                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
+              </div>
 
-            <div className="mb-12">
-              <div className="max-w-4xl mx-auto text-gray-600 space-y-4 text-left">
-                <p>
-                  Zigo Technology (Private) Limited is a premier industry leader
-                  in the manufacturing, exportation, importation, and
-                  distribution of high-quality mobile phone accessories, repair
-                  parts, and electrical equipment. As the exclusive owner of the
-                  OMS brand (OMS Mobile Phone Accessories) and the sole
-                  distributor of Onesam and Xpert, we are committed to
-                  delivering cutting-edge solutions that enhance mobile
-                  connectivity and user experience. With the establishment of
-                  our state-of-the-art manufacturing facility in Sri Lanka in
-                  2019, we have expanded our production capabilities to
-                  manufacture premium mobile accessories that meet international
-                  quality standards. Our strong export operations enable us to
-                  supply OEM and branded accessories to global markets,
-                  strengthening our presence across China (PRC), Thailand,
-                  Singapore, Bangladesh, India, and beyond.
-                </p>
+              {/* Content Section */}
+              <div className="flex flex-col justify-start">
+                <div className="mb-8">
+                  <h3 className="text-gray-700 text-3xl font-bold mb-4 relative inline-block">
+                    COMPANY OVERVIEW
+                    <div className="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                  </h3>
+                </div>
 
-                <p>
-                  Since our inception in 2006 and formal incorporation in 2014,
-                  Zigo Technology has continuously evolved, driven by a passion
-                  for innovation, efficiency, and excellence. Our ability to
-                  manufacture and export high-quality mobile accessories has
-                  positioned us as a trusted global supplier, ensuring seamless
-                  distribution and accessibility across international markets.
-                </p>
-                <p>
-                  At Zigo Technology, our commitment to technological
-                  advancement and superior manufacturing standards remains the
-                  driving force behind our success. By maintaining a robust
-                  distribution network and a relentless focus on quality, we
-                  continue to set new benchmarks in the mobile accessories
-                  industry.
-                </p>
+                <div className="space-y-6 text-gray-600 leading-relaxed">
+                  <p className="text-lg">
+                    <span className="font-semibold text-blue-600">Zigo Technology (Private) Limited</span> is a premier industry leader
+                    in the manufacturing, exportation, importation, and
+                    distribution of high-quality mobile phone accessories, repair
+                    parts, and electrical equipment. As the exclusive owner of the
+                    <span className="font-semibold text-purple-600"> OMS brand</span> (OMS Mobile Phone Accessories) and the sole
+                    distributor of Onesam and Xpert, we are committed to
+                    delivering cutting-edge solutions that enhance mobile
+                    connectivity and user experience.
+                  </p>
 
-                <p>
-                  Founded in 2006 and incorporated in 2014, Zigo Technology has
-                  grown rapidly over the years, expanding its services
-                  island-wide while maintaining a strong focus on customer
-                  satisfaction. Our dedication to excellence has enabled us to
-                  build strategic partnerships with international markets,
-                  including the People&apos;s Republic of China (PRC),
-                  Thailand, Singapore, Bangladesh, and India.
-                </p>
+                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-500">
+                    <p>
+                      With the establishment of our <span className="font-medium text-blue-700">state-of-the-art manufacturing facility in Sri Lanka in 2019</span>, we have expanded our production capabilities to
+                      manufacture premium mobile accessories that meet international
+                      quality standards. Our strong export operations enable us to
+                      supply OEM and branded accessories to global markets,
+                      strengthening our presence across <span className="font-medium">China (PRC), Thailand,
+                        Singapore, Bangladesh, India, and beyond</span>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-6 text-gray-600 leading-relaxed">
+                <div>
+                  <p>
+                    Since our inception in <span className="font-medium text-blue-600">2006</span> and formal incorporation in <span className="font-medium text-purple-600">2014</span>,
+                    Zigo Technology has continuously evolved, driven by a passion
+                    for innovation, efficiency, and excellence. Our ability to
+                    manufacture and export high-quality mobile accessories has
+                    positioned us as a trusted global supplier, ensuring seamless
+                    distribution and accessibility across international markets.
+                  </p>
+                </div>
+              </div>
 
-                <p>
-                  In 2019, we launched our own mobile phone accessory
-                  manufacturing plant in Sri Lanka, marking a significant
-                  milestone in our journey. With the support of our extensive
-                  distribution network, we remain committed to delivering
-                  high-quality products and ensuring fast, efficient
-                  distribution to meet the growing demands of our customers.
-                </p>
+              <div>
+                <div>
+                  <p>
+                    At Zigo Technology, our commitment to technological
+                    advancement and superior manufacturing standards remains the
+                    driving force behind our success. By maintaining a robust
+                    distribution network and a relentless focus on quality, we
+                    continue to set new benchmarks in the mobile accessories
+                    industry.
+                  </p>
+                </div>
               </div>
             </div>
+            <div>
+              <div className="w-full mb-12 mt-12">
+                <div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                    <p className="mb-4">
+                      Founded in 2006 and incorporated in 2014, Zigo Technology has
+                      grown rapidly over the years, expanding its services
+                      island-wide while maintaining a strong focus on customer
+                      satisfaction. Our dedication to excellence has enabled us to
+                      build strategic partnerships with international markets,
+                      including the People&apos;s Republic of China (PRC),
+                      Thailand, Singapore, Bangladesh, and India.
+                    </p>
+
+                    <p>
+                      In <span className="font-medium text-green-600">2019</span>, we launched our own mobile phone accessory
+                      manufacturing plant in Sri Lanka, marking a significant
+                      milestone in our journey. With the support of our extensive
+                      distribution network, we remain committed to delivering
+                      high-quality products and ensuring fast, efficient
+                      distribution to meet the growing demands of our customers.
+                    </p>
+                  </div>
+
+                  {/* Timeline highlights */}
+                  <div className="flex justify-between items-center bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-6 mt-8">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-blue-600">2006</div>
+                      <div className="text-sm text-gray-500">Founded</div>
+                    </div>
+                    <div className="flex-1 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 mx-4"></div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-purple-600">2014</div>
+                      <div className="text-sm text-gray-500">Incorporated</div>
+                    </div>
+                    <div className="flex-1 h-0.5 bg-gradient-to-r from-purple-500 via-green-500 to-blue-500 mx-4"></div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600">2019</div>
+                      <div className="text-sm text-gray-500">Manufacturing Plant</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
             {/* Vision and Mission - Side by Side within container */}
             <div className="max-w-4xl mx-auto mb-12">
@@ -417,10 +477,10 @@ export default function Home() {
               <div className="h-[3px] w-full bg-blue-200 rounded-md mt-12"></div>
             </div>
           </div>
-        </div>
+        </div >
 
         {/* Achievements Section */}
-        <div
+        < div
           ref={achievementRef}
           className="bg-gradient-to-b from-white to-blue-500 py-16 relative overflow-hidden"
         >
@@ -569,15 +629,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div >
 
         {/* Milestones */}
-        <AnimatedMilestones />
+        < AnimatedMilestones />
 
 
-      </main>
+      </main >
       <Footer />
-    </div>
+    </div >
 
   );
 }
