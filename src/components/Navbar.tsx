@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 type MenuItem = {
     name: string;
@@ -15,6 +16,7 @@ type MenuItem = {
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolling, setScrolling] = useState(false);
+    const router = useRouter();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -25,12 +27,20 @@ const Navbar = () => {
         e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
     ) => {
         e.preventDefault();
-        const aboutSection = document.getElementById("about-us-section");
-        if (aboutSection) {
-            aboutSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
+
+        // Check if we're on the home page
+        if (window.location.pathname === "/") {
+            // If on home page, scroll to the section
+            const aboutSection = document.getElementById("about-us-section");
+            if (aboutSection) {
+                aboutSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }
+        } else {
+            // If on another page, navigate to home page with hash
+            router.push("/#about-us-section");
         }
         setIsOpen(false);
     };
@@ -51,7 +61,8 @@ const Navbar = () => {
                 });
             }
         } else {
-            window.location.href = "/pages/production#distribution";
+            // Navigate to production page 
+            router.push("/pages/production#distribution");
         }
         setIsOpen(false);
     };
@@ -89,6 +100,35 @@ const Navbar = () => {
         };
     }, []);
 
+    // Handle scroll to section after navigation
+    useEffect(() => {
+        const handleHashScroll = () => {
+            const hash = window.location.hash;
+            if (hash) {
+                // Small delay to ensure the page has loaded
+                setTimeout(() => {
+                    const element = document.getElementById(hash.substring(1));
+                    if (element) {
+                        element.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                }, 100);
+            }
+        };
+
+        // Check for hash on initial load
+        handleHashScroll();
+
+        // Listen for hash changes
+        window.addEventListener("hashchange", handleHashScroll);
+
+        return () => {
+            window.removeEventListener("hashchange", handleHashScroll);
+        };
+    }, []);
+
     return (
         <nav
             className={` z-100 fixed top-0 left-0 w-full transition-all duration-300 ${scrolling ? "bg-blue-500 opacity-70" : "bg-transparent"
@@ -97,7 +137,7 @@ const Navbar = () => {
             {scrolling && (
                 <video
                     className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-                    src="/images/Banner1.mp4"
+                    src="/images/Scroll_Video.mp4"
                     autoPlay
                     loop
                     muted

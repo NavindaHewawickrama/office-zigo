@@ -76,33 +76,33 @@ const AnimatedMilestones = () => {
             x: 790,
             y: 362,
             year: "2020",
-            label: "FEB  LAUNCH XPERT BRAND (CHINTHAKA)",
+            label: "LAUNCH XPERT BRAND (CHINTHAKA)",
         },
         {
             x: 880,
             y: 327,
             year: "2021",
-            label: "MAY EXPAND TO DUBAI MARKET WITH INCORPORATE NEW COMPANY",
+            label: "EXPAND TO DUBAI MARKET WITH INCORPORATE NEW COMPANY",
         },
         {
             x: 980,
             y: 280,
             year: "2022",
-            label: "MAY START DISTRIBUTION NETWORK IN UAE",
+            label: "START DISTRIBUTION NETWORK IN UAE",
         },
         {
             x: 1070,
             y: 220,
             year: "2024",
             label:
-                "DECEMBER EXPAND TO ABHU DHABI MARKET WITH INCORPORATE NEW COMPANY",
+                "EXPAND TO ABHU DHABI MARKET \n INCORPORATE NEW COMPANY",
         },
         {
             x: 1145,
             y: 155,
             year: "2025",
             label:
-                "START TO MANUFACTURE MOBILE CHARGERS \n JUNE INCORPORATE ZENZUL INDUSTRIES (PRIVATE) LIMITED ",
+                "START TO MANUFACTURE MOBILE CHARGERS \n INCORPORATE ZENZUL INDUSTRIES (PRIVATE) LIMITED ",
         },
     ];
 
@@ -180,7 +180,7 @@ const AnimatedMilestones = () => {
                 </h2>
 
                 <div className="flex flex-col items-center mb-10">
-                    <div className="relative h-[300px] sm:h-[400px] md:h-[500px] w-full max-w-7xl">
+                    <div className="relative h-[300px] sm:h-[400px] md:h-[650px] w-full max-w-7xl">
                         {/* SVG Graph Path */}
                         <svg
                             viewBox="0 0 1200 500"
@@ -263,7 +263,7 @@ const AnimatedMilestones = () => {
                                 const arrowEndY = tooltipY + tooltipHeight + 5;
                                 console.log(arrowX, arrowEndY);
 
-                                const bubbleDelay = i * 200;
+                                const bubbleDelay = i * 50;
                                 const showBubble = animationStage >= 3;
 
                                 return (
@@ -327,70 +327,79 @@ const AnimatedMilestones = () => {
                                                 stroke="#60A5FA"
                                                 strokeWidth="2"
                                             />
-
                                             {(() => {
-                                                // Calculate dynamic dimensions for tooltip
-                                                const lines = milestone.label
-                                                    .split("\n")
-                                                    .filter((line) => line.trim());
-                                                const maxLineLength = Math.max(
-                                                    ...lines.map((line) => line.length)
-                                                );
-                                                const tooltipWidth = Math.max(
-                                                    180,
-                                                    Math.min(350, maxLineLength * 8 + 40)
-                                                );
-                                                const tooltipHeight = Math.max(
-                                                    77,
-                                                    lines.length * 16 + 35
-                                                );
+                                                const lines = milestone.label.split("\n").filter((line) => line.trim());
 
-                                                // Calculate positioning to keep tooltip in bounds
-                                                let tooltipX = milestone.x - tooltipWidth / 2;
-                                                const padding = 20;
-                                                const minX = padding;
-                                                const maxX = 1200 - tooltipWidth - padding;
-                                                tooltipX = Math.max(minX, Math.min(maxX, tooltipX));
+                                                return lines.map((line, lineIndex) => {
+                                                    // const svgCenterX = 600;
+                                                    // const isLeftSide = milestone.x < svgCenterX;
+                                                    const spacing = 90;
+                                                    const offsetY = milestone.y - spacing * (lineIndex + 1);
 
-                                                const tooltipY = milestone.y - 80 - tooltipHeight;
+                                                    const maxLineLength = line.length;
+                                                    const tooltipWidth = Math.max(180, Math.min(350, maxLineLength * 8 + 40));
+                                                    const tooltipHeight = 50;
 
-                                                return (
-                                                    <>
-                                                        {/* Dynamic label background */}
-                                                        <rect
-                                                            x={tooltipX}
-                                                            y={tooltipY}
-                                                            width={tooltipWidth}
-                                                            height={tooltipHeight}
-                                                            rx="8"
-                                                            ry="8"
-                                                            fill="rgba(147, 197, 253, 0.95)"
-                                                            stroke="#3B82F6"
-                                                            strokeWidth="1"
-                                                            className="drop-shadow-lg"
-                                                        />
+                                                    let tooltipX = milestone.x - (tooltipWidth / 2);
+                                                    const padding = 20;
+                                                    const minX = padding;
+                                                    const maxX = 1200 - tooltipWidth - padding;
+                                                    tooltipX = Math.max(minX, Math.min(maxX, tooltipX));
 
-                                                        {/* Dynamic label text */}
-                                                        <foreignObject
-                                                            x={tooltipX + 8}
-                                                            y={tooltipY + 8}
-                                                            width={tooltipWidth - 16}
-                                                            height={tooltipHeight - 16}
-                                                        >
-                                                            <div className="text-xs font-semibold text-blue-800 px-2 py-1 leading-relaxed">
-                                                                {lines.map((line, lineIndex) => (
-                                                                    <div
-                                                                        key={lineIndex}
-                                                                        className="text-center mb-1 last:mb-0"
-                                                                    >
-                                                                        {line.trim()}
-                                                                    </div>
-                                                                ))}
-                                                            </div>
-                                                        </foreignObject>
-                                                    </>
-                                                );
+                                                    const tooltipY = offsetY - tooltipHeight;
+
+                                                    return (
+                                                        <React.Fragment key={lineIndex}>
+                                                            {/* Line from bubble to tooltip */}
+                                                            <line
+                                                                x1={milestone.x}
+                                                                y1={milestone.y - 20}
+                                                                x2={milestone.x}
+                                                                y2={tooltipY + tooltipHeight + 8}
+                                                                stroke="#60A5FA"
+                                                                strokeWidth="2"
+
+                                                            />
+
+                                                            {/* Tooltip rectangle */}
+                                                            <rect
+                                                                x={milestone.year == "2025" ? tooltipX - tooltipWidth / 6 : milestone.year == "2006" ? tooltipX + tooltipWidth / 1.8 : milestone.year == "2014" ? tooltipX + tooltipWidth / 1.8 : tooltipX - tooltipWidth / 1.8}
+                                                                y={tooltipY + 30}
+                                                                width={tooltipWidth}
+                                                                height={tooltipHeight}
+                                                                rx="8"
+                                                                ry="8"
+                                                                fill="rgba(147, 197, 253, 0.95)"
+                                                                stroke="#3B82F6"
+                                                                strokeWidth="1"
+                                                                className="drop-shadow-lg"
+                                                            />
+
+                                                            {/* Tooltip tail bubble at end of line */}
+                                                            <circle
+                                                                cx={milestone.x}
+                                                                cy={tooltipY + tooltipHeight + 8}
+                                                                r="4"
+                                                                fill="#3B82F6"
+                                                                z={100}
+                                                            />
+
+                                                            {/* Tooltip text */}
+                                                            <foreignObject
+                                                                x={milestone.year == "2025" ? tooltipX - tooltipWidth / 6 : milestone.year == "2006" ? tooltipX + tooltipWidth / 1.8 : milestone.year == "2014" ? tooltipX + tooltipWidth / 1.8 : tooltipX - tooltipWidth / 1.8}
+                                                                y={tooltipY + 30}
+                                                                width={tooltipWidth}
+                                                                height={tooltipHeight}
+                                                            >
+                                                                <div className="flex justify-center items-center h-full px-2 text-xs font-semibold text-blue-800">
+                                                                    {line.trim()}
+                                                                </div>
+                                                            </foreignObject>
+                                                        </React.Fragment>
+                                                    );
+                                                });
                                             })()}
+
                                         </g>
                                     </g>
                                 );

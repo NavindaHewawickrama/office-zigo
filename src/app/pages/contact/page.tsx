@@ -3,8 +3,10 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 export default function Contact() {
+
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
@@ -81,13 +83,16 @@ export default function Contact() {
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-lg border border-blue-100">
                   <div className="space-y-4">
                     <p className="text-gray-700 leading-relaxed text-lg">
-                      Have questions or need assistance? We&apos;re here to help! Reach
-                      out to <strong className="text-blue-700">Zigo Technology (Private) Limited</strong>{" "}
-                      for inquiries about our products, services, or distribution
-                      opportunities. Our team is ready to support you across Sri
-                      Lanka and international markets. Get in touch via phone,
-                      email, or visit us at our head office — we&apos;d love
-                      to hear from you!
+                      Have questions or need assistance? We&apos;re here to
+                      help! Reach out to{" "}
+                      <strong className="text-blue-700">
+                        Zigo Technology (Private) Limited
+                      </strong>{" "}
+                      for inquiries about our products, services, or
+                      distribution opportunities. Our team is ready to support
+                      you across Sri Lanka and international markets. Get in
+                      touch via phone, email, or visit us at our head office —
+                      we&apos;d love to hear from you!
                     </p>
                   </div>
                 </div>
@@ -191,9 +196,35 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Island Wide Sales Officers Section */}
-            <div className="mt-16 sm:mt-20 md:mt-8">
+            {/* Contact Form Section */}
+            <div className="mt-16 sm:mt-20 md:mt-24">
+              {/* Descriptive Text Section */}
+              <div className="text-center mb-12 sm:mb-16">
+                <div className="max-w-4xl mx-auto">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Get In Touch
+                  </h3>
+                  <p className="text-gray-600 text-lg sm:text-xl leading-relaxed px-4">
+                    If you want more details, what to know from where to buy our
+                    products in your hometown or join as a reseller please send
+                    your inquiry and we will respond you shortly.
+                  </p>
+                </div>
+              </div>
+
+              {/* Contact Form Container */}
+              <div className="relative overflow-hidden">
+                {/* Glassmorphism Overlay */}
+                <div className="absolute inset-0"></div>
+
+                <div className="relative z-10 px-6 sm:px-12 md:px-16 py-6 sm:py-8 md:py-10">
+                  {/* Contact Form */}
+                  <ContactForm />
+                </div>
+              </div>
             </div>
+            {/* Island Wide Sales Officers Section */}
+            <div className="mt-16 sm:mt-20 md:mt-8"></div>
           </div>
         </div>
       </main>

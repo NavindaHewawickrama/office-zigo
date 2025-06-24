@@ -178,12 +178,22 @@ export default function Production() {
                               PRODUCTION & MANUFACTURING
                             </h4>
                             <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3">
-                              Depending on the industry and product, the
-                              production process includes casting & molding for
-                              metal, plastic, and rubber components, machining &
-                              cutting for precision shaping, and assembly &
-                              fabrication combining components using welding,
-                              soldering, or adhesives.
+                              Production and manufacturing processes vary based
+                              on the industry and type of product but generally
+                              involve several key stages. Casting and molding
+                              are commonly used to form materials such as metal,
+                              plastic, and rubber into specific shapes through
+                              techniques like injection molding or die casting.
+                              Machining and cutting involve precision shaping of
+                              materials using equipment such as CNC machines,
+                              lathes, or milling tools to achieve accurate
+                              dimensions. Assembly and fabrication combine
+                              individual components into a finished product
+                              using methods like welding, soldering, riveting,
+                              or adhesives, depending on the product
+                              requirements. Each stage plays a vital role in
+                              ensuring quality, functionality, and efficiency in
+                              the final output.
                             </p>
                           </div>
                         </div>
@@ -545,15 +555,39 @@ export default function Production() {
                       <h4 className="font-bold text-blue-900 text-lg mb-2">
                         Hikma Al Nur Trading LLC
                       </h4>
-                      <p className="text-blue-700 font-medium mb-2">📍 Dubai</p>
+                      <p className="text-blue-700 font-medium mb-2 items-center">
+                        <svg
+                          className="w-4 h-4 inline mr-2"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        Dubai
+                      </p>
                     </div>
 
                     <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-l-4 border-green-600">
                       <h4 className="font-bold text-green-900 text-lg mb-2">
                         Nur Al Hikma Trading LLC
                       </h4>
-                      <p className="text-green-700 font-medium mb-2">
-                        📍 Abu Dhabi
+                      <p className="text-green-700 font-medium mb-2 items-center">
+                        <svg
+                          className="w-4 h-4 inline mr-2"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        Abu Dhabi
                       </p>
                     </div>
                   </div>
