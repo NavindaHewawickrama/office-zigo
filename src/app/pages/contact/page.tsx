@@ -158,7 +158,7 @@ export default function Contact() {
                         034 2266990
                       </p>
                       <p className="text-blue-600 font-medium text-base sm:text-lg transition-colors">
-                        034 2266990
+                        071 1260260
                       </p>
                     </div>
                   </div>
