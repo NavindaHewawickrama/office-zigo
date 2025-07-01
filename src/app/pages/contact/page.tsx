@@ -6,7 +6,6 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
 export default function Contact() {
-
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
@@ -168,7 +167,7 @@ export default function Contact() {
                 <div className="block lg:hidden w-full h-120 border-black border-2">
                   <div className="w-full h-full relative">
                     <iframe
-                      src="https://maps.google.com/maps?q=Zigo+Technology,01,+Main+Street,+Colombo+01&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.435158858868!2d80.06153227475505!3d6.7166321932792155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24b0004cb2755%3A0x279db2921fcba636!2sZigo%20Technology%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1751357570172!5m2!1sen!2slk"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -184,7 +183,7 @@ export default function Contact() {
               <div className="hidden lg:block w-full lg:w-[500px] h-120 border-black border-2">
                 <div className="w-full h-full relative">
                   <iframe
-                      src="https://maps.google.com/maps?q=No+99,+Rathnapura+Road,+Horana&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.435158858868!2d80.06153227475505!3d6.7166321932792155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24b0004cb2755%3A0x279db2921fcba636!2sZigo%20Technology%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1751357570172!5m2!1sen!2slk"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
