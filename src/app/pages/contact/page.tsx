@@ -184,7 +184,7 @@ export default function Contact() {
               <div className="hidden lg:block w-full lg:w-[500px] h-120 border-black border-2">
                 <div className="w-full h-full relative">
                   <iframe
-                    src="https://maps.google.com/maps?q=Zigo+Technology,01,+Main+Street,+Colombo+01&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      src="https://maps.google.com/maps?q=No+99,+Rathnapura+Road,+Horana&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
